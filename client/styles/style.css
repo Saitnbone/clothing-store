@@ -1,0 +1,181 @@
+/* 
+---------------------------------------------------------------
+                    Стили для блока header
+---------------------------------------------------------------
+*/
+
+.header {
+  min-height: min-content;
+}
+
+.header__navigation-block {
+  display: flex;
+  position: absolute;
+  padding-block-start: 36px;
+  padding-inline-start: 150px;
+  padding-inline-end: 150px;
+  line-height: 21px;
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.header__list-about {
+  display: flex;
+  gap: 1.875rem;
+  font-size: 18px;
+  padding-inline-start: 6.5rem;
+}
+
+.header__list-about-item-buttom {
+  text-transform: uppercase;
+}
+
+.header__list-about-item-buttom:hover {
+  box-shadow: 0px 10px 15px 0px rgba(37, 37, 37, 0.07);
+  opacity: 0.5;
+}
+
+.header__title {
+  padding-inline-start: 121px;
+  font-size: 50px;
+}
+
+.header__list-of-languages-and-currencies {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 18px;
+  padding-inline-start: 5.875rem;
+}
+
+.header__list-of-things-item:hover {
+  cursor: pointer;
+  box-shadow: 0px 10px 15px 0px rgba(37, 37, 37, 0.07);
+  opacity: 0.5;
+}
+
+.header__background-list-of-images {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(3, 1fr);
+  z-index: -1;
+}
+
+.header__background-list-of-images-item-image {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Медиазапросы для блока header */
+
+@media (width <= 768px) {
+}
+
+@media (width <= 375px) {
+}
+
+/* 
+---------------------------------------------------------------
+                    Стили для блока main
+---------------------------------------------------------------
+*/
+
+.main {
+  padding-inline-start: 150px;
+  padding-inline-end: 150px;
+}
+
+.main__section-category {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  padding-block-start: 100px;
+}
+
+.main__section-category-title {
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: 0%;
+  color: var(--text-second-color);
+}
+
+.main__section-list {
+  display: flex;
+  gap: 15px;
+}
+
+.main__section-subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-block-start: 100px;
+  text-align: center;
+  color: var(--text-second-color);
+}
+
+.main__section-subscription-title {
+  font-size: 36px;
+  line-height: 42px;
+  padding-block-end: 43px;
+}
+
+.main__section-subscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-block-end: 20px;
+}
+
+.main__section-subscription-form-input {
+  inline-size: 600px;
+  block-size: 50px;
+}
+
+.main__section-subscription-form-input::placeholder {
+  text-align: center;
+}
+
+.main__section-subscription-form-buttom {
+  inline-size: 600px;
+  block-size: 50px;
+  background-color: var(--tools-color);
+  color: var(--text-color);
+  padding: 16px 81px 17px 81px;
+}
+
+.main__section-subscription-text {
+  color: var(--text-second-color);
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+/* Медиазапросы для блока main */
+
+@media (width <= 768px) {
+}
+
+@media (width <= 375px) {
+}
+
+/* 
+---------------------------------------------------------------
+                    Стили для блока footer
+---------------------------------------------------------------
+*/
+
+.footer {
+  display: flex;
+  gap: 180px;
+  padding-top: 94px;
+  padding-inline-start: 150px;
+  padding-inline-end: 150px;
+}
+
+/* Медиазапросы для блока footer */
+
+@media (width <= 768px) {
+}
+
+@media (width <= 375px) {
+}
