@@ -172,6 +172,24 @@
   padding-inline-end: 150px;
 }
 
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer__section-title {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 23px;
+}
+
+.footer__section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 /* Медиазапросы для блока footer */
 
 @media (width <= 768px) {
