@@ -1,0 +1,56 @@
+/* 
+---------------------------------------------------------------
+                    Стили для блока header
+---------------------------------------------------------------
+*/
+
+.header {
+  min-height: min-content;
+  color: var(--text-second-color);
+}
+
+.header__navigation-block {
+  display: flex;
+  position: absolute;
+  padding-block-start: 36px;
+  padding-inline-start: 150px;
+  padding-inline-end: 150px;
+  line-height: 21px;
+  /* color: var(--text-second-color); */
+  text-transform: uppercase;
+}
+
+.header__list-about {
+  display: flex;
+  gap: 1.875rem;
+  font-size: 18px;
+  padding-inline-start: 6.5rem;
+}
+
+.header__list-about-item-buttom {
+  text-transform: uppercase;
+}
+
+.header__list-about-item-buttom:hover {
+  color: var(--accent-color);
+  box-shadow: var(--box-shadow);
+  opacity: 0.5;
+}
+
+.header__title {
+  padding-inline-start: 121px;
+  font-size: 50px;
+}
+
+.header__list-of-languages-and-currencies {
+  display: flex;
+  gap: 1.25rem;
+  font-size: 18px;
+  padding-inline-start: 5.875rem;
+}
+
+.header__list-of-things-item:hover {
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  opacity: 0.5;
+}
