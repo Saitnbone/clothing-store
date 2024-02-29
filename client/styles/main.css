@@ -143,9 +143,18 @@
 /* Медиазапросы для блока header */
 
 @media (width <= 1439px) {
+  .header__navigation-block {
+    justify-content: flex-end;
+  }
+
+  .header__button {
+    grid-template-columns: span 2;
+  }
+
   .header__list-about {
     display: none;
   }
+
   .header__element:nth-child(3) {
     padding-inline-start: 30%;
     /* padding-inline-start: 7.7rem; */
@@ -167,8 +176,8 @@
 /* Общие стили для блока main */
 
 .main {
-  padding-inline-start: 150px;
-  padding-inline-end: 150px;
+  padding-inline-start: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
+  padding-inline-end: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
 }
 
 /* Стили для секции main__section-category */
@@ -304,8 +313,8 @@
 
 .footer {
   display: flex;
-  /* gap: 130px; */
-  padding: 99px 150px 74px 150px;
+  padding: 99px clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem) 74px
+    clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
 }
 
 /* Стили для блока footer__section */
