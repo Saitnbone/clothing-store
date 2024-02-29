@@ -12,9 +12,9 @@
   gap: 50vh;
   background-image: url("../images/background-image.png");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   min-height: 134vh;
-  width: 100%;
 }
 
 .header__navigation-block {
