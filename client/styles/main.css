@@ -312,7 +312,9 @@
 /* Общие стили для блока footer */
 
 .footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3.26vw;
   padding: 99px clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem) 74px
     clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
 }
@@ -323,18 +325,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.footer__section:nth-child(2) {
-  padding-inline-start: 182px;
-}
-
-.footer__section:nth-child(3) {
-  padding-inline-start: 156px;
-}
-
-.footer__section:nth-child(4) {
-  padding-inline-start: 56px;
 }
 
 .footer__section-title {
