@@ -196,7 +196,11 @@
 }
 
 .main__catalog-cloth-list-item {
-  padding-block-start: 13px;
+  padding: 13px 0;
+}
+
+.main__catalog-cloth-list-item:hover {
+  box-shadow: var(--box-shadow);
 }
 
 .main__catalog-cloth-list-article {
@@ -243,6 +247,32 @@
 .main__catalog-cloth-list-article-sizes-list-item:hover {
   cursor: pointer;
   text-decoration: underline;
+}
+
+.main__catalog-cloth-list-article-colors-list {
+  display: flex;
+  gap: 5px;
+}
+
+.main__catalog-cloth-list-article-colors-list-item {
+  width: 14px;
+  height: 14px;
+  border: 0.3px solid rgb(37, 37, 37);
+  border-radius: 50%;
+}
+
+.main__catalog-cloth-list-article-colors-list-item_blue {
+  width: 14px;
+  height: 14px;
+  background: rgb(111, 131, 164);
+  border-radius: 50%;
+}
+
+.main__catalog-cloth-list-article-colors-list-item_yellow {
+  width: 14px;
+  height: 14px;
+  background: rgb(241, 221, 170);
+  border-radius: 50%;
 }
 
 /* Медиазапросы для блока main */
