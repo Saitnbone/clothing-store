@@ -20,6 +20,14 @@ function html() {
     .pipe(browserSync.reload({ stream: true }));
 }
 
+function pug() {
+  return gulp
+    .src("src/components/**/*.pug")
+    .pipe(plumber())
+    .pipe(gulp.dest("dist/components"))
+    .pipe(browserSync.reload({ stream: true }));
+}
+
 function css() {
   return gulp
     .src("src/styles/**/*.css")
@@ -54,14 +62,8 @@ function clean() {
   return del("dist");
 }
 
-const build = gulp.series(clean, gulp.parallel(html, css, images, svg));
+const build = gulp.series(clean, gulp.parallel(html, pug, css, images, svg));
 const watchApp = gulp.parallel(build, watchFiles, serve);
 
 exports.build = build;
 exports.watchApp = watchApp;
-
-// exports.html = html;
-// exports.css = css;
-// exports.images = images;
-// exports.svg = svg;
-// exports.clean = clean;

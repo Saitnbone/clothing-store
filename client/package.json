@@ -1,0 +1,28 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "description": "client side of the application",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saitnbone/clothing-store.git"
+  },
+  "author": "Aleksandr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Saitnbone/clothing-store/issues"
+  },
+  "homepage": "https://github.com/Saitnbone/clothing-store#readme",
+  "devDependencies": {
+    "browser-sync": "^3.0.2",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pug": "^5.0.0"
+  }
+}
