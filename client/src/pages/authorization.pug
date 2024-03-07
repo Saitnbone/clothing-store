@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+block content
+  main.main
+    section.main__section-subscription
+      h2.main__section-subscription-title Узнайте первым о новинках
+      form.main__section-subscription-form
+        label
+          input.main__section-subscription-form-input(type='text' placeholder='Ваш e-mail*')
+        button.main__section-subscription-form-buttom(type='submit') Подписаться
+      p.main__section-subscription-text
+        | Нажимая на кнопку «Подписаться», я соглашаюсь на обработку моих
+        br
+        | персональных данных и ознакомлен(а) с условиями конфиденциальности.
