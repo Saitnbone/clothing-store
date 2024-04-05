@@ -16,7 +16,6 @@ function serve() {
 function pug() {
   return gulp
     .src("src/pages/**/*.pug")
-    .pipe(plumber())
     .pipe(gulpPug())
     .pipe(gulp.dest("dist/"))
     .pipe(browserSync.reload({ stream: true }));
