@@ -23,6 +23,8 @@
     "gulp": "^4.0.2",
     "gulp-concat-css": "^3.1.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-pug": "^5.0.0"
+    "gulp-pug": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.74.1"
   }
 }
