@@ -3,3 +3,40 @@ extends ../layouts/default
 block variables 
   - var title = 'Магазин одежды YANKI | Главная'
 
+block content
+  main.main
+    section.main__section-category
+      h2.main__section-category-title Категории
+      ul.main__section-category-list
+        li.main__section-category-list-item
+          a.main__section-category-list-item-link(href='http://127.0.0.1:5500/client/views/catalog.html')
+            h3.main__section-category-list-item-title Куртки
+            picture
+              img.main__section-category-list-item-image(src='../images/Rectangle-11.png' alt='Девушка в зимней куртке белого цвета с меховым капюшоном')
+        li.main__section-category-list-item
+          a.main__section-category-list-item-link(href='http://127.0.0.1:5500/client/views/catalog.html')
+            h3.main__section-category-list-item-title Пальто
+            picture
+              img.main__section-category-list-item-image(src='../images/Rectangle-10.png' alt='Девушка в зимнем пальто официального стиля в темно-синем цвете')
+        li.main__section-category-list-item
+          a.main__section-category-list-item-link(href='http://127.0.0.1:5500/client/views/catalog.html')
+            h3.main__section-category-list-item-title Шубы
+            picture
+              img.main__section-category-list-item-image(src='../images/Rectangle-7.png' alt='Девушка в зимней меховой шубе бежевого цвета')
+        li.main__section-category-list-item
+          a.main__section-category-list-item-link(href='http://127.0.0.1:5500/client/views/catalog.html')
+            h3.main__section-category-list-item-title Парки
+            picture
+              img.main__section-list-item-image(src='../images/Rectangle-9.png' alt='Девушка в зимней парке серо-синего цвета с меховым капюшоном')
+    section.main__section-subscription
+      h2.main__section-subscription-title
+        | Узнайте первым о новинках
+      form.main__section-subscription-form
+        label
+          input.main__section-subscription-form-input(type='text' placeholder='Ваш e-mail*')
+        button.main__section-subscription-form-buttom(type='submit')
+          | Подписаться
+      p.main__section-subscription-text
+        | Нажимая на кнопку «Подписаться», я соглашаюсь на обработку моих 
+        br
+        |           персональных данных и ознакомлен(а) с условиями конфиденциальности.
