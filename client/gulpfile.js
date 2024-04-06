@@ -21,14 +21,6 @@ function pug() {
     .pipe(browserSync.reload({ stream: true }));
 }
 
-// function html() {
-//   return gulp
-//     .src("src/pages/**/*.html")
-//     .pipe(plumber())
-//     .pipe(gulp.dest("dist/"))
-//     .pipe(browserSync.reload({ stream: true }));
-// }
-
 function css() {
   return gulp
     .src("src/styles/**/*.css")

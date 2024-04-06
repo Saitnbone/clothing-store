@@ -16,11 +16,14 @@
   display: flex;
   flex-direction: column;
   gap: 50vh;
-  background-image: url("../images/background-image.png");
+  min-height: 134vh;
+}
+
+.header__main-page {
+  background-image: url("../dist/images/background-image.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 134vh;
 }
 
 .header__navigation-block {
