@@ -1,99 +1,24 @@
 /* 
 ---------------------------------------------------------------
-                      Стили для страницы контактов
-                          (Contacts Page)
+                      Стили для страницы авторизации 
+                          (Authorization Page)
 ---------------------------------------------------------------
 */
-.page {
-  color: var(--text-second-color);
-}
-/* 
----------------------------------------------------------------
-                    Стили для блока header
----------------------------------------------------------------
-*/
-
-/* Медиазапросы для блока header */
-
-@media (width <= 1439px) {
-  .header__navigation-block {
-    justify-content: flex-end;
-  }
-
-  .header__button {
-    grid-template-columns: span 2;
-  }
-
-  .header__list-about {
-    display: none;
-  }
-
-  .header__element:nth-child(3) {
-    padding-inline-start: 30%;
-    /* padding-inline-start: 7.7rem; */
-  }
-}
-
-@media (width <= 768px) {
-}
-
-@media (width <= 375px) {
-}
 
 /* 
 ---------------------------------------------------------------
-                    Стили для блока main
+                      Стили для блока main
 ---------------------------------------------------------------
 */
 
-/* Общие стили для блока main */
+/* Общие настройки для блока main */
 
 .main {
-  padding-block-start: 35px;
   padding-inline-start: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
   padding-inline-end: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
 }
 
-.main__navigation {
-  display: flex;
-  gap: 30px;
-}
-
-/* Стили для секции main__section-feedback */
-
-.main__section-feedback {
-  padding-block-start: 30px;
-}
-
-.main__section-feedback-title {
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 23px;
-}
-
-.main__section-feedback-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding-block-start: 30px;
-  gap: 7.8vw;
-}
-
-.main__section-feedback-list-item {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  height: auto;
-}
-
-.main__section-feedback-list-item-title {
-  font-size: 16px;
-}
-
-.main__section-feedback-list-item-address {
-  font-style: normal;
-}
-
-/* Стили для секции main__section-subscription */
+/* Стили для блока main__section-subscription */
 
 .main__section-subscription {
   display: flex;
@@ -158,9 +83,6 @@
 
 /* Медиазапросы для блока main */
 
-@media (width <= 1439px) {
-}
-
 @media (width <= 768px) {
 }
 
@@ -168,10 +90,10 @@
 }
 
 /* 
----------------------------------------------------------------
-                    Стили для блока footer
----------------------------------------------------------------
-*/
+  ---------------------------------------------------------------
+                      Стили для блока footer
+  ---------------------------------------------------------------
+  */
 
 /* Общие стили для блока footer */
 
