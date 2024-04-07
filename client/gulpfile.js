@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const gulpPug = require("gulp-pug");
 const concat = require("gulp-concat-css");
+const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
 const del = require("del");
 const browserSync = require("browser-sync").create();
@@ -30,6 +31,14 @@ function css() {
     .pipe(browserSync.reload({ stream: true }));
 }
 
+function scss() {
+  return gulp
+    .src("src/**/*.scss")
+    .pipe(sass())
+    .pipe(gulp.dest("dist/"))
+    .pipe(browserSync.reload({ stream: true }));
+}
+
 function images() {
   return gulp
     .src("src/images/**/*{jpg,png,gif,ico,webp,avif}")
@@ -48,6 +57,7 @@ function watchFiles() {
   gulp.watch(["src/views/**/*.html"], html);
   gulp.watch(["src/pages/**/*.pug"], pug);
   gulp.watch(["src/styles/**/*.css"], css);
+  gulp.watch(["src/styles/**/*.scss"], scss);
   gulp.watch(["src/images/**/*{jpg,png,gif,ico,webp,avif}"], images);
   gulp.watch(["src/svg/**/*.svg"], svg);
 }
@@ -56,12 +66,13 @@ function clean() {
   return del("dist");
 }
 
-const build = gulp.series(clean, gulp.parallel(pug, css, images, svg));
+const build = gulp.series(clean, gulp.parallel(pug, css, scss, images, svg));
 const watchApp = gulp.parallel(build, watchFiles, serve);
 
 // exports.html = html;
 exports.pug = pug;
 exports.css = css;
+exports.scss = scss;
 exports.images = images;
 exports.svg = svg;
 exports.build = build;
