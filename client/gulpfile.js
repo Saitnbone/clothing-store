@@ -33,7 +33,7 @@ function css() {
 
 function scss() {
   return gulp
-    .src("src/**/*.scss")
+    .src("src/layouts/*.scss")
     .pipe(plumber())
     .pipe(concat("bundle.css"))
     .pipe(sass())
