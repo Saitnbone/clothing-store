@@ -22,21 +22,20 @@ function pug() {
     .pipe(browserSync.reload({ stream: true }));
 }
 
+function scss() {
+  return gulp
+    .src("src/layouts/*.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(gulp.dest("dist/"))
+    .pipe(browserSync.reload({ stream: true }));
+}
+
 function css() {
   return gulp
     .src("src/styles/**/*.css")
     .pipe(plumber())
     .pipe(concat("bundle.css"))
-    .pipe(gulp.dest("dist/"))
-    .pipe(browserSync.reload({ stream: true }));
-}
-
-function scss() {
-  return gulp
-    .src("src/layouts/*.scss")
-    .pipe(plumber())
-    .pipe(concat("bundle.css"))
-    .pipe(sass())
     .pipe(gulp.dest("dist/"))
     .pipe(browserSync.reload({ stream: true }));
 }
