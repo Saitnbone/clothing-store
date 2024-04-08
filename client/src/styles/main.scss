@@ -149,30 +149,30 @@
 
 // Медиазапросы для блока header
 
-@media (width <= 1439px) {
-  .header__navigation-block {
-    justify-content: flex-end;
-  }
+// @media (width <= 1439px) {
+//   .header__navigation-block {
+//     justify-content: flex-end;
+//   }
 
-  .header__button {
-    grid-template-columns: span 2;
-  }
+//   .header__button {
+//     grid-template-columns: span 2;
+//   }
 
-  .header__list-about {
-    display: none;
-  }
+//   .header__list-about {
+//     display: none;
+//   }
 
-  .header__element:nth-child(3) {
-    padding-inline-start: 30%;
-    /* padding-inline-start: 7.7rem; */
-  }
-}
+//   .header__element:nth-child(3) {
+//     padding-inline-start: 30%;
+//     /* padding-inline-start: 7.7rem; */
+//   }
+// }
 
-@media (width <= 768px) {
-}
+// @media (width <= 768px) {
+// }
 
-@media (width <= 375px) {
-}
+// @media (width <= 375px) {
+// }
 
 /* 
   ---------------------------------------------------------------
