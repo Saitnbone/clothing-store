@@ -10,7 +10,7 @@
 ---------------------------------------------------------------
 */
 
-/* Общие стили для блока header */
+// Общие стили для блока header
 
 .header {
   display: flex;
@@ -147,11 +147,11 @@
   }
 }
 
-/* Медиазапросы для блока header */
+// Медиазапросы для блока header
 
 @media (width <= 1439px) {
   .header__navigation-block {
-    // justify-content: flex-end;
+    justify-content: flex-end;
   }
 
   .header__button {
@@ -178,128 +178,122 @@
   ---------------------------------------------------------------
                       Стили для блока main
   ---------------------------------------------------------------
-  */
+*/
 
-/* Общие стили для блока main */
+// Общие стили для блока main
 
 .main {
   padding-inline-start: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
   padding-inline-end: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
-}
 
-/* Стили для секции main__section-category */
+  // Стили для секции main__section-category
+  &__section-category {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    padding-block-start: 100px;
 
-.main__section-category {
-  display: flex;
-  flex-direction: column;
-  gap: 46px;
-  padding-block-start: 100px;
-}
+    &-title {
+      font-size: 36px;
+      line-height: 42px;
+      letter-spacing: 0%;
+      color: var(--text-second-color);
+    }
 
-.main__section-category-title {
-  font-size: 36px;
-  line-height: 42px;
-  letter-spacing: 0%;
-  color: var(--text-second-color);
-}
+    &-list {
+      display: flex;
+      gap: 15px;
 
-.main__section-category-list {
-  display: flex;
-  gap: 15px;
-}
+      &-item {
+        position: relative;
+        transition: transform 0.4s ease-in-out;
 
-.main__section-category-list-item {
-  position: relative;
-  transition: transform 0.4s ease-in-out;
-}
+        &:hover {
+          transform: scale(1.1);
+        }
 
-.main__section-category-list-item:hover {
-  transform: scale(1.1);
-}
+        &:active {
+          opacity: 0.7;
+        }
 
-.main__section-category-list-item-title {
-  inline-size: 100%;
-  position: absolute;
-  bottom: 0.7%;
-  color: var(--text-color);
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
-  background-color: var(--background-color);
-  padding-block-start: 8px;
-  padding-block-end: 5px;
-}
+        &-title {
+          inline-size: 100%;
+          position: absolute;
+          bottom: 0.7%;
+          color: var(--text-color);
+          font-size: 20px;
+          line-height: 23px;
+          text-align: center;
+          background-color: var(--background-color);
+          padding-block-start: 8px;
+          padding-block-end: 5px;
+        }
+        &-image {
+          object-fit: cover;
+          object-position: center;
+        }
+      }
+    }
+  }
 
-.main__section-category-list-item:active {
-  opacity: 0.7;
-}
+  // Стили для секции main__section-subscription
+  &__section-subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-block-start: 100px;
+    text-align: center;
+    color: var(--text-second-color);
 
-.main__section-category-list-item-image {
-  object-fit: cover;
-  object-position: center;
-}
+    &-title {
+      font-size: 36px;
+      line-height: 42px;
+      letter-spacing: 1px;
+      padding-block-end: 47px;
+    }
 
-/* Стили для секции main__section-subscription */
+    &-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding-block-end: 24px;
 
-.main__section-subscription {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-block-start: 100px;
-  text-align: center;
-  color: var(--text-second-color);
-}
+      &-input {
+        inline-size: 600px;
+        block-size: 50px;
 
-.main__section-subscription-title {
-  font-size: 36px;
-  line-height: 42px;
-  letter-spacing: 1px;
-  padding-block-end: 47px;
-}
+        &::placeholder {
+          font-size: 16px;
+          text-align: center;
+          line-height: 19px;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      &-buttom {
+        inline-size: 600px;
+        block-size: 50px;
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 19px;
+        background-color: var(--accent-color);
+        color: var(--text-color);
+        padding: 16px 81px 17px 81px;
 
-.main__section-subscription-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-block-end: 24px;
-}
-
-.main__section-subscription-form-input {
-  inline-size: 600px;
-  block-size: 50px;
-}
-
-.main__section-subscription-form-input::placeholder {
-  font-size: 16px;
-  text-align: center;
-  line-height: 19px;
-}
-
-.main__section-subscription-form-input:focus {
-  outline: none;
-}
-
-.main__section-subscription-form-buttom {
-  inline-size: 600px;
-  block-size: 50px;
-  font-size: 16px;
-  text-transform: uppercase;
-  line-height: 19px;
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  padding: 16px 81px 17px 81px;
-}
-
-.main__section-subscription-form-buttom:hover {
-  box-shadow: var(--box-shadow);
-}
-
-.main__section-subscription-text {
-  color: var(--text-second-color);
-  font-weight: 200;
-  font-size: 16px;
-  line-height: 19px;
+        &:hover {
+          box-shadow: var(--box-shadow);
+        }
+      }
+    }
+    &-text {
+      color: var(--text-second-color);
+      font-weight: 200;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
 }
 
 /* Медиазапросы для блока main */
