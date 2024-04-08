@@ -308,9 +308,9 @@
   ---------------------------------------------------------------
                       Стили для блока footer
   ---------------------------------------------------------------
-  */
+*/
 
-/* Общие стили для блока footer */
+// Общие стили для блока footer
 
 .footer {
   display: grid;
@@ -318,33 +318,31 @@
   gap: 3.26vw;
   padding: 99px clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem) 74px
     clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
+
+  // Стили для блока footer__section
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &-title {
+      font-size: 20px;
+      text-transform: uppercase;
+      line-height: 23px;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &-item:hover {
+        opacity: 0.5;
+      }
+    }
+  }
 }
 
-/* Стили для блока footer__section */
-
-.footer__section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.footer__section-title {
-  font-size: 20px;
-  text-transform: uppercase;
-  line-height: 23px;
-}
-
-.footer__section-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer__section-list-item:hover {
-  opacity: 0.5;
-}
-
-/* Медиазапросы для блока footer */
+// Медиазапросы для блока footer
 
 @media (width <= 768px) {
 }
