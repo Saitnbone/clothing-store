@@ -6,7 +6,7 @@
 */
 /* 
 ---------------------------------------------------------------
-                    Стили для блока header
+                          Стили для блока header
 ---------------------------------------------------------------
 */
 
@@ -16,158 +16,142 @@
   display: flex;
   flex-direction: column;
   gap: 50vh;
-}
 
-.header__navigation-block {
-  display: flex;
-  padding-block-start: 33px;
-  padding-inline-start: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
-  padding-inline-end: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
-  line-height: 21px;
-  color: var(--text-color);
-  text-transform: uppercase;
+  &__main-page {
+    min-height: 134vh;
+    background-image: url("../dist/images/background-image.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-  .header__button:hover {
-    opacity: 0.5;
+    .header__navigation-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-block-start: 33px;
+      line-height: 21px;
+      color: var(--text-color);
+      text-transform: uppercase;
+
+      .header__button:hover {
+        opacity: 0.5;
+      }
+
+      .header__list-about {
+        display: flex;
+        gap: 1.575rem;
+        font-size: 18px;
+
+        &-item-buttom {
+          text-transform: uppercase;
+
+          &:hover {
+            box-shadow: var(--box-shadow);
+            opacity: 0.5;
+          }
+          &:active {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .header__title {
+        text-align: center;
+        font-size: 50px;
+        letter-spacing: 4px;
+      }
+
+      .header__list-of-tools {
+        display: flex;
+        gap: 27px;
+
+        &-item-button {
+          display: flex;
+          line-height: 21px;
+          font-size: 18px;
+          text-transform: uppercase;
+        }
+      }
+
+      .header__list-of-things {
+        display: flex;
+        gap: 30px;
+        font-size: 18px;
+
+        &-item {
+          display: flex;
+          flex-direction: row;
+
+          &:hover {
+            cursor: pointer;
+            box-shadow: var(--box-shadow);
+            opacity: 0.5;
+          }
+        }
+      }
+      .header__element:nth-child(2) {
+        padding-inline-start: 9%;
+        /* padding-inline-start: 6.625rem; */
+      }
+
+      .header__element:nth-child(3) {
+        padding-inline-start: 11%;
+        /* padding-inline-start: 7.7rem; */
+      }
+
+      .header__element:nth-child(4) {
+        padding-inline-start: 7.6%;
+        /* padding-inline-start: 5.875rem; */
+      }
+      .header__element:nth-child(5) {
+        padding-inline-start: 4.9rem;
+      }
+    }
+
+    .header__collection-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: var(--text-color);
+
+      &-title {
+        font-size: 46px;
+        font-weight: 300;
+        line-height: 54px;
+      }
+
+      &-line {
+        display: block;
+        height: 1px;
+        width: 120px;
+        background-color: var(--text-color);
+
+        &-link {
+          padding-block-start: 5px;
+          padding-inline-start: 15px;
+          line-height: 19px;
+          text-transform: uppercase;
+
+          &:hover {
+            opacity: 0.5;
+          }
+
+          &:active {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
   }
-}
-
-.header__main-page {
-  min-height: 134vh;
-  background-image: url("../dist/images/background-image.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-// .header__navigation-block {
-//   display: flex;
-//   padding-block-start: 33px;
-//   padding-inline-start: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
-//   padding-inline-end: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
-//   line-height: 21px;
-//   color: var(--text-color);
-//   text-transform: uppercase;
-// }
-
-// .header__button:hover {
-//   opacity: 0.5;
-// }
-
-.header__list-about {
-  display: flex;
-  gap: 1.575rem;
-  font-size: 18px;
-}
-
-.header__list-about-item-buttom {
-  text-transform: uppercase;
-}
-
-.header__list-about-item-buttom:hover {
-  box-shadow: var(--box-shadow);
-  opacity: 0.5;
-}
-
-.header__list-about-item-buttom:active {
-  opacity: 0.7;
-}
-
-.header__title {
-  text-align: center;
-  font-size: 50px;
-  letter-spacing: 4px;
-}
-
-.header__list-of-tools {
-  display: flex;
-  gap: 27px;
-}
-
-.header__list-of-tools-item-button {
-  display: flex;
-  line-height: 21px;
-  font-size: 18px;
-  text-transform: uppercase;
-}
-
-.header__list-of-things {
-  display: flex;
-  gap: 30px;
-  font-size: 18px;
-}
-
-.header__list-of-things-item {
-  display: flex;
-  flex-direction: row;
-}
-
-.header__list-of-things-item:hover {
-  cursor: pointer;
-  box-shadow: var(--box-shadow);
-  opacity: 0.5;
-}
-
-.header__element:nth-child(2) {
-  padding-inline-start: 9%;
-  /* padding-inline-start: 6.625rem; */
-}
-
-.header__element:nth-child(3) {
-  padding-inline-start: 11%;
-  /* padding-inline-start: 7.7rem; */
-}
-
-.header__element:nth-child(4) {
-  padding-inline-start: 7.6%;
-  /* padding-inline-start: 5.875rem; */
-}
-.header__element:nth-child(5) {
-  padding-inline-start: 4.9rem;
-}
-
-.header__collection-block {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 14px;
-  color: var(--text-color);
-}
-
-.header__collection-block-title {
-  font-size: 46px;
-  font-weight: 300;
-  line-height: 54px;
-}
-
-.header__collection-block-line {
-  display: block;
-  height: 1px;
-  width: 120px;
-  background-color: var(--text-color);
-}
-
-.header__collection-block-link {
-  padding-block-start: 5px;
-  padding-inline-start: 15px;
-  line-height: 19px;
-  text-transform: uppercase;
-}
-
-.header__collection-block-link:hover {
-  opacity: 0.5;
-}
-
-.header__collection-block-link:active {
-  opacity: 0.7;
 }
 
 /* Медиазапросы для блока header */
 
 @media (width <= 1439px) {
   .header__navigation-block {
-    justify-content: flex-end;
+    // justify-content: flex-end;
   }
 
   .header__button {

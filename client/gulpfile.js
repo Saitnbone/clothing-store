@@ -27,15 +27,15 @@ function scss() {
     .src("src/layouts/*.scss")
     .pipe(plumber())
     .pipe(sass())
+    .pipe(concat("bundle.css")) // Указываем имя временного файла
     .pipe(gulp.dest("dist/"))
     .pipe(browserSync.reload({ stream: true }));
 }
 
 function css() {
   return gulp
-    .src("src/styles/**/*.css")
-    .pipe(plumber())
-    .pipe(concat("bundle.css"))
+    .src("dist/**/*.css") // Берем временные CSS файлы
+    .pipe(concat("bundle.css")) // Объединение всех CSS файлов в один
     .pipe(gulp.dest("dist/"))
     .pipe(browserSync.reload({ stream: true }));
 }
