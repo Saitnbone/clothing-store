@@ -54,9 +54,11 @@ function svg() {
     .pipe(browserSync.reload({ stream: true }));
 }
 
-function reload(done) {
-  browserSync.reload();
-  done();
+function javaScript() {
+  return gulp
+    .src("dist/**/*.js")
+    .pipe(gulp.dest("dist/scripts"))
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 function watchFiles() {
@@ -65,13 +67,22 @@ function watchFiles() {
   gulp.watch(["src/**/*.scss"], scss);
   gulp.watch(["src/images/**/*{jpg,png,gif,ico,webp,avif}"], images);
   gulp.watch(["src/svg/**/*.svg"], svg);
+  gulp.watch(["src/**/*.js"], javaScript);
 }
 
 function clean() {
   return del("dist");
 }
 
-const build = gulp.series(clean, gulp.parallel(pug, scss, images, svg));
+function reload(done) {
+  browserSync.reload();
+  done();
+}
+
+const build = gulp.series(
+  clean,
+  gulp.parallel(pug, scss, images, svg, javaScript)
+);
 const watchApp = gulp.parallel(build, watchFiles, reload, serve);
 
 // exports.html = html;
@@ -80,5 +91,6 @@ exports.css = css;
 exports.scss = scss;
 exports.images = images;
 exports.svg = svg;
+exports.javaScript = javaScript;
 exports.build = build;
 exports.watchApp = watchApp;

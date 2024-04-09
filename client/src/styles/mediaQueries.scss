@@ -13,6 +13,9 @@
   .header__main-page .header__navigation-block .header__list-about {
     display: none;
   }
+  .header__main-page .header__navigation-block .header__title {
+    padding-inline-start: 14%;
+  }
   .header__main-page .header__navigation-block .header__list-of-tools {
     display: none;
   }
@@ -25,3 +28,20 @@
 }
 
 // Медиа-запросы для блока footer
+
+@media (max-width: 950px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__section-title {
+    text-align: center;
+  }
+
+  .footer__section-list {
+    display: none;
+    align-items: center;
+  }
+}
