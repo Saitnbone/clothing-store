@@ -1,0 +1,27 @@
+/* 
+---------------------------------------------------------------
+                      Медиа-запросы для проекта 
+---------------------------------------------------------------
+*/
+
+// Медиазапросы для блока header
+
+@media (max-width: 1210px) {
+  .header__main-page .header__navigation-block {
+    justify-content: space-around;
+  }
+  .header__main-page .header__navigation-block .header__list-about {
+    display: none;
+  }
+  .header__main-page .header__navigation-block .header__list-of-tools {
+    display: none;
+  }
+}
+
+@media (width <= 768px) {
+}
+
+@media (width <= 375px) {
+}
+
+// Медиа-запросы для блока footer

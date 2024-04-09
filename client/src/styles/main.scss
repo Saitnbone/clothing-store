@@ -7,6 +7,7 @@
 /* 
 ---------------------------------------------------------------
                           Стили для блока header
+                              (все страницы)
 ---------------------------------------------------------------
 */
 
@@ -19,7 +20,7 @@
 
   &__main-page {
     min-height: 134vh;
-    background-image: url("../dist/images/background-image.png");
+    // background-image: url("../dist/images/background-image.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -147,54 +148,30 @@
   }
 }
 
-// Медиазапросы для блока header
-
-// @media (width <= 1439px) {
-//   .header__navigation-block {
-//     justify-content: flex-end;
-//   }
-
-//   .header__button {
-//     grid-template-columns: span 2;
-//   }
-
-//   .header__list-about {
-//     display: none;
-//   }
-
-//   .header__element:nth-child(3) {
-//     padding-inline-start: 30%;
-//     /* padding-inline-start: 7.7rem; */
-//   }
-// }
-
-// @media (width <= 768px) {
-// }
-
-// @media (width <= 375px) {
-// }
-
 /* 
   ---------------------------------------------------------------
-                      Стили для блока main
+                        Стили для блока main
+                    (основная страница магазина)
   ---------------------------------------------------------------
 */
 
 // Общие стили для блока main
 
 .main {
-  padding-inline-start: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
-  padding-inline-end: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   // Стили для секции main__section-category
   &__section-category {
     display: flex;
     flex-direction: column;
     gap: 46px;
-    padding-block-start: 100px;
+    margin: 100px 20px 0 20px;
 
     &-title {
-      font-size: 36px;
+      font-size: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
       line-height: 42px;
       letter-spacing: 0%;
       color: var(--text-second-color);
@@ -228,9 +205,10 @@
           padding-block-start: 8px;
           padding-block-end: 5px;
         }
+
         &-image {
-          object-fit: cover;
-          object-position: center;
+          max-width: 100%;
+          height: auto;
         }
       }
     }
@@ -242,12 +220,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-block-start: 100px;
+    margin: 100px 20px 0 20px;
     text-align: center;
     color: var(--text-second-color);
 
     &-title {
-      font-size: 36px;
+      font-size: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
       line-height: 42px;
       letter-spacing: 1px;
       padding-block-end: 47px;
@@ -260,7 +238,7 @@
       padding-block-end: 24px;
 
       &-input {
-        inline-size: 600px;
+        inline-size: 100%;
         block-size: 50px;
 
         &::placeholder {
@@ -296,7 +274,11 @@
   }
 }
 
-/* Медиазапросы для блока main */
+// @media (width <= 1210px) {
+//   .main__section-category {
+//     margin: 0 20px;
+//   }
+// }
 
 @media (width <= 768px) {
 }
@@ -307,6 +289,7 @@
 /* 
   ---------------------------------------------------------------
                       Стили для блока footer
+                          (все страницы)
   ---------------------------------------------------------------
 */
 
@@ -314,10 +297,12 @@
 
 .footer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3.26vw;
-  padding: 99px clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem) 74px
-    clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
+  gap: 46px;
+  grid-template-columns: repeat(4, minmax(100px, 250px));
+  justify-content: center;
+  margin-block-start: 94px;
+  margin-inline-start: clamp(10px, 10%, 100px);
+  margin-inline-end: clamp(10px, 5%, 100px);
 
   // Стили для блока footer__section
   &__section {
@@ -340,12 +325,4 @@
       }
     }
   }
-}
-
-// Медиазапросы для блока footer
-
-@media (width <= 768px) {
-}
-
-@media (width <= 375px) {
 }

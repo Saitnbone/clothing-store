@@ -4,7 +4,6 @@
                           (Authorization Page)
 ---------------------------------------------------------------
 */
-
 /* 
 ---------------------------------------------------------------
                       Стили для блока main
@@ -14,77 +13,6 @@
 /* Общие настройки для блока main */
 
 .main {
-  padding-inline-start: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
-  padding-inline-end: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
 }
 
 /* Стили для блока main__section-subscription */
-
-.main__section-subscription {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-block-start: 143px;
-  text-align: center;
-  color: var(--text-second-color);
-}
-
-.main__section-subscription-title {
-  font-size: 36px;
-  line-height: 42px;
-  letter-spacing: 1px;
-  padding-block-end: 47px;
-}
-
-.main__section-subscription-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-block-end: 24px;
-}
-
-.main__section-subscription-form-input {
-  inline-size: 600px;
-  block-size: 50px;
-}
-
-.main__section-subscription-form-input::placeholder {
-  font-size: 16px;
-  text-align: center;
-  line-height: 19px;
-}
-
-.main__section-subscription-form-input:focus {
-  outline: none;
-}
-
-.main__section-subscription-form-buttom {
-  inline-size: 600px;
-  block-size: 50px;
-  font-size: 16px;
-  text-transform: uppercase;
-  line-height: 19px;
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  padding: 16px 81px 17px 81px;
-}
-
-.main__section-subscription-form-buttom:hover {
-  box-shadow: var(--box-shadow);
-}
-
-.main__section-subscription-text {
-  color: var(--text-second-color);
-  font-weight: 200;
-  font-size: 16px;
-  line-height: 19px;
-}
-
-/* Медиазапросы для блока main */
-
-@media (width <= 768px) {
-}
-
-@media (width <= 375px) {
-}

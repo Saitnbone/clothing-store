@@ -9,49 +9,13 @@
 }
 /* 
   ---------------------------------------------------------------
-                      Стили для блока header
-  ---------------------------------------------------------------
-  */
-
-/* Медиазапросы для блока header */
-
-// @media (width <= 1439px) {
-//   .header__navigation-block {
-//     justify-content: flex-end;
-//   }
-
-//   .header__button {
-//     grid-template-columns: span 2;
-//   }
-
-//   .header__list-about {
-//     display: none;
-//   }
-
-//   .header__element:nth-child(3) {
-//     padding-inline-start: 30%;
-//     /* padding-inline-start: 7.7rem; */
-//   }
-// }
-
-// @media (width <= 768px) {
-// }
-
-// @media (width <= 375px) {
-// }
-
-/* 
-  ---------------------------------------------------------------
                       Стили для блока main
   ---------------------------------------------------------------
-  */
+*/
 
 /* Общие стили для блока main */
 
 .main {
-  padding-block-start: 35px;
-  padding-inline-start: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
-  padding-inline-end: clamp(4.688rem, 18.029vw - 6.851rem, 9.375rem);
 }
 
 .main__navigation {
@@ -154,15 +118,4 @@
   font-weight: 200;
   font-size: 16px;
   line-height: 19px;
-}
-
-/* Медиазапросы для блока main */
-
-@media (width <= 1439px) {
-}
-
-@media (width <= 768px) {
-}
-
-@media (width <= 375px) {
 }
