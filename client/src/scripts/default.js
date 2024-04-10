@@ -2,7 +2,7 @@
 
 // Перменные для проекта
 
-const headerButton = document.querySelector(".header__button");
+// const headerButton = document.querySelector(".header__button");
 const footerSections = document.querySelectorAll(".footer__section");
 
 // @todo Функция открытия меню в блоке header
@@ -25,6 +25,7 @@ function openFooterList(event) {
   const footerButton = event.currentTarget.querySelector(
     ".footer__section-list"
   );
-  footerButton.style.display =
-    footerButton.style.display === "none" ? "flex" : "none";
+  if (window.innerWidth <= 950 && footerButton) {
+    footerButton.classList.toggle("footer__section-list_show");
+  }
 }

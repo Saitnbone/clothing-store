@@ -44,6 +44,16 @@
 
   .footer__section-list {
     display: none;
+  }
+
+  .footer__section-list_show {
+    display: flex;
     align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    &-item:hover {
+      opacity: 0.5;
+    }
   }
 }
