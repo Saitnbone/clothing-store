@@ -244,11 +244,14 @@
     &-form {
       display: flex;
       flex-direction: column;
+      inline-size: 100%;
       gap: 20px;
       padding-block-end: 24px;
+      // padding-inline-start: 20px;
+      // padding-inline-end: 20px;
 
       &-input {
-        inline-size: 600px;
+        inline-size: 100%;
         block-size: 50px;
 
         &::placeholder {
@@ -262,7 +265,7 @@
         }
       }
       &-buttom {
-        inline-size: 600px;
+        inline-size: 100%;
         block-size: 50px;
         font-size: 16px;
         text-transform: uppercase;
@@ -285,14 +288,14 @@
   }
 }
 
-@media (width <= 768px) {
-  .main__section-subscription-form-input {
-    inline-size: 355px;
-  }
-  .main__section-subscription-form-buttom {
-    inline-size: 355px;
-  }
-}
+// @media (width <= 768px) {
+//   .main__section-subscription-form-input {
+//     inline-size: 355px;
+//   }
+//   .main__section-subscription-form-buttom {
+//     inline-size: 355px;
+//   }
+// }
 
 @media (width <= 375px) {
 }
@@ -310,11 +313,7 @@
   gap: 46px;
   grid-template-columns: repeat(4, minmax(100px, 250px));
   justify-content: center;
-  margin-block-start: 94px;
-  // margin-inline-start: clamp(10px, 10%, 100px);
-  // margin-inline-end: clamp(10px, 5%, 100px);
-  margin-inline-start: 20px;
-  margin-inline-end: 20px;
+  margin: 94px 20px 71px 20px;
 
   // Стили для блока footer__section
   &__section {
