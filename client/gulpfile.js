@@ -56,8 +56,8 @@ function svg() {
 
 function javaScript() {
   return gulp
-    .src("dist/**/*.js")
-    .pipe(gulp.dest("dist/scripts"))
+    .src("src/**/*.js")
+    .pipe(gulp.dest("dist/"))
     .pipe(browserSync.reload({ stream: true }));
 }
 

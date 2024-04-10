@@ -145,10 +145,8 @@
   }
 }
 
-@media (max-width: 1210px) {
-}
-
-@media (max-width: 481px) {
+// Медиазапросы для блока header main-page
+@media (width <= 568px) {
   .header__main-page {
     background-image: url("../dist/images/mobile-background-image.png");
     background-size: 100vw auto;
@@ -247,8 +245,6 @@
       inline-size: 100%;
       gap: 20px;
       padding-block-end: 24px;
-      // padding-inline-start: 20px;
-      // padding-inline-end: 20px;
 
       &-input {
         inline-size: 100%;
@@ -288,14 +284,14 @@
   }
 }
 
-// @media (width <= 768px) {
-//   .main__section-subscription-form-input {
-//     inline-size: 355px;
-//   }
-//   .main__section-subscription-form-buttom {
-//     inline-size: 355px;
-//   }
-// }
+@media (width <= 568px) {
+  .main__section-category-list {
+    overflow-y: scroll;
+  }
+  .main__section-category-list-item {
+    min-width: calc(50% - 10px);
+  }
+}
 
 @media (width <= 375px) {
 }

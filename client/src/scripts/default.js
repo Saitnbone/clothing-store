@@ -1,11 +1,30 @@
-// Файл для скрипта, который применяется для все сраниц онлайн-магазина
+// Файл для скрипта, который применяется для всей сраниц онлайн-магазина
 
 // Перменные для проекта
 
-const footerButton = document.querySelector(".footer__section-list");
+const headerButton = document.querySelector(".header__button");
+const footerSections = document.querySelectorAll(".footer__section");
 
-// @todo Функция открытия списков
+// @todo Функция открытия меню в блоке header
 
-footerButton.addEventListener("click", openFooterList);
+// headerButton.addEventListener("click", openHeaderMenu);
 
-function openFooterList() {}
+// function openHeaderMenu() {
+//   headerButton.style.display === "none"
+//     ? (headerButton.style.display = "flex")
+//     : (headerButton.style.display = "none");
+// }
+
+// @todo Функция открытия списков в блоке footer
+
+footerSections.forEach((element) => {
+  element.addEventListener("click", openFooterList);
+});
+
+function openFooterList(event) {
+  const footerButton = event.currentTarget.querySelector(
+    ".footer__section-list"
+  );
+  footerButton.style.display =
+    footerButton.style.display === "none" ? "flex" : "none";
+}
