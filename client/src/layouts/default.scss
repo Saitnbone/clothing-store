@@ -1,9 +1,140 @@
-@import "../styles/global.scss";
-@import "../styles/variables.scss";
-@import "../styles/main.scss";
-// @import "../styles/catalog.scss";
-// @import "../styles/contacts.scss";
-// @import "../styles/returns.scss";
-// @import "../styles/authorization.scss";
-@import "../styles/mediaQueries.scss";
+/* 
+---------------------------------------------------------------
+                      Общие стили для проекта
+---------------------------------------------------------------
+*/
 
+// Стили для блока header
+
+.header__navigation-block {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-block-start: 33px;
+  line-height: 21px;
+  color: var(--text-second-color);
+  text-transform: uppercase;
+}
+.header__button:hover {
+  opacity: 0.5;
+}
+
+.header__list-about {
+  display: flex;
+  gap: 1.575rem;
+  font-size: 18px;
+}
+
+.header__list-about-item-buttom {
+  text-transform: uppercase;
+}
+.header__list-about-item-buttom:hover {
+  box-shadow: var(--box-shadow);
+  opacity: 0.5;
+}
+
+.header__list-about-item-buttom:active {
+  opacity: 0.7;
+}
+
+.header__title {
+  text-align: center;
+  font-size: clamp(1.375rem, 0.7588rem + 2.6291vw, 3.125rem);
+  letter-spacing: 4px;
+}
+
+.header__list-of-tools {
+  display: flex;
+  gap: 27px;
+}
+.header__list-of-tools-item-button {
+  display: flex;
+  line-height: 21px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.header__list-of-things {
+  display: flex;
+  gap: 30px;
+  font-size: 18px;
+}
+.header__list-of-things-item {
+  display: flex;
+  flex-direction: row;
+}
+.header__list-of-things-item:hover {
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  opacity: 0.5;
+}
+
+// Медиазапросы для блока header
+
+@media (max-width: 1210px) {
+  .header__main-page .header__navigation-block {
+    justify-content: space-around;
+  }
+  .header__main-page .header__navigation-block .header__list-about {
+    display: none;
+  }
+  .header__main-page .header__navigation-block .header__title {
+    padding-inline-start: 14%;
+  }
+  .header__main-page .header__navigation-block .header__list-of-tools {
+    display: none;
+  }
+}
+
+@media (width <= 900px) {
+  .header__main-page
+    .header__navigation-block
+    .header__list-of-things-item:nth-child(1) {
+    display: none;
+  }
+
+  .header__main-page
+    .header__navigation-block
+    .header__list-of-things-item:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (width <= 375px) {
+}
+
+//
+
+//  Стили для блока footer
+
+// Медиа-запросы для блока footer
+
+@media (max-width: 950px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+  }
+
+  .footer__section-title {
+    text-align: center;
+  }
+
+  .footer__section-list {
+    display: none;
+  }
+
+  .footer__section-list_show {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    &-item:hover {
+      opacity: 0.5;
+    }
+  }
+}

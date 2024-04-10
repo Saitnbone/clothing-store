@@ -24,7 +24,7 @@ function pug() {
 
 function scss() {
   return gulp
-    .src("src/layouts/*.scss")
+    .src("src/layouts/imports.scss")
     .pipe(plumber())
     .pipe(sass())
     .pipe(concat("bundle.css")) // Указываем имя временного файла

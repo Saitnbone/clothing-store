@@ -1,12 +1,13 @@
 /* 
 ---------------------------------------------------------------
-                      Стили для страницы контактов
-                          (Contacts Page)
+                      Стили для страницы "Контакты"
+                            
 ---------------------------------------------------------------
 */
-.page {
-  color: var(--text-second-color);
-}
+// .page {
+//   color: var(--text-second-color);
+// }
+
 /* 
   ---------------------------------------------------------------
                       Стили для блока main
@@ -57,65 +58,4 @@
   font-style: normal;
 }
 
-/* Стили для секции main__section-subscription */
-
-.main__section-subscription {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-block-start: 143px;
-  text-align: center;
-  color: var(--text-second-color);
-}
-
-.main__section-subscription-title {
-  font-size: 36px;
-  line-height: 42px;
-  letter-spacing: 1px;
-  padding-block-end: 47px;
-}
-
-.main__section-subscription-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  padding-block-end: 24px;
-}
-
-.main__section-subscription-form-input {
-  inline-size: 600px;
-  block-size: 50px;
-}
-
-.main__section-subscription-form-input::placeholder {
-  font-size: 16px;
-  text-align: center;
-  line-height: 19px;
-}
-
-.main__section-subscription-form-input:focus {
-  outline: none;
-}
-
-.main__section-subscription-form-buttom {
-  inline-size: 600px;
-  block-size: 50px;
-  font-size: 16px;
-  text-transform: uppercase;
-  line-height: 19px;
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  padding: 16px 81px 17px 81px;
-}
-
-.main__section-subscription-form-buttom:hover {
-  box-shadow: var(--box-shadow);
-}
-
-.main__section-subscription-text {
-  color: var(--text-second-color);
-  font-weight: 200;
-  font-size: 16px;
-  line-height: 19px;
-}
+// Стили для секции main__section-subscription

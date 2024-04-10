@@ -2,18 +2,16 @@
 
 // Перменные для проекта
 
-// const headerButton = document.querySelector(".header__button");
+const headerButton = document.querySelector(".header__button");
 const footerSections = document.querySelectorAll(".footer__section");
 
 // @todo Функция открытия меню в блоке header
 
-// headerButton.addEventListener("click", openHeaderMenu);
+headerButton.addEventListener("click", openHeaderMenu);
 
-// function openHeaderMenu() {
-//   headerButton.style.display === "none"
-//     ? (headerButton.style.display = "flex")
-//     : (headerButton.style.display = "none");
-// }
+function openHeaderMenu() {
+  
+}
 
 // @todo Функция открытия списков в блоке footer
 
