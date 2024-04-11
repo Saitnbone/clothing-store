@@ -4,6 +4,35 @@
                             (Returns Page)
 ---------------------------------------------------------------
 */
+
+@media (max-width: 1210px) {
+  .header__navigation-block {
+    justify-content: space-around;
+  }
+  .header__list-about {
+    display: none;
+  }
+  .header__title {
+    padding-inline-start: 14%;
+  }
+  .header__list-of-tools {
+    display: none;
+  }
+}
+
+@media (width <= 900px) {
+  .header__main-page
+    .header__navigation-block
+    .header__list-of-things-item:nth-child(1) {
+    display: none;
+  }
+
+  .header__main-page
+    .header__navigation-block
+    .header__list-of-things-item:nth-child(2) {
+    display: none;
+  }
+}
 /* 
   ---------------------------------------------------------------
                       Стили для блока main
@@ -12,40 +41,67 @@
 
 /* Общие стили для блока main */
 
-.main {
-}
-
-.main__navigation {
+.returns__main {
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  min-block-size: 80vh;
+  align-items: center;
+  margin-block-start: 30px;
+  margin-inline-start: 20px;
+  margin-inline-end: 20px;
+  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+
+  &-navigation {
+    display: flex;
+    gap: 30px;
+  }
+
+  .returns__main-information {
+    display: flex;
+    flex-direction: column;
+    padding-block-start: 30px;
+
+    &-title {
+      margin-block-start: 27px;
+      font-size: clamp(1.125rem, 1.081rem + 0.1878vw, 1.25rem);
+    }
+    &-text {
+      margin-block-start: 16px;
+      line-height: 20px;
+    }
+
+  }
 }
 
-.main__returns-information {
-  padding-block-start: 30px;
-}
-
-.main__returns-information-title {
-  font-size: 20px;
-}
-
-.main__returns-information-text:nth-child(2) {
+.returns__main-information-text:nth-child(2) {
   padding-block-start: 19px;
 }
 
-.main__returns-information-text:nth-child(3) {
+.returns__main-information-text:nth-child(3) {
   padding-block-start: 10px;
 }
 
 .main__returns-information-list {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  padding-block-start: 20px;
+  grid-template-columns: repeat(6, minmax(100px, 165px));
+  gap: 30px;
+  margin-block-start: 20px;
 }
 
 .main__returns-information-list-item {
   display: flex;
   flex-direction: column;
+  gap: 10px;
   align-items: center;
-  justify-content: center;
   text-align: center;
+  line-height: 20px;
+  text-align: center;
+}
+// Медиазапросы для блока main
+
+@media (width <= 950px) {
+  .main__returns-information-list {
+    display: flex;
+    flex-direction: column;
+  }
 }

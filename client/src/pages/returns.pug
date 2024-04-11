@@ -4,36 +4,41 @@ block variables
   - var title = 'Магазин одежды YANKI | Возврат и обмен '
 
 block content
-  main.main
-    div.main__navigation
-      span.main__navigation-item
-        a(href='http://127.0.0.1:5500/client/views/index.html') Главная
-      span.main__navigation-item Возврат и обмен
-    section.main__returns-information
-      h2.main__returns-information-title Обмен и возврат
-      p.main__returns-information-text
+  main.returns__main
+    section.returns__main-information
+      div.returns__main-navigation
+        span.returns__main-navigation-item
+          a(href='http://127.0.0.1:5500/client/dist/main.html') Главная
+        span.returns__main-navigation-item Возврат и обмен
+      h2.returns__main-information-title Обмен и возврат
+      p.returns__main-information-text
         | Если вам не подошел заказ, мы с удовольствием вам его обменяем или
         | примем возврат
-      p.main__returns-information-text
+      p.returns__main-information-text
         | Обмен и возврат возможен в случае :
       ul.main__returns-information-list
         li.main__returns-information-list-item
-          img(src='../images/label.svg' alt='Картинка с изображением ярлыка для одежды')
+          img(src='../dist/svg/sale-icon.svg' alt='Картинка с изображением ярлыка для одежды')
           p.main__returns-information-list-item-text
-            | если заказ не был использован и сохранил товарный вид(в том числе
+            | если заказ не был использован и сохранил товарный вид (в том числе
             | не нарушены бирки, ярлыки, упаковочные материалы)
         li.main__returns-information-list-item
-          img(src='' alt='')
-          p
-        li.main__returns-information-list-item
-          img(src='' alt='')
+          img(src='../dist/svg/clock-icon.svg' alt='Картинка с изображением часов')
           p.main__returns-information-list-item-text
+            | возврат и обмен осуществляется в течение двух дней с момента получения заказа
         li.main__returns-information-list-item
-          img(src='' alt='')
+          img(src='../dist/svg/bike-icon.svg' alt='Картинка с изображеним мотоцикла')
           p.main__returns-information-list-item-text
+            | возврат и обмен товара возможен только при отправке по Украине
         li.main__returns-information-list-item
-          img(src='' alt='')
+          img(src='../dist/svg/bill-icon.svg' alt='Картинка с изображением бланка возврата товара')
           p.main__returns-information-list-item-text
+            | бланк возврата присутствует в каждой посылке
         li.main__returns-information-list-item
-          img(src='' alt='')
+          img(src='../dist/svg/coast-icon.svg' alt='')
           p.main__returns-information-list-item-text
+            | все расходы по обмену и возврату товара несет покупатель
+        li.main__returns-information-list-item
+          img(src='../dist/svg/creditcard-icon.svg' alt='')
+          p.main__returns-information-list-item-text
+            | после получения возврата мы делаем перевод денежных средств на карту клиента

@@ -88,21 +88,6 @@
             opacity: 0.5;
           }
         }
-        // }
-        // .header__element:nth-child(2) {
-        //   padding-inline-start: 9%;
-        // }
-
-        // .header__element:nth-child(3) {
-        //   padding-inline-start: 11%;
-        // }
-
-        // .header__element:nth-child(4) {
-        //   padding-inline-start: 7.6%;
-        // }
-        // .header__element:nth-child(5) {
-        //   padding-inline-start: 4.9rem;
-        // }
       }
     }
 
@@ -294,42 +279,4 @@
 }
 
 @media (width <= 375px) {
-}
-/* 
-  ---------------------------------------------------------------
-                      Стили для блока footer
-                          (все страницы)
-  ---------------------------------------------------------------
-*/
-
-// Общие стили для блока footer
-
-.footer {
-  display: grid;
-  gap: 46px;
-  grid-template-columns: repeat(4, minmax(100px, 250px));
-  justify-content: center;
-  margin: 94px 20px 71px 20px;
-
-  // Стили для блока footer__section
-  &__section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    &-title {
-      font-size: clamp(1.5rem, 1.434rem + 0.2817vw, 1.6875rem);
-      text-transform: uppercase;
-      line-height: 23px;
-    }
-    &-list {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-      &-item:hover {
-        opacity: 0.5;
-      }
-    }
-  }
 }
