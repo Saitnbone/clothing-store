@@ -40,7 +40,7 @@
 .header__title {
   text-align: center;
   padding-inline-start: 4%;
-  font-size: clamp(1.375rem, 0.7588rem + 2.6291vw, 3.125rem);
+  font-size: clamp(1.875rem, 1.5666rem + 1.7316vw, 3.125rem);
   letter-spacing: 4px;
 }
 
@@ -88,15 +88,18 @@
 }
 
 @media (width <= 900px) {
-  .header__main-page
-    .header__navigation-block
-    .header__list-of-things-item:nth-child(1) {
+  .header__main-page .header__navigation-block .header__title {
+    padding-inline-start: 9%;
+  }
+  // .header__main-page
+  //   .header__navigation-block
+  .header__list-of-things-item:nth-child(1) {
     display: none;
   }
 
-  .header__main-page
-    .header__navigation-block
-    .header__list-of-things-item:nth-child(2) {
+  // .header__main-page
+  //   .header__navigation-block
+  .header__list-of-things-item:nth-child(2) {
     display: none;
   }
 }

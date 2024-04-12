@@ -19,21 +19,60 @@
     .payments__main-navigation {
       display: flex;
       gap: 30px;
+      padding-block-start: 30px;
+    }
 
-      &-item {
+    &-title {
+      margin-block-start: 27px;
+      font-size: clamp(1.125rem, 1.081rem + 0.1878vw, 1.25rem);
+      line-height: 23px;
+    }
+
+    &-block {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(350px, 550px));
+      gap: 40px;
+      margin-block-start: 16px;
+
+      &-text {
+        margin-block-end: 10px;
+      }
+
+      &-list {
+        line-height: 20px;
+        list-style: inherit;
       }
     }
-    &-title {
-    }
-    .payments__main-methods {
-      display: flex;
-      gap: 100px;
-      &-block {
-        &-list {
-          &-item {
-          }
+
+    &-liqpay {
+      margin-block-start: 20px;
+
+      &-list {
+        display: flex;
+
+        &-item {
+          max-inline-size: 490px;
+          margin-block-end: 5px;
+        }
+
+        .third-frame {
+          list-style-image: url("../dist/svg/frame-03.svg");
         }
       }
     }
+  }
+}
+
+// Медиазапросы для блока main (payments page)
+
+@media (width <= 950px) {
+  .payments__main-information-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .payments__main-information-liqpay-list {
+    flex-direction: column;
   }
 }
