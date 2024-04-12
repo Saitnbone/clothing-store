@@ -49,14 +49,14 @@ html(lang="ru")
           li.footer__section-list-item
             a(href='#') О нас
           li.footer__section-list-item
-            a(href='http://127.0.0.1:5500/client/views/contacts.html') Контакты
+            a(href='http://127.0.0.1:5500/client/dist/contacts.html') Контакты
       section.footer__section
         h2.footer__section-title Полезное
         ul.footer__section-list
           li.footer__section-list-item
             a(href='#') Оплата и доставка
           li.footer__section-list-item
-            a(href='http://127.0.0.1:5500/client/views/returns.html') Условия возврата
+            a(href='http://127.0.0.1:5500/client/dist/returns.html') Условия возврата
           li.footer__section-list-item
             a(href='#') Бонусная система
       section.footer__section
@@ -71,10 +71,11 @@ html(lang="ru")
       section.footer__section
         h2.footer__section-title Контакты
         address.address
-          span
-            img(src='../dist/svg/instagram-icon.svg' alt='Иконка инстаграма')
-          span 
-            img(src='../dist/svg/telegram-icon.svg' alt='Иконка телеграма')
+          div.address__socials
+            span
+              img(src='../dist/svg/instagram-icon.svg' alt='Иконка инстаграма')
+            span 
+              img(src='../dist/svg/telegram-icon.svg' alt='Иконка телеграма')
           span +38(073) 096 36 44
           span info@yanki.com
     script(src="../dist/scripts/default.js")

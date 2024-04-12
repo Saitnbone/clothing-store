@@ -39,6 +39,7 @@
 
 .header__title {
   text-align: center;
+  padding-inline-start: 4%;
   font-size: clamp(1.375rem, 0.7588rem + 2.6291vw, 3.125rem);
   letter-spacing: 4px;
 }
@@ -132,13 +133,18 @@
         opacity: 0.5;
       }
     }
-    .address{
+    .address {
       display: flex;
       flex-direction: column;
+      gap: 10px;
+
+      &__socials {
+        display: flex;
+        gap: 15px;
+      }
     }
   }
 }
-
 
 // Медиа-запросы для блока footer
 
@@ -173,5 +179,8 @@
     &-item:hover {
       opacity: 0.5;
     }
+  }
+  .address__socials {
+    justify-content: center;
   }
 }

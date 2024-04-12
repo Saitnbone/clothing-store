@@ -1,0 +1,45 @@
+extends ../layouts/default.pug
+
+block variables 
+  - var title = 'Магазин одежды YANKI | Оплата'
+
+block content
+  main.payments__main
+    section.payments__main-information
+      div.payments__main-navigation
+        span.payments__main-navigation-item
+         a(href='http://127.0.0.1:5500/client/dist/main.html') Главная
+        span.payments__main-navigation-item
+        | Оплата и доставка
+      h2.payments__main-information-title Оплата и доставка
+      div.payments__main-methods
+        div.payments__main-information-block
+          p
+            | Вы можете оплатить покупку одним из ниже перечисленных способов:
+          ul.payments__main-information-block-list
+            li.payments__main-information-block-list-item
+              | наложенным платежом в отделении Новой Почты;
+            li.payments__main-information-block-list-item
+              | денежным переводом Visa/MasterCard;
+            li.payments__main-information-block-list-item
+              | полная предоплата через Приват 24.
+          p Мы готовы предложить несколько вариантов доставки:
+          ul.payments__main-information-block-list
+            li.payments__main-information-block-list-item
+              | отправка по всей Украине в отделение Новой Почты(1-2 дня);
+            li.payments__main-information-block-list-item
+              | международные сервисы доставки для жителей зарубежья: Укрпочта(
+              | 1-3 недели ,DHL(3-7 дней));
+            li.payments__main-information-block-list-item
+              | Срок доставки: 1–2 дня с момента заказа.
+        div.payments__main-information-liqpay
+          p Процесс оформления заказа с помощью LIQPAY:
+          ul.payments__main-information-liqpay-list
+            li.payments__main-information-liqpay-list-item
+              | Выбрать в корзине способ оплаты "LIQPAY";
+            li.payments__main-information-liqpay-list-item
+              | Подтвердить заказ;
+            li.payments__main-information-liqpay-list-item
+              | После этого Вас перенаправит на сайт LIQPAY, где вы выбираете
+              | удобный для вас способ оплаты: через Приват24, или с помощью карты
+              | Mastercard/VISA со всего мира.
