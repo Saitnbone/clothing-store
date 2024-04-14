@@ -51,8 +51,17 @@
         display: flex;
 
         &-item {
+          position: absolute;
           max-inline-size: 490px;
           margin-block-end: 5px;
+        }
+
+        .first-frame {
+          list-style-image: url("../dist/svg/frame-01.svg");
+        }
+
+        .second-frame {
+          list-style-image: url("../dist/svg/frame-02.svg");
         }
 
         .third-frame {
