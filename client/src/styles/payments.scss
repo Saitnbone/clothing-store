@@ -18,7 +18,7 @@
   &-information {
     .payments__main-navigation {
       display: flex;
-      gap: 30px;
+      gap: 10px;
       padding-block-start: 30px;
     }
 
@@ -40,7 +40,20 @@
 
       &-list {
         line-height: 20px;
-        list-style: inherit;
+        // list-style: inherit;
+
+        &-item {
+          position: relative;
+
+          &::before {
+            position: absolute;
+            content: "•";
+          }
+
+          p {
+            padding-inline-start: 10px;
+          }
+        }
       }
     }
 
@@ -49,23 +62,15 @@
 
       &-list {
         display: flex;
+        justify-content: space-around;
+        margin-block-start: 25px;
 
         &-item {
-          position: absolute;
+          display: flex;
+          gap: 15px;
           max-inline-size: 490px;
           margin-block-end: 5px;
-        }
-
-        .first-frame {
-          list-style-image: url("../dist/svg/frame-01.svg");
-        }
-
-        .second-frame {
-          list-style-image: url("../dist/svg/frame-02.svg");
-        }
-
-        .third-frame {
-          list-style-image: url("../dist/svg/frame-03.svg");
+          align-items: center;
         }
       }
     }
@@ -83,5 +88,13 @@
 
   .payments__main-information-liqpay-list {
     flex-direction: column;
+    gap: 15px;
   }
+
+  // необходимо исправить фреймы изображений пунктов меню оплаты
+
+  // .frame-mage {
+  //   inline-size: 35px;
+  //   block-size: 39px;
+  // }
 }
