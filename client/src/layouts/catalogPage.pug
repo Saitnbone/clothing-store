@@ -1,0 +1,83 @@
+block variables
+
+html(lang="ru")
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet' href='../dist/bundle.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet')
+    title= title 
+  body.page
+    header.header
+      nav.header__navigation-block
+        button.header__button
+          img(src='../dist/svg/menu-button_beige.svg' alt='Кнопка для открытия каталога')
+        ul.header__element.header__list-about
+          li.header__list-about-item
+            a(href='http://127.0.0.1:5500/client/dist/catalog.html') New
+          li.header__list-about-item
+            a.header__list-about-item-buttom(href='http://127.0.0.1:5500/client/dist/catalog.html') Каталог
+          li.header__list-about-item
+            a.header__list-about-item-buttom(href='http://127.0.0.1:5500/client/dist/contacts.html') О нас
+        h1.header__element.header__title
+          a(href="http://127.0.0.1:5500/client/dist/main.html") Yanki
+        ul.header__element.header__list-of-tools
+          li.header__list-of-tools-item
+            button.header__list-of-tools-item-button
+              span Ru 
+              img(src='../dist/svg/item_beige.svg' alt='Кнопка для переключения языка сайта')
+          li.header__list-of-tools-item
+            button.header__list-of-tools-item-button
+              span Uah
+              img(src='../dist/svg/item_beige.svg' alt='Кнопка для переключения языка сайта')
+        ul.header__element.header__list-of-things
+          li.header__list-of-things-item
+            img(src='../dist/svg/search-icon_black.svg' alt='Изображение иконки поискового поля')
+          li.header__list-of-things-item
+            img(src='../dist/svg/profile-icon_beige.svg' alt='Изображение иконки профиля пользователя в минималистичном стиле')
+          li.header__list-of-things-item
+            img(src='../dist/svg/favorites_beige.svg' alt='Иконка с изображением сердечка для перехода на страницу с избранными товарами пользователя')
+          li.header__list-of-things-item
+            img(src='../dist/svg/basket_beige.svg' alt='Иконка с изображением козины покупателя')
+    block content
+    footer.footer
+      section.footer__section
+        h2.footer__section-title Компания
+        ul.footer__section-list
+          li.footer__section-list-item
+            a(href='#') О нас
+          li.footer__section-list-item
+            a(href='http://127.0.0.1:5500/client/dist/contacts.html') Контакты
+      section.footer__section
+        h2.footer__section-title Полезное
+        ul.footer__section-list
+          li.footer__section-list-item
+            a(href='#') Оплата и доставка
+          li.footer__section-list-item
+            a(href='http://127.0.0.1:5500/client/dist/returns.html') Условия возврата
+          li.footer__section-list-item
+            a(href='#') Бонусная система
+      section.footer__section
+        h2.footer__section-title Покупателю
+        ul.footer__section-list
+          li.footer__section-list-item
+            a(href='#')  Избранное
+          li.footer__section-list-item
+            a(href='#') Публичная оферта
+          li.footer__section-list-item
+            a(href='#') Политика конфиденциальности
+      section.footer__section
+        h2.footer__section-title Контакты
+        address.address
+          div.address__socials
+            span
+              img(src='../dist/svg/instagram-icon.svg' alt='Иконка инстаграма')
+            span 
+              img(src='../dist/svg/telegram-icon.svg' alt='Иконка телеграма')
+          span +38(073) 096 36 44
+          span info@yanki.com
+    template
+    script(src="../dist/scripts/default.js")
+    script(src="../dist/scripts/catalog.js")

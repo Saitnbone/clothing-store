@@ -1,3 +1,5 @@
+// Категория "Шубы"
+
 const furCoats = [
   {
     name: "Шуба",
@@ -36,6 +38,8 @@ const furCoats = [
   },
 ];
 
+// Категории "Пальто"
+
 const coats = [
   {
     name: "Пальто",
@@ -68,6 +72,8 @@ const coats = [
     description: "Описание пальто",
   },
 ];
+
+// Категория "Парки"
 
 const parks = [
   {
