@@ -131,17 +131,6 @@
   }
 }
 
-// Медиазапросы для блока header main-page
-@media (width <= 568px) {
-  .header__main-page {
-    background-image: url("../dist/images/mobile-background-image.png");
-    background-size: 100vw auto;
-    background-position: center top;
-    background-repeat: no-repeat;
-    aspect-ratio: 3 / 5;
-  }
-}
-
 /* 
   ---------------------------------------------------------------
                         Стили для блока main
@@ -268,16 +257,4 @@
       line-height: 19px;
     }
   }
-}
-
-@media (width <= 568px) {
-  .main__section-category-list {
-    overflow-y: scroll;
-  }
-  .main__section-category-list-item {
-    min-width: calc(50% - 10px);
-  }
-}
-
-@media (width <= 375px) {
 }

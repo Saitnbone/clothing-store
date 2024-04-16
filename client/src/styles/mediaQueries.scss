@@ -1,27 +1,32 @@
 /* 
----------------------------------------------------------------
-                      Медиа-запросы для проекта 
----------------------------------------------------------------
+------------------------------------------------------------------------
+                         Медиазапросы для проекта 
+                                    ||
+                       Media queries for the project
+------------------------------------------------------------------------
 */
 
-// Медиазапросы для блока header
-
 @media (max-width: 1210px) {
-  .header__main-page .header__navigation-block {
-    justify-content: space-around;
+  .header__navigation-block {
+    padding: 33px 120px 0 120px;
+    justify-content: space-between;
   }
-  .header__main-page .header__navigation-block .header__list-about {
+  .header__list-about {
     display: none;
   }
-  .header__main-page .header__navigation-block .header__title {
+  .header__title {
     padding-inline-start: 14%;
   }
-  .header__main-page .header__navigation-block .header__list-of-tools {
+  .header__list-of-tools {
     display: none;
   }
 }
 
 @media (width <= 900px) {
+  .header__title {
+    padding-inline-start: 9%;
+  }
+
   .header__main-page
     .header__navigation-block
     .header__list-of-things-item:nth-child(1) {
@@ -33,9 +38,6 @@
     .header__list-of-things-item:nth-child(2) {
     display: none;
   }
-}
-
-@media (width <= 375px) {
 }
 
 // Медиа-запросы для блока footer
@@ -67,5 +69,195 @@
     &-item:hover {
       opacity: 0.5;
     }
+  }
+}
+
+
+/* 
+------------------------------------------------------------------------
+                         Медиазапросы для страницы main
+                                      ||
+                         Media queries for the main page
+------------------------------------------------------------------------
+*/
+
+// Медиазапросы для блока header
+
+@media (width <= 568px) {
+  .header__main-page {
+    background-image: url("../dist/images/mobile-background-image.png");
+    background-size: 100vw auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    aspect-ratio: 3 / 5;
+  }
+}
+
+// Медиазапросы для блока main
+
+@media (width <= 568px) {
+  .main__section-category-list {
+    overflow-y: scroll;
+  }
+  .main__section-category-list-item {
+    min-width: calc(50% - 10px);
+  }
+}
+
+/* 
+------------------------------------------------------------------------
+                         Медиазапросы для страницы payments
+                                      ||
+                         Media queries for the payments page
+------------------------------------------------------------------------
+*/
+
+// Медиазапросы для блока main
+
+@media (width <= 950px) {
+  .payments__main-information-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .payments__main-information-liqpay-list {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* 
+------------------------------------------------------------------------
+                         Медиазапросы для страницы catalog
+                                      ||
+                         Media queries for the catalog page
+------------------------------------------------------------------------
+*/
+
+// Медиазапросы для блока main
+
+@media (width <= 900px) {
+  .catalog__main-content
+    .catalog__main-category-items
+    .catalog__cloth-options-list {
+    display: none;
+  }
+
+  .catalog__main-content
+    .catalog__main-category-items
+    .catalog__cloth-options-list-adaptive {
+    display: block;
+  }
+
+  .catalog__main-content
+    .catalog__main-category-items
+    .catalog__cloth
+    .catalog__cloth-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    padding-block-start: 14px;
+  }
+}
+
+@media (width <= 765px) {
+  .catalog__main-content {
+    margin: 0 20px;
+  }
+
+  .catalog__main-content
+    .catalog__main-category-items
+    .catalog__category-block {
+    display: none;
+  }
+
+  .catalog__main-content .catalog__main-category-items {
+    gap: 0;
+  }
+
+  .catalog__main-content .catalog__main-category-items .catalog__cloth-button {
+    display: block;
+    inline-size: 100%;
+    block-size: 40px;
+    margin-block-end: 15px;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 19px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+  }
+
+  .catalog__main-content
+    .catalog__main-category-items
+    .catalog__cloth
+    .catalog__cloth-list-item
+    .catalog__cloth-card {
+    inline-size: auto;
+  }
+}
+
+/* 
+------------------------------------------------------------------------
+                         Медиазапросы для страницы returns
+                                      ||
+                         Media queries for the returns page
+------------------------------------------------------------------------
+*/
+
+// Медиазапросы для блока main
+
+@media (width <= 950px) {
+  .main__returns-information-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+/* 
+------------------------------------------------------------------------
+                         Медиазапросы для страницы contacts
+                                      ||
+                         Media queries for the contacts page
+------------------------------------------------------------------------
+*/
+
+// Медиазапросы для блока header
+//
+
+@media (max-width: 1210px) {
+
+  .header__main-page .header__navigation-block {
+    justify-content: space-around;
+  }
+
+  .header__main-page .header__navigation-block .header__list-about {
+    display: none;
+  }
+
+  .header__main-page .header__navigation-block .header__title {
+    padding-inline-start: 14%;
+  }
+
+  .header__main-page .header__navigation-block .header__list-of-tools {
+    display: none;
+  }
+
+}
+
+@media (width <= 900px) {
+  
+  .header__main-page
+    .header__navigation-block
+    .header__list-of-things-item:nth-child(1) {
+    display: none;
+  }
+
+  .header__main-page
+    .header__navigation-block
+    .header__list-of-things-item:nth-child(2) {
+    display: none;
   }
 }

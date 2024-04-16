@@ -77,24 +77,9 @@
   }
 }
 
-// Медиазапросы для блока main (payments page)
+// необходимо исправить фреймы изображений пунктов меню оплаты
 
-@media (width <= 950px) {
-  .payments__main-information-block {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .payments__main-information-liqpay-list {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  // необходимо исправить фреймы изображений пунктов меню оплаты
-
-  // .frame-mage {
-  //   inline-size: 35px;
-  //   block-size: 39px;
-  // }
-}
+// .frame-mage {
+//   inline-size: 35px;
+//   block-size: 39px;
+// }

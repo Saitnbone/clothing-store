@@ -5,38 +5,6 @@
 ---------------------------------------------------------------
 */
 
-@media (max-width: 1210px) {
-  .header__navigation-block {
-    justify-content: space-around;
-  }
-  .header__list-about {
-    display: none;
-  }
-  .header__title {
-    padding-inline-start: 14%;
-  }
-  .header__list-of-tools {
-    display: none;
-  }
-}
-
-@media (width <= 900px) {
-  .header__title {
-    padding-inline-start: 9%;
-  }
-
-  .header__main-page
-    .header__navigation-block
-    .header__list-of-things-item:nth-child(1) {
-    display: none;
-  }
-
-  .header__main-page
-    .header__navigation-block
-    .header__list-of-things-item:nth-child(2) {
-    display: none;
-  }
-}
 /* 
   ---------------------------------------------------------------
                       Стили для блока main

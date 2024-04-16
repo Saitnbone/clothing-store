@@ -4,10 +4,6 @@
                             
 ---------------------------------------------------------------
 */
-// .page {
-//   color: var(--text-second-color);
-// }
-
 /* 
   ---------------------------------------------------------------
                       Стили для блока main
@@ -16,46 +12,56 @@
 
 /* Общие стили для блока main */
 
-.main {
+.contacts__main {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
 }
 
-.main__navigation {
+.contacts__main-navigation {
   display: flex;
   gap: 30px;
 }
 
 /* Стили для секции main__section-feedback */
 
-.main__section-feedback {
-  padding-block-start: 30px;
-}
-
-.main__section-feedback-title {
-  font-size: 20px;
-  font-weight: 300;
-  line-height: 23px;
-}
-
-.main__section-feedback-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  padding-block-start: 30px;
-  gap: 7.8vw;
-}
-
-.main__section-feedback-list-item {
+.contacts__main-feedback {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  height: auto;
+  padding-block-start: 30px;
+  padding-inline-start: 120px;
+  padding-inline-end: 120px;
+  padding-block-start: 30px;
+
+  &-title {
+    font-size: clamp(1.125rem, 1.0893rem + 0.1786vw, 1.25rem);
+    font-weight: 300;
+    line-height: 23px;
+    padding-block-start: 27px;
+  }
 }
 
-.main__section-feedback-list-item-title {
-  font-size: 16px;
+.contacts__main-feedback-list {
+  display: flex;
+  padding-block-start: 30px;
+  justify-content: space-around;
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: auto;
+
+    &-title {
+      font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
+    }
+  }
 }
 
 .main__section-feedback-list-item-address {
   font-style: normal;
 }
 
-// Стили для секции main__section-subscription
+@media (width <= 765px) {
+}
