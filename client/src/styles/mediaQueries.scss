@@ -32,15 +32,11 @@
     padding-inline-start: 9%;
   }
 
-  .header__main-page
-    .header__navigation-block
-    .header__list-of-things-item:nth-child(1) {
+  .header__list-of-things-item:nth-child(1) {
     display: none;
   }
 
-  .header__main-page
-    .header__navigation-block
-    .header__list-of-things-item:nth-child(2) {
+  .header__list-of-things-item:nth-child(2) {
     display: none;
   }
 }
@@ -86,7 +82,7 @@
       opacity: 0.5;
     }
   }
-  
+
   .address__socials {
     justify-content: center;
   }
@@ -126,7 +122,7 @@
 /* 
 ------------------------------------------------------------------------
                          Медиазапросы для страницы payments
-                                      ||
+                                          ||
                          Media queries for the payments page
 ------------------------------------------------------------------------
 */
@@ -149,7 +145,7 @@
 /* 
 ------------------------------------------------------------------------
                          Медиазапросы для страницы catalog
-                                      ||
+                                        ||
                          Media queries for the catalog page
 ------------------------------------------------------------------------
 */

@@ -172,15 +172,15 @@ a {
       }
     }
   }
+}
 
-  .address {
+.address {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__socials {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    &__socials {
-      display: flex;
-      gap: 15px;
-    }
+    gap: 15px;
   }
 }
