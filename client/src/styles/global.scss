@@ -80,11 +80,10 @@ a {
   justify-content: space-between;
   align-items: center;
   padding: 33px 120px 0 120px;
-  // padding-block-start: 33px;
   line-height: 21px;
-  color: var(--text-second-color);
   text-transform: uppercase;
 }
+
 .header__button:hover {
   opacity: 0.5;
 }
@@ -118,6 +117,7 @@ a {
   display: flex;
   gap: 27px;
 }
+
 .header__list-of-tools-item-button {
   display: flex;
   line-height: 21px;
@@ -130,46 +130,16 @@ a {
   gap: 30px;
   font-size: 18px;
 }
+
 .header__list-of-things-item {
   display: flex;
   flex-direction: row;
 }
+
 .header__list-of-things-item:hover {
   cursor: pointer;
   box-shadow: var(--box-shadow);
   opacity: 0.5;
-}
-
-// Медиазапросы для блока header
-
-@media (width <= 1210px) {
-  .header__main-page .header__navigation-block {
-    padding: 33px 90px 0 90px;
-    justify-content: space-between;
-  }
-  .header__main-page .header__navigation-block .header__list-about {
-    display: none;
-  }
-  .header__main-page .header__navigation-block .header__title {
-    padding-inline-start: 14%;
-  }
-  .header__main-page .header__navigation-block .header__list-of-tools {
-    display: none;
-  }
-}
-
-@media (width <= 900px) {
-  .header__main-page .header__navigation-block .header__title {
-    padding-inline-start: 9%;
-  }
-  
-  .header__list-of-things-item:nth-child(1) {
-    display: none;
-  }
-
-  .header__list-of-things-item:nth-child(2) {
-    display: none;
-  }
 }
 
 //  Стили для блока footer
@@ -201,54 +171,16 @@ a {
         opacity: 0.5;
       }
     }
-    .address {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-
-      &__socials {
-        display: flex;
-        gap: 15px;
-      }
-    }
   }
-}
 
-// Медиа-запросы для блока footer
-
-@media (max-width: 950px) {
-  .footer {
+  .address {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-inline-start: 40px;
-    margin-inline-end: 40px;
-  }
-
-  .footer__section-title {
-    text-align: center;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
-  .footer__section-list {
-    display: none;
-  }
-
-  .footer__section-list_show {
-    display: flex;
-    align-items: center;
     flex-direction: column;
     gap: 10px;
 
-    &-item:hover {
-      opacity: 0.5;
+    &__socials {
+      display: flex;
+      gap: 15px;
     }
-  }
-  .address__socials {
-    justify-content: center;
   }
 }

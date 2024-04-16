@@ -8,14 +8,14 @@
 
 @media (max-width: 1210px) {
   .header__navigation-block {
-    padding: 33px 120px 0 120px;
+    padding: 33px 90px 0 90px;
     justify-content: space-between;
   }
   .header__list-about {
     display: none;
   }
   .header__title {
-    padding-inline-start: 14%;
+    padding-inline-start: 20%;
   }
   .header__list-of-tools {
     display: none;
@@ -23,6 +23,11 @@
 }
 
 @media (width <= 900px) {
+  .header__navigation-block {
+    padding-inline-start: 60px;
+    padding-inline-end: 60px;
+  }
+
   .header__title {
     padding-inline-start: 9%;
   }
@@ -40,6 +45,13 @@
   }
 }
 
+@media (width <= 575px) {
+  .header__navigation-block {
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+  }
+}
+
 // Медиа-запросы для блока footer
 
 @media (max-width: 950px) {
@@ -54,6 +66,10 @@
 
   .footer__section-title {
     text-align: center;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .footer__section-list {
@@ -70,8 +86,11 @@
       opacity: 0.5;
     }
   }
+  
+  .address__socials {
+    justify-content: center;
+  }
 }
-
 
 /* 
 ------------------------------------------------------------------------
@@ -215,7 +234,6 @@
   }
 }
 
-
 /* 
 ------------------------------------------------------------------------
                          Медиазапросы для страницы contacts
@@ -227,37 +245,34 @@
 // Медиазапросы для блока header
 //
 
-@media (max-width: 1210px) {
+// @media (max-width: 1210px) {
+//   .header__main-page .header__navigation-block {
+//     justify-content: space-around;
+//   }
 
-  .header__main-page .header__navigation-block {
-    justify-content: space-around;
-  }
+//   .header__main-page .header__navigation-block .header__list-about {
+//     display: none;
+//   }
 
-  .header__main-page .header__navigation-block .header__list-about {
-    display: none;
-  }
+//   .header__main-page .header__navigation-block .header__title {
+//     padding-inline-start: 14%;
+//   }
 
-  .header__main-page .header__navigation-block .header__title {
-    padding-inline-start: 14%;
-  }
+//   .header__main-page .header__navigation-block .header__list-of-tools {
+//     display: none;
+//   }
+// }
 
-  .header__main-page .header__navigation-block .header__list-of-tools {
-    display: none;
-  }
+// @media (width <= 900px) {
+//   .header__main-page
+//     .header__navigation-block
+//     .header__list-of-things-item:nth-child(1) {
+//     display: none;
+//   }
 
-}
-
-@media (width <= 900px) {
-  
-  .header__main-page
-    .header__navigation-block
-    .header__list-of-things-item:nth-child(1) {
-    display: none;
-  }
-
-  .header__main-page
-    .header__navigation-block
-    .header__list-of-things-item:nth-child(2) {
-    display: none;
-  }
-}
+//   .header__main-page
+//     .header__navigation-block
+//     .header__list-of-things-item:nth-child(2) {
+//     display: none;
+//   }
+// }
