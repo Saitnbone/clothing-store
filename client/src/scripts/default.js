@@ -14,16 +14,27 @@
 
 // Переменные для блока header
 
-const headerButton = document.querySelector(".header__button");
-
+const header = document.querySelector(".header");
+const navButton = header.querySelector(".header__button");
+const basketButton = header.querySelector("");
 
 // :@todo Функция открытия меню в блоке header
 
-headerButton.addEventListener("click", openHeaderMenu);
+navButton.addEventListener("click", openMobileHeaderMenu);
 
-function openHeaderMenu(event) {{
+function openMobileHeaderMenu() {
+  const popUpMobile = header.querySelector(".popup-mobile");
 
-}}
+  if (window.innerWidth <= 568 && popUpMobile) {
+    popUpMobile.classList.toggle("popup-mobile_show");
+  }
+}
+
+// :@todo Функция открытия корзины в блоке header
+
+basketButton.addEventListener("click", openHeaderBasket);
+
+function openHeaderBasket() {}
 
 /* 
 ------------------------------------------------------------------------

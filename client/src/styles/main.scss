@@ -42,6 +42,15 @@
   }
 }
 
+.popup-mobile {
+  display: none;
+}
+
+.popup-mobile_show {
+  display: flex;
+  z-index: 1;
+}
+
 .header__collection-block {
   display: flex;
   flex-direction: column;
