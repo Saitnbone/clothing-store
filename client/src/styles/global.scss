@@ -98,7 +98,6 @@ a {
   text-transform: uppercase;
 }
 .header__list-about-item-buttom:hover {
-  box-shadow: var(--box-shadow);
   opacity: 0.5;
 }
 
@@ -151,14 +150,14 @@ a {
 //  Стили для блока footer
 
 .footer {
-  display: grid;
+  display: flex;
   gap: 46px;
-  grid-template-columns: repeat(4, minmax(100px, 250px));
-  justify-content: center;
-  margin: 94px 20px 71px 20px;
+  justify-content: space-between;
+  margin: 94px 120px 71px 120px;
 
   // Стили для блока footer__section
   &__section {
+    inline-size: 250px;
     display: flex;
     flex-direction: column;
     gap: 20px;

@@ -76,6 +76,7 @@
     padding-inline-end: 20px;
   }
 }
+
 // Медиазапросы для блока footer
 
 @media (width <= 950px) {
@@ -266,37 +267,24 @@
 ------------------------------------------------------------------------
 */
 
-// Медиазапросы для блока header
-//
+// Медиазапросы для блока main
 
-// @media (max-width: 1210px) {
-//   .header__main-page .header__navigation-block {
-//     justify-content: space-around;
-//   }
+@media (width <= 900px) {
+  .contacts__main-feedback-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
 
-//   .header__main-page .header__navigation-block .header__list-about {
-//     display: none;
-//   }
+  .contacts__main-feedback-list-item {
+    justify-self: start;
+  }
+}
 
-//   .header__main-page .header__navigation-block .header__title {
-//     padding-inline-start: 14%;
-//   }
-
-//   .header__main-page .header__navigation-block .header__list-of-tools {
-//     display: none;
-//   }
-// }
-
-// @media (width <= 900px) {
-//   .header__main-page
-//     .header__navigation-block
-//     .header__list-of-things-item:nth-child(1) {
-//     display: none;
-//   }
-
-//   .header__main-page
-//     .header__navigation-block
-//     .header__list-of-things-item:nth-child(2) {
-//     display: none;
-//   }
-// }
+/* 
+------------------------------------------------------------------------
+                         Медиазапросы для страницы profile
+                                      ||
+                         Media queries for the profile page
+------------------------------------------------------------------------
+*/

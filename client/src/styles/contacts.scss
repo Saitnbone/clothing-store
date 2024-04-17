@@ -15,6 +15,7 @@
 .contacts__main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding-block-start: 30px;
 }
 
@@ -28,11 +29,11 @@
 .contacts__main-feedback {
   display: flex;
   flex-direction: column;
-  padding-block-start: 30px;
+  inline-size: 100%;
   padding-block-start: 30px;
 
   &-title {
-    font-size: clamp(1.125rem, 1.0893rem + 0.1786vw, 1.25rem);
+    font-size: clamp(1.25rem, 1.1786rem + 0.3571vw, 1.5rem);
     font-weight: 300;
     line-height: 23px;
     padding-block-start: 27px;
@@ -50,12 +51,17 @@
     gap: 20px;
     height: auto;
 
-    &-title {
-      font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
-    }
+    // &-title {
+    //   font-size: clamp(0.875rem, 0.8393rem + 0.1786vw, 1rem);
+    // }
   }
 }
 
 .main__section-feedback-list-item-address {
   font-style: normal;
+}
+
+.contacts__address-socials {
+  display: flex;
+  gap: 15px;
 }

@@ -1,19 +1,45 @@
-// Файл для скрипта, который применяется для всей сраниц онлайн-магазина
+// Файл для скрипта, который применяется для всех сраниц онлайн-магазина
 
 // Перменные для проекта
 
-const headerButton = document.querySelector(".header__button");
-const footerSections = document.querySelectorAll(".footer__section");
+/* 
+------------------------------------------------------------------------
+                         Настройки скрипта для блока header
+                                  (все страницы)
+                                        ||
+                          Script settings for block header
+                                    (all pages)
+------------------------------------------------------------------------
+*/
 
-// @todo Функция открытия меню в блоке header
+// Переменные для блока header
+
+const headerButton = document.querySelector(".header__button");
+
+
+// :@todo Функция открытия меню в блоке header
 
 headerButton.addEventListener("click", openHeaderMenu);
 
-function openHeaderMenu() {
-  
-}
+function openHeaderMenu(event) {{
 
-// @todo Функция открытия списков в блоке footer
+}}
+
+/* 
+------------------------------------------------------------------------
+                         Настройки скрипта для блока footer
+                                  (все страницы)
+                                        ||
+                          Script settings for block footer
+                                    (all pages)
+------------------------------------------------------------------------
+*/
+
+// Переменнные для блока footer
+
+const footerSections = document.querySelectorAll(".footer__section");
+
+// :@todo Функция открытия списков в блоке footer
 
 footerSections.forEach((element) => {
   element.addEventListener("click", openFooterList);

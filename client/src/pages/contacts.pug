@@ -15,7 +15,11 @@ block content
         li.contacts__main-feedback-list-item
           h3.contacts__main-feedback-list-item-title
             | В социальных сетях
-          div 
+          div.contacts__address-socials
+            span
+              img(src='../dist/svg/instagram-icon.svg' alt='Иконка инстаграма')
+            span 
+              img(src='../dist/svg/telegram-icon.svg' alt='Иконка телеграма')
         li.contacts__main-feedback-list-item
           h3.contacts__main-feedback-list-item-title По телефону
           address.contacts__main-feedback-list-item-address
@@ -24,12 +28,12 @@ block content
         li.contacts__main-feedback-list-item
           h3.contacts__main-feedback-list-item-title По почте
           address.contacts__main-feedback-list-item-address
-          span
-            a(href='mailto:example@mail.com') example@mail.com
+            span
+              a(href='mailto:example@mail.com') example@mail.com
         li.contacts__main-feedback-list-item
-          h3.contacts__main-feedback-list-title Наш офис
+          h3.contacts__main-feedback-list-item-title Наш офис
           address.contacts__main-feedback-list-item-address
-          p г. Киев ул. Пушкина, д. 32
+            p г. Киев ул. Пушкина, д. 32
     section.main__page-subscription
       h2.main__page-subscription-title
         | Узнайте первым о новинках
@@ -41,4 +45,4 @@ block content
       p.main__page-subscription-text
         | Нажимая на кнопку «Подписаться», я соглашаюсь на обработку моих 
         br
-        |           персональных данных и ознакомлен(а) с условиями конфиденциальности.
+        | персональных данных и ознакомлен(а) с условиями конфиденциальности.
