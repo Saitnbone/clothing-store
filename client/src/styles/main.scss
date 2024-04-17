@@ -88,121 +88,121 @@
 
 // Общие стили для блока main
 
-.main {
+.main__page {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
-  // Стили для секции main__section-category
-  &__section-category {
-    display: flex;
-    flex-direction: column;
-    gap: 46px;
-    margin: 100px 20px 0 20px;
+// Стили для секции main__section-category
 
-    &-title {
-      font-size: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
-      line-height: 42px;
-      letter-spacing: 0%;
-      color: var(--text-second-color);
+.main__page-category {
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+  margin-block-start: 100px;
+}
+.main__page-category-title {
+  font-size: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
+  line-height: 42px;
+  letter-spacing: 0%;
+  color: var(--text-second-color);
+}
+
+.main__page-category-list {
+  display: flex;
+  gap: 15px;
+
+  &-item {
+    position: relative;
+    transition: transform 0.4s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
     }
 
-    &-list {
-      display: flex;
-      gap: 15px;
+    &:active {
+      opacity: 0.7;
+    }
 
-      &-item {
-        position: relative;
-        transition: transform 0.4s ease-in-out;
+    &-title {
+      inline-size: 100%;
+      position: absolute;
+      bottom: 0.7%;
+      color: var(--text-color);
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      background-color: var(--background-color);
+      padding-block-start: 8px;
+      padding-block-end: 5px;
+    }
 
-        &:hover {
-          transform: scale(1.1);
-        }
-
-        &:active {
-          opacity: 0.7;
-        }
-
-        &-title {
-          inline-size: 100%;
-          position: absolute;
-          bottom: 0.7%;
-          color: var(--text-color);
-          font-size: 20px;
-          line-height: 23px;
-          text-align: center;
-          background-color: var(--background-color);
-          padding-block-start: 8px;
-          padding-block-end: 5px;
-        }
-
-        &-image {
-          max-width: 100%;
-          height: auto;
-        }
-      }
+    &-image {
+      max-width: 100%;
+      height: auto;
     }
   }
+}
 
-  // Стили для секции main__section-subscription
-  &__section-subscription {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 100px 20px 0 20px;
-    text-align: center;
-    color: var(--text-second-color);
+// Стили для секции main__section-subscription
+.main__page-subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 20px 0 20px;
+  text-align: center;
+  color: var(--text-second-color);
+}
 
-    &-title {
-      font-size: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
-      line-height: 42px;
-      letter-spacing: 1px;
-      padding-block-end: 47px;
-    }
+.main__page-subscription-title {
+  font-size: clamp(1.5rem, 1.2359rem + 1.1268vw, 2.25rem);
+  line-height: 42px;
+  letter-spacing: 1px;
+  padding-block-end: 47px;
+}
 
-    &-form {
-      display: flex;
-      flex-direction: column;
-      inline-size: 100%;
-      gap: 20px;
-      padding-block-end: 24px;
+.form__subscription {
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  gap: 20px;
+  padding-block-end: 24px;
 
-      &-input {
-        inline-size: 100%;
-        block-size: 50px;
+  &-input {
+    inline-size: 100%;
+    block-size: 50px;
 
-        &::placeholder {
-          font-size: 16px;
-          text-align: center;
-          line-height: 19px;
-          opacity: 0.5;
-        }
-        &:focus {
-          outline: none;
-        }
-      }
-      &-buttom {
-        inline-size: 100%;
-        block-size: 50px;
-        font-size: 16px;
-        text-transform: uppercase;
-        line-height: 19px;
-        background-color: var(--accent-color);
-        color: var(--text-color);
-        padding: 16px 81px 17px 81px;
-
-        &:hover {
-          box-shadow: var(--box-shadow);
-        }
-      }
-    }
-    &-text {
-      color: var(--text-second-color);
-      font-weight: 200;
+    &::placeholder {
       font-size: 16px;
+      text-align: center;
       line-height: 19px;
+      opacity: 0.5;
     }
+    &:focus {
+      outline: none;
+    }
+  }
+  &-button {
+    inline-size: 100%;
+    block-size: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 19px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 16px 81px 17px 81px;
+
+    &:hover {
+      box-shadow: var(--box-shadow);
+    }
+  }
+  &-text {
+    color: var(--text-second-color);
+    font-weight: 200;
+    font-size: 16px;
+    line-height: 19px;
   }
 }

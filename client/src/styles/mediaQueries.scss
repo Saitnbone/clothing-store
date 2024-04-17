@@ -6,7 +6,9 @@
 ------------------------------------------------------------------------
 */
 
-@media (max-width: 1210px) {
+// Медиазапросы для блока header
+
+@media (width <= 1210px) {
   .header__navigation-block {
     padding: 33px 90px 0 90px;
     justify-content: space-between;
@@ -48,9 +50,13 @@
   }
 }
 
-// Медиа-запросы для блока footer
+// Медиазапросы для блока main
 
-@media (max-width: 950px) {
+@media( width <= 1210px){}
+
+// Медиазапросы для блока footer
+
+@media (width <= 950px) {
   .footer {
     display: flex;
     flex-direction: column;
