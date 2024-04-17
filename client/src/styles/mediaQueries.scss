@@ -48,12 +48,34 @@
     padding-inline-start: 20px;
     padding-inline-end: 20px;
   }
+
+  .header__list-of-things {
+    gap: 18px;
+  }
 }
 
 // Медиазапросы для блока main
 
-@media( width <= 1210px){}
+@media (width <= 1210px) {
+  .main {
+    padding-inline-start: 90px;
+    padding-inline-end: 90px;
+  }
+}
 
+@media (width <= 900px) {
+  .main {
+    padding-inline-start: 60px;
+    padding-inline-end: 60px;
+  }
+}
+
+@media (width <= 575px) {
+  .main {
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+  }
+}
 // Медиазапросы для блока footer
 
 @media (width <= 950px) {

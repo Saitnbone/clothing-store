@@ -15,13 +15,10 @@
 
 .returns__main {
   display: flex;
-  flex-direction: column;
-  min-block-size: 80vh;
-  align-items: center;
-  margin-block-start: 30px;
-  margin-inline-start: 20px;
-  margin-inline-end: 20px;
-  font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
+    flex-direction: column;
+    min-block-size: 80vh;
+    margin-block-start: 30px;
+    font-size: clamp(0.875rem, 0.831rem + 0.1878vw, 1rem);
 
   &-navigation {
     display: flex;
@@ -68,12 +65,4 @@
   text-align: center;
   line-height: 20px;
   text-align: center;
-}
-// Медиазапросы для блока main
-
-@media (width <= 950px) {
-  .main__returns-information-list {
-    display: flex;
-    flex-direction: column;
-  }
 }

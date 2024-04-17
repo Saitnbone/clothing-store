@@ -4,7 +4,7 @@ block variables
   - var title = 'Магазин одежды YANKI | Контакты'
 
 block content
-  main.contacts__main
+  main.contacts__main.main
     section.contacts__main-feedback
       div.contacts__main-navigation
         span.contacts__main-navigation-item
@@ -30,15 +30,15 @@ block content
           h3.contacts__main-feedback-list-title Наш офис
           address.contacts__main-feedback-list-item-address
           p г. Киев ул. Пушкина, д. 32
-    section.main__section-subscription
-      h2.main__section-subscription-title
+    section.main__page-subscription
+      h2.main__page-subscription-title
         | Узнайте первым о новинках
-      form.main__section-subscription-form
+      form.form__subscription
         label
-          input.main__section-subscription-form-input(type='text' placeholder='Ваш e-mail*')
-        button.main__section-subscription-form-buttom(type='submit')
+          input.form__subscription-input(type='text' placeholder='Ваш e-mail*')
+        button.form__subscription-button(type='submit')
           | Подписаться
-      p.main__section-subscription-text
+      p.main__page-subscription-text
         | Нажимая на кнопку «Подписаться», я соглашаюсь на обработку моих 
         br
-        | персональных данных и ознакомлен(а) с условиями конфиденциальности.
+        |           персональных данных и ознакомлен(а) с условиями конфиденциальности.
