@@ -24,15 +24,51 @@ const profileButton = header.querySelector(".profile-button");
 const favoritesButton = header.querySelector(".favorites-button");
 const basketButton = header.querySelector(".basket-button");
 
-// :@todo Функция открытия меню в блоке header
+// :@todo Функция открытия функция проверки размеров экрана
 
-navButton.addEventListener("click", openMobileHeaderMenu);
+// :@todo Функция проверки размеров экрана
+
+window.addEventListener("resize", handleResize);
+
+function handleResize() {
+  const checkOpenedMobileMenu = window.matchMedia("(width: 568px)").matches;
+  const popUpMobile = header.querySelector(".popup-mobile");
+
+  if (checkOpenedMobileMenu && popUpMobile) {
+    closeMobileHeaderMenu();
+  }
+}
+
+// :@todo Функция открытия меню навигации в блоке header
+
+navButton.addEventListener("click", toggleMobileHeaderMenu);
+
+function toggleMobileHeaderMenu() {
+  const popUpMobile = header.querySelector(".popup-mobile");
+
+  if (
+    window.innerWidth >= 569 ||
+    popUpMobile.classList.contains("popup-mobile_show")
+  ) {
+    closeMobileHeaderMenu();
+  } else {
+    openMobileHeaderMenu();
+  }
+}
 
 function openMobileHeaderMenu() {
   const popUpMobile = header.querySelector(".popup-mobile");
 
-  if (window.innerWidth <= 568 && popUpMobile) {
-    popUpMobile.classList.toggle("popup-mobile_show");
+  if (popUpMobile) {
+    popUpMobile.classList.add("popup-mobile_show");
+  }
+}
+
+function closeMobileHeaderMenu() {
+  const popUpMobile = header.querySelector(".popup-mobile");
+
+  if (popUpMobile) {
+    popUpMobile.classList.remove("popup-mobile_show");
   }
 }
 

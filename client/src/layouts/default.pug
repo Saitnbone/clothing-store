@@ -41,6 +41,37 @@ html(lang="ru")
             img(src='../dist/svg/favorites_beige.svg' alt='Иконка с изображением сердечка для перехода на страницу с избранными товарами пользователя')
           li.header__list-of-things-item
             img(src='../dist/svg/basket_beige.svg' alt='Иконка с изображением козины покупателя')
+      ul.popup-mobile
+        li.popup-mobile__item
+          div.popup-mobile__search-block
+            input(type="text", id="searchInput", placeholder="Введите ваш запрос").popup-mobile__search-block-input
+            span Uah
+        li.popup-mobile__item
+          div 
+            img(src='../dist/svg/profile-icon.svg' alt='Изображение иконки профиля пользователя')
+            a(href='http://127.0.0.1:5500/client/dist/authorization.html')
+              | Личный кабинет
+        li.popup-mobile__item
+          a(href="http://127.0.0.1:5500/client/dist/catalog.html")
+            | New 
+        li.popup-mobile__item
+          a(href="http://127.0.0.1:5500/client/dist/catalog.html")
+            | Каталог 
+        li.popup-mobile__item
+          a(href="http://127.0.0.1:5500/client/dist/returns.html") 
+            | Условия возврата
+        li.popup-mobile__item
+          a(href="http://127.0.0.1:5500/client/dist/contacts.html")
+            | Контакты 
+        li.popup-mobile__item
+          address.address
+            div.address__socials
+              span
+                img(src='../dist/svg/instagram-icon.svg' alt='Иконка инстаграма')
+              span 
+                img(src='../dist/svg/telegram-icon.svg' alt='Иконка телеграма')
+            span +38(073) 096 36 44
+            span info@yanki.com 
     block content
     footer.footer
       section.footer__section
