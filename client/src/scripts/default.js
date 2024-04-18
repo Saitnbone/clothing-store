@@ -14,9 +14,15 @@
 
 // Переменные для блока header
 
+// querySelector блока header
 const header = document.querySelector(".header");
+
+// Кнопки блока .header__list-of-things
 const navButton = header.querySelector(".header__button");
-const basketButton = header.querySelector("");
+const searchButton = header.querySelector(".search-button");
+const profileButton = header.querySelector(".profile-button");
+const favoritesButton = header.querySelector(".favorites-button");
+const basketButton = header.querySelector(".basket-button");
 
 // :@todo Функция открытия меню в блоке header
 
@@ -32,9 +38,9 @@ function openMobileHeaderMenu() {
 
 // :@todo Функция открытия корзины в блоке header
 
-basketButton.addEventListener("click", openHeaderBasket);
+// basketButton.addEventListener("click", openHeaderBasket);
 
-function openHeaderBasket() {}
+// function openHeaderBasket() {}
 
 /* 
 ------------------------------------------------------------------------
