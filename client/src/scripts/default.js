@@ -20,9 +20,6 @@ const header = document.querySelector(".header");
 // Кнопки блока .header__list-of-things
 const navButton = header.querySelector(".header__button");
 const searchButton = header.querySelector(".search-button");
-const profileButton = header.querySelector(".profile-button");
-const favoritesButton = header.querySelector(".favorites-button");
-const basketButton = header.querySelector(".basket-button");
 
 // :@todo Функция открытия функция проверки размеров экрана
 
@@ -31,7 +28,7 @@ const basketButton = header.querySelector(".basket-button");
 window.addEventListener("resize", handleResize);
 
 function handleResize() {
-  const checkOpenedMobileMenu = window.matchMedia("(width: 568px)").matches;
+  const checkOpenedMobileMenu = window.matchMedia("(min-width: 569px)").matches;
   const popUpMobile = header.querySelector(".popup-mobile");
 
   if (checkOpenedMobileMenu && popUpMobile) {
@@ -71,12 +68,6 @@ function closeMobileHeaderMenu() {
     popUpMobile.classList.remove("popup-mobile_show");
   }
 }
-
-// :@todo Функция открытия корзины в блоке header
-
-// basketButton.addEventListener("click", openHeaderBasket);
-
-// function openHeaderBasket() {}
 
 /* 
 ------------------------------------------------------------------------
