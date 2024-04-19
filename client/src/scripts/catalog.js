@@ -1,3 +1,5 @@
 // Переменные для страницы каталога
 
-// Функции 
+// const catalog = document.querySelector(".")
+
+// Функции
