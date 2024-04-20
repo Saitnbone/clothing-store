@@ -1,0 +1,57 @@
+/* 
+  ---------------------------------------------------------------
+                        Стили для блока main
+                    (основная страница магазина)
+  ---------------------------------------------------------------
+*/
+
+// Стили для секции placing-order
+
+.placing-order {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.placing-order__personal-information {
+  grid-column: span 2;
+}
+
+.placing-order__personal-inf {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column: span 2;
+  gap: 20px;
+}
+
+.input-block {
+  block-size: 50px;
+}
+
+.total-coast {
+  display: flex;
+  flex-direction: column;
+}
+
+.total-coast__text {
+  text-transform: uppercase;
+  margin-block-end: 17px;
+}
+
+.total-coast__button {
+  inline-size: 100%;
+  block-size: 50px;
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 19px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  padding: 16px 81px 17px 81px;
+  margin-block-start: 10px;
+}
+
+.total-coast__offer-text {
+  margin-block-start: 15px;
+  text-align: left;
+  line-height: 16px;
+}

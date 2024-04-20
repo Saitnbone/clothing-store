@@ -5,6 +5,51 @@ block variables
 
 block content
     main.basket__main.main
-      div 
-      section 
-      section 
+      div.basket__main-navigation
+        span.basket__main-navigation-item
+          a(href='http://127.0.0.1:5500/client/dist/main.html') Главная
+        span.basket__main-navigation-item Каталог
+        span.basket__main-navigation-item Корзина
+      section.basket__order 
+      section
+        h2.placing-order__title
+          | Оформление заказа:
+        div.placing-order
+          div.placing-order__personal-information
+            div 
+              h3.placing-order__title-block
+                | Персональные данные:
+              div.placing-order__personal-inf
+                input(type="text").input-block
+                input(type="text").input-block
+                input(type="text").input-block
+                input(type="text").input-block
+            div
+              h3.placing-order__title-block
+                | Способ доставки:
+            div 
+              h3.placing-order__title-block
+                | Адрес доставки 
+              input(type="text").input-block
+              input(type="text").input-block
+            div 
+              h3.placing-order__title-block
+                | Вы можете оплатить покупку одним из ниже перечисленных способов:
+            div 
+              h3.placing-order__title-block 
+                | Использование бонусного счёта:
+              input(type="text").input-block
+          div.total-coast
+            span.total-coast__text 
+              | Войти в личный кабинет 
+            span.total-coast__text  
+              | Условия доставки
+            span.total-coast__text 
+              | Условия возврата и обмена
+            span.total-coast-text 
+              | Информация об оплате
+            button.total-coast__button
+              | Оформить заказ
+            p.total-coast__offer-text 
+            | Нажимая на кнопку «оплатить заказ», я принимаю условия публичной оферты и политики конфиденциальности
+
