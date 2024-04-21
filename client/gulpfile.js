@@ -1,6 +1,6 @@
 const gulp = require("gulp");
 const gulpPug = require("gulp-pug");
-const concat = require("gulp-concat-css");
+const concat = require("gulp-concat");
 const sass = require("gulp-sass")(require("sass"));
 const plumber = require("gulp-plumber");
 const del = require("del");
@@ -57,6 +57,7 @@ function svg() {
 function javaScript() {
   return gulp
     .src("src/**/*.js")
+    .pipe(concat("bundle.js"))
     .pipe(gulp.dest("dist/"))
     .pipe(browserSync.reload({ stream: true }));
 }
