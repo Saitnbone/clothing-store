@@ -10,36 +10,66 @@ block content
           a(href='http://127.0.0.1:5500/client/dist/main.html') Главная
         span.basket__main-navigation-item Каталог
         span.basket__main-navigation-item Корзина
-      section.basket__order 
-      section
+      section.order
+        h2.order__title
+          | Ваш заказ
+        ul.order__list
+          li.order__list-item
+            img.order__list-item-image
+          li.order__list-item 
+      section.order-details
         h2.placing-order__title
           | Оформление заказа:
-        div.placing-order
-          div.placing-order__personal-information
-            div 
-              h3.placing-order__title-block
+        form.placing-order
+          fieldset.placing-order__personal-information          
+            legend.placing-order__second-title
                 | Персональные данные:
-              div.placing-order__personal-inf
-                input(type="text").input-block
-                input(type="text").input-block
-                input(type="text").input-block
-                input(type="text").input-block
-            div
-              h3.placing-order__title-block
-                | Способ доставки:
+            div.placing-order__settings
+              input(type="text" placeholder='Ваше имя*').input-block
+              input(type="text" placeholder='Ваша фамилия*').input-block
+              input(type="text" placeholder='Ваш e-mail*').input-block
+              input(type="text" placeholder='Ваш телефон*').input-block
+            legend.placing-order__second-title
+              | Способ доставки:   
+            div.placing-order__settings
+              div
+                p 
+                  | По Украине:
+                ul
+                  li
+                    input#delivery-method_1(type="radio", name="delivery-method" value='Самовывоз') 
+                    label(for="delivery-method_1") 
+                      | Самовывоз - вул. Большая Васильковская 14(м. Льва Толстого)
+                  li 
+                    input#delivery-method_2(type="radio", name="delivery-method" value='Новая Почта')
+                    label(for="delivery-method_2") 
+                      | Новая Почта
+              div      
+                p 
+                  | Международная доставка:
+                ul 
+                  li 
+                    input#delivery-method_3(type="radio", name="delivery-method" value='Украпочта')
+                    label(for="delivery-method_3") 
+                      | Украпочта / 1-3 недели / 30$
+                  li
+                    input#delivery-method_4(type="radio", name="delivery-method" value='DHL')
+                    label(for="delivery-method_4") 
+                      | DHL / 3-7 дней / 60$
+            h3.placing-order__second-title
+              | Адрес доставки 
+            div.placing-order__settings
+              input(type="text" placeholder='Город*').input-block
+              input(type="text" placeholder='Отделение почты*').input-block
             div 
-              h3.placing-order__title-block
-                | Адрес доставки 
-              input(type="text").input-block
-              input(type="text").input-block
-            div 
-              h3.placing-order__title-block
+              h3.placing-order__second-title
                 | Вы можете оплатить покупку одним из ниже перечисленных способов:
             div 
-              h3.placing-order__title-block 
+              h3.placing-order__second-title 
                 | Использование бонусного счёта:
-              input(type="text").input-block
-          div.total-coast
+              div.placing-order__settings
+                input(type="text" placeholder='Сумма списания бонусов*').input-block
+          fieldset.total-coast
             span.total-coast__text 
               | Войти в личный кабинет 
             span.total-coast__text  
@@ -48,6 +78,15 @@ block content
               | Условия возврата и обмена
             span.total-coast-text 
               | Информация об оплате
+            div.total-coast__bill
+              ul 
+                li 
+                  | Доставка:
+                li 
+                  | Бонусы:
+                li 
+                  | Итого:
+              div
             button.total-coast__button
               | Оформить заказ
             p.total-coast__offer-text 

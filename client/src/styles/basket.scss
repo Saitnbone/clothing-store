@@ -5,7 +5,17 @@
   ---------------------------------------------------------------
 */
 
-// Стили для секции placing-order
+// Стили для секции order
+
+.order__list-item {
+  display: flex;
+}
+
+// Стили для секции order-details
+
+.order-details {
+  margin-block-start: 67px;
+}
 
 .placing-order {
   display: grid;
@@ -17,7 +27,7 @@
   grid-column: span 2;
 }
 
-.placing-order__personal-inf {
+.placing-order__settings {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-column: span 2;
@@ -31,27 +41,36 @@
 .total-coast {
   display: flex;
   flex-direction: column;
+
+  &__text {
+    text-transform: uppercase;
+    margin-block-end: 17px;
+  }
+
+  &__button {
+    inline-size: 100%;
+    block-size: 50px;
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 19px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 16px 81px 17px 81px;
+    margin-block-start: 10px;
+  }
 }
 
-.total-coast__text {
-  text-transform: uppercase;
-  margin-block-end: 17px;
-}
+.total-coast {
+  margin-block-start: 53px;
 
-.total-coast__button {
-  inline-size: 100%;
-  block-size: 50px;
-  font-size: 16px;
-  text-transform: uppercase;
-  line-height: 19px;
-  background-color: var(--accent-color);
-  color: var(--text-color);
-  padding: 16px 81px 17px 81px;
-  margin-block-start: 10px;
-}
+  &__offer-text {
+    margin-block-start: 15px;
+    text-align: left;
+    line-height: 16px;
+  }
 
-.total-coast__offer-text {
-  margin-block-start: 15px;
-  text-align: left;
-  line-height: 16px;
+  &__bill {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

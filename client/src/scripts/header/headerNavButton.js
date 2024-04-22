@@ -1,20 +1,15 @@
-// Файл для скрипта, который применяется для всех сраниц онлайн-магазина
-
-// Перменные для проекта
-
 /* 
 ------------------------------------------------------------------------
-                         Настройки скрипта для блока header
+                         Настройки скрипта для навигации header
                                   (все страницы)
                                         ||
-                          Script settings for block header
+                          Script settings for navigation header
                                     (all pages)
 ------------------------------------------------------------------------
 */
 
 // Переменные для блока header
 
-// querySelector блока header
 const header = document.querySelector(".header");
 
 // Кнопки блока .header__list-of-things
@@ -69,31 +64,4 @@ function closeMobileHeaderMenu() {
   }
 }
 
-/* 
-------------------------------------------------------------------------
-                         Настройки скрипта для блока footer
-                                  (все страницы)
-                                        ||
-                          Script settings for block footer
-                                    (all pages)
-------------------------------------------------------------------------
-*/
-
-// Переменнные для блока footer
-
-const footerSections = document.querySelectorAll(".footer__section");
-
-// :@todo Функция открытия списков в блоке footer
-
-footerSections.forEach((element) => {
-  element.addEventListener("click", openFooterList);
-});
-
-function openFooterList(event) {
-  const footerButton = event.currentTarget.querySelector(
-    ".footer__section-list"
-  );
-  if (window.innerWidth <= 950 && footerButton) {
-    footerButton.classList.toggle("footer__section-list_show");
-  }
-}
+export default header;

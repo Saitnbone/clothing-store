@@ -1,8 +1,8 @@
 // Переменные для страницы main
 
-const scrollButton = document.querySelector();
+// const scrollButton = document.querySelector();
 
 // Функции
-scrollButton.addEventListener("click", scrollCategory);
+// scrollButton.addEventListener("click", scrollCategory);
 
-function scrollCategory() {}
+// function scrollCategory() {}

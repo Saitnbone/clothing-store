@@ -42,7 +42,7 @@ html(lang="ru")
           li.header__list-of-things-item.favorites-button
             a(href="http://127.0.0.1:5500/client/dist/favorites.html")
               img(src='../dist/svg/favorites.svg' alt='Иконка с изображением сердечка для перехода на страницу с избранными товарами пользователя')
-          li.header__list-of-things-item.basket-button
+          li#basket-button.header__list-of-things-item
             img(src='../dist/svg/basket.svg' alt='Иконка с изображением козины покупателя').header__collection-block
       ul.popup-mobile
         li.popup-mobile__item
@@ -116,4 +116,4 @@ html(lang="ru")
               img(src='../dist/svg/telegram-icon.svg' alt='Иконка телеграма')
           span +38(073) 096 36 44
           span info@yanki.com
-    script(src="../dist/scripts/default.js")
+    script(src="../dist/bundle.js")
