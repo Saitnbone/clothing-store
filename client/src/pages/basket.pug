@@ -5,36 +5,58 @@ block variables
 
 block content
     main.basket__main.main
-      div.basket__main-navigation
+      div.main-navigation
         span.basket__main-navigation-item
           a(href='http://127.0.0.1:5500/client/dist/main.html') Главная
         span.basket__main-navigation-item Каталог
         span.basket__main-navigation-item Корзина
       section.order
-        h2.order__title
+        h2.main__title
           | Ваш заказ
         ul.order__list
           li.order__list-item
-            img.order__list-item-image
-          li.order__list-item 
+            div.order__list-item-block-image
+              div
+                img.order__list-item-image(src='../dist/images/Rectangle-10.png' alt='Девушка в зимней куртке белого цвета с меховым капюшоном')
+              div.order__list-item-block-information
+                span.order__list-item-article арт. 1589956
+                h3.order__list-item-title Кремовое пальто 
+            div.order__list-item-color-blok 
+              span.order__list-item-color
+            div.order__list-item-size L
+            div.order__list-item-quantity 3
+            span.order__list-item-price 9450 грн.
+            button.order__list-item-delete-button 
+          li.order__list-item
+            div.order__list-item-block-image
+              div
+                img.order__list-item-image(src='../dist/images/Rectangle-10.png' alt='Девушка в зимней куртке белого цвета с меховым капюшоном')
+              div.order__list-item-block-information
+                span.order__list-item-article арт. 1588262
+                h3.order__list-item-title Кремовое пальто 
+            div.order__list-item-color-blok 
+              span.order__list-item-color
+            div.order__list-item-size L
+            div.order__list-item-quantity 3
+            span.order__list-item-price 9450 грн.
+            button.order__list-item-delete-button 
       section.order-details
         h2.placing-order__title
           | Оформление заказа:
         form.placing-order
-          fieldset.placing-order__personal-information          
+          div.placing-order__personal-information          
             legend.placing-order__second-title
                 | Персональные данные:
             div.placing-order__settings
               input(type="text" placeholder='Ваше имя*').input-block
               input(type="text" placeholder='Ваша фамилия*').input-block
-              input(type="text" placeholder='Ваш e-mail*').input-block
-              input(type="text" placeholder='Ваш телефон*').input-block
+              input(type="email" placeholder='Ваш e-mail*').input-block
+              input(type="tel" placeholder='Ваш телефон*').input-block
             legend.placing-order__second-title
               | Способ доставки:   
             div.placing-order__settings
               div
-                p 
-                  | По Украине:
+                p По Украине:
                 ul
                   li
                     input#delivery-method_1(type="radio", name="delivery-method" value='Самовывоз') 
@@ -45,8 +67,7 @@ block content
                     label(for="delivery-method_2") 
                       | Новая Почта
               div      
-                p 
-                  | Международная доставка:
+                p Международная доставка:
                 ul 
                   li 
                     input#delivery-method_3(type="radio", name="delivery-method" value='Украпочта')
@@ -61,34 +82,52 @@ block content
             div.placing-order__settings
               input(type="text" placeholder='Город*').input-block
               input(type="text" placeholder='Отделение почты*').input-block
-            div 
-              h3.placing-order__second-title
+            fieldset.placing-order__settings
+              legend.placing-order__second-title
                 | Вы можете оплатить покупку одним из ниже перечисленных способов:
-            div 
-              h3.placing-order__second-title 
-                | Использование бонусного счёта:
-              div.placing-order__settings
-                input(type="text" placeholder='Сумма списания бонусов*').input-block
-          fieldset.total-coast
-            span.total-coast__text 
-              | Войти в личный кабинет 
-            span.total-coast__text  
-              | Условия доставки
-            span.total-coast__text 
-              | Условия возврата и обмена
-            span.total-coast-text 
-              | Информация об оплате
-            div.total-coast__bill
               ul 
                 li 
-                  | Доставка:
+                  input#payment-method_1(type="radio", name="payment-method" value='Приват 24')
+                  label(for="payment-method_1") 
+                    | Полная предоплата через Приват 24
                 li 
-                  | Бонусы:
+                  input#payment-method_2(type="radio", name="payment-method" value='Visa/MasterCard')
+                  label(for='payment-method_2')
+                    | Денежным переводом Visa/MasterCard
                 li 
-                  | Итого:
-              div
+                  input#payment-method_3(type="radio", name="payment-method" value='Наложенный платеж')
+                  label(for="payment-method_3") 
+                    | Наложенным платежом в отделении Новой Почты
+            fieldset 
+              label.placing-order__second-title 
+                | Использование бонусного счёта:
+              div.placing-order__settings
+                input(type=""  placeholder='Сумма списания бонусов*').input-block
+          div.total-coast
+            ul.total-coast__list 
+              li.total-coast__list-item
+                a(href="http://127.0.0.1:5500/client/dist/profile.html") 
+                  | Войти в личный кабинет 
+              li.total-coast__list-item
+                a(href="http://127.0.0.1:5500/client/dist/returns.html") 
+                  | Условия доставки
+              li.total-coast__list-item
+                a(href="http://127.0.0.1:5500/client/dist/returns.html") 
+                  | Условия возврата и обмена
+              li.total-coast__list-item
+                a(href="http://127.0.0.1:5500/client/dist/payment.html") 
+                  | Информация об оплате
+            div.total-coast__bill
+              ul.total-coast__bill-criteria
+                li Доставка:
+                li Бонусы:
+                li Итого:
+              ul.total-coast__bill-elements
+                li По тарифам перевозчика
+                li -69 грн.
+                li 18831 грн.
             button.total-coast__button
               | Оформить заказ
             p.total-coast__offer-text 
-            | Нажимая на кнопку «оплатить заказ», я принимаю условия публичной оферты и политики конфиденциальности
+              | Нажимая на кнопку «Оплатить заказ», я принимаю условия публичной оферты и политики конфиденциальности
 

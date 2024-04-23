@@ -73,6 +73,12 @@ a {
   text-decoration: none;
 }
 
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 // Стили для блока header
 
 .header__navigation-block {
@@ -144,7 +150,19 @@ a {
 // Стили для блока main
 
 .main {
-  padding: 0 120px;
+  padding: 30px 120px 0 120px;
+
+  &-navigation {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__title {
+    font-size: clamp(1.25rem, 1.1786rem + 0.3571vw, 1.5rem);
+    font-weight: 300;
+    line-height: 23px;
+    padding-block-start: 27px;
+  }
 }
 
 //  Стили для блока footer
@@ -153,7 +171,7 @@ a {
   display: flex;
   gap: 46px;
   justify-content: space-between;
-  margin: 94px 120px 71px 120px;
+  padding: 94px 120px 71px 120px;
 
   // Стили для блока footer__section
   &__section {

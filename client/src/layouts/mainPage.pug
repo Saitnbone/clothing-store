@@ -37,13 +37,14 @@ html(lang="ru")
           li.header__list-of-things-item.search-button
             img(src='../dist/svg/search-icon.svg' alt='Изображение иконки поискового поля')
           li.header__list-of-things-item.profile-button
-            a(href='http://127.0.0.1:5500/client/dist/authorization.html')
-            img(src='../dist/svg/profile-icon.svg' alt='Изображение иконки профиля пользователя')
+            a(href='http://127.0.0.1:5500/client/dist/profile.html')
+              img(src='../dist/svg/profile-icon.svg' alt='Изображение иконки профиля пользователя')
           li.header__list-of-things-item.favorites-button
             a(href="http://127.0.0.1:5500/client/dist/favorites.html")
               img(src='../dist/svg/favorites.svg' alt='Иконка с изображением сердечка для перехода на страницу с избранными товарами пользователя')
           li#basket-button.header__list-of-things-item
-            img(src='../dist/svg/basket.svg' alt='Иконка с изображением козины покупателя').header__collection-block
+            a(href="http://127.0.0.1:5500/client/dist/basket.html") 
+              img(src='../dist/svg/basket.svg' alt='Иконка с изображением козины покупателя').header__collection-block
       ul.popup-mobile
         li.popup-mobile__item
           div.popup-mobile__search-block
