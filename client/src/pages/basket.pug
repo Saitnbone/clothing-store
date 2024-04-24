@@ -25,8 +25,10 @@ block content
               span.order__list-item-color
             div.order__list-item-size L
             div.order__list-item-quantity 3
-            span.order__list-item-price 9450 грн.
-            button.order__list-item-delete-button 
+            div.order__list-item-other
+              span.order__list-item-price 9450 грн.
+              button.order__list-item-delete-button 
+                img(src="../dist/svg/trash-basket.svg", alt="Изображение корзины удаления товара") 
           li.order__list-item
             div.order__list-item-block-image
               div
@@ -38,8 +40,13 @@ block content
               span.order__list-item-color
             div.order__list-item-size L
             div.order__list-item-quantity 3
-            span.order__list-item-price 9450 грн.
-            button.order__list-item-delete-button 
+            div.order__list-item-other
+              span.order__list-item-price 9450 грн.
+              button.order__list-item-delete-button 
+                img(src="../dist/svg/trash-basket.svg", alt="Изображение корзины удаления товара") 
+        div.order__total
+          span.order__total-text К оплате: 
+          span.order__total-coast 18831 грн 
       section.order-details
         h2.placing-order__title
           | Оформление заказа:
@@ -55,29 +62,29 @@ block content
             legend.placing-order__second-title
               | Способ доставки:   
             div.placing-order__settings
-              div
-                p По Украине:
-                ul
-                  li
+              div.delivery-methods
+                h3.delivery-methods__text По Украине:
+                ul.delivery-methods__list
+                  li.delivery-methods__list-item
                     input#delivery-method_1(type="radio", name="delivery-method" value='Самовывоз') 
                     label(for="delivery-method_1") 
                       | Самовывоз - вул. Большая Васильковская 14(м. Льва Толстого)
-                  li 
+                  li.delivery-methods__list-item 
                     input#delivery-method_2(type="radio", name="delivery-method" value='Новая Почта')
                     label(for="delivery-method_2") 
                       | Новая Почта
-              div      
-                p Международная доставка:
-                ul 
-                  li 
+              div.delivery-methods     
+                h3.delivery-methods__text Международная доставка:
+                ul.delivery-methods__list
+                  li.delivery-methods__list-item
                     input#delivery-method_3(type="radio", name="delivery-method" value='Украпочта')
                     label(for="delivery-method_3") 
                       | Украпочта / 1-3 недели / 30$
-                  li
+                  li.delivery-methods__list-item
                     input#delivery-method_4(type="radio", name="delivery-method" value='DHL')
                     label(for="delivery-method_4") 
                       | DHL / 3-7 дней / 60$
-            h3.placing-order__second-title
+            legend.placing-order__second-title
               | Адрес доставки 
             div.placing-order__settings
               input(type="text" placeholder='Город*').input-block
@@ -85,7 +92,7 @@ block content
             fieldset.placing-order__settings
               legend.placing-order__second-title
                 | Вы можете оплатить покупку одним из ниже перечисленных способов:
-              ul 
+              ul
                 li 
                   input#payment-method_1(type="radio", name="payment-method" value='Приват 24')
                   label(for="payment-method_1") 
