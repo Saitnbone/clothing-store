@@ -1,0 +1,36 @@
+/* 
+  ---------------------------------------------------------------
+                        Стили для блока profile
+                    (страница профиля пользователя)
+  ---------------------------------------------------------------
+*/
+
+.porfile__switch {
+  border-top: 0.3px solid rgb(37, 37, 37);
+  border-bottom: 0.3px solid rgb(37, 37, 37);
+
+  &-list {
+    display: flex;
+    justify-content: center;
+
+    .porfile__switch-button {
+      text-align: center;
+      inline-size: 228px;
+      block-size: 49px;
+    }
+  }
+}
+
+.switch-button_active {
+  color: var(--text-color);
+  background-color: var(--accent-color);
+}
+
+// Стили для блока .orders__history-list
+
+.orders__history-list {
+  margin-block-start: 20px;
+
+  &-block {
+  }
+}

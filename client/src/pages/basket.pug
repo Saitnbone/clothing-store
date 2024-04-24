@@ -6,10 +6,10 @@ block variables
 block content
     main.basket__main.main
       div.main-navigation
-        span.basket__main-navigation-item
+        span
           a(href='http://127.0.0.1:5500/client/dist/main.html') Главная
-        span.basket__main-navigation-item Каталог
-        span.basket__main-navigation-item Корзина
+        span Каталог
+        span Корзина
       section.order
         h2.main__title
           | Ваш заказ
@@ -92,16 +92,16 @@ block content
             fieldset.placing-order__settings
               legend.placing-order__second-title
                 | Вы можете оплатить покупку одним из ниже перечисленных способов:
-              ul
-                li 
+              ul.payment-methods__list
+                li.payment-methods__list-item
                   input#payment-method_1(type="radio", name="payment-method" value='Приват 24')
                   label(for="payment-method_1") 
                     | Полная предоплата через Приват 24
-                li 
+                li.payment-methods__list-item
                   input#payment-method_2(type="radio", name="payment-method" value='Visa/MasterCard')
                   label(for='payment-method_2')
                     | Денежным переводом Visa/MasterCard
-                li 
+                li.payment-methods__list-item
                   input#payment-method_3(type="radio", name="payment-method" value='Наложенный платеж')
                   label(for="payment-method_3") 
                     | Наложенным платежом в отделении Новой Почты

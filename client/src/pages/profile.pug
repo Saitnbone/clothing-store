@@ -5,3 +5,31 @@ block variables
 
 block content   
     main.personal__main.main
+      div.main-navigation
+        span
+          a(href='http://127.0.0.1:5500/client/dist/main.html') Главная
+        span Личный кабинет
+      section.profile
+        div.porfile__switch 
+          ul.porfile__switch-list 
+            li.porfile__switch-list-item 
+              button.porfile__switch-button.switch-button_active История заказов
+            li.porfile__switch-list-item
+              button.porfile__switch-button Личные данные 
+            li.porfile__switch-list-item 
+              button.porfile__switch-button Выйти
+        ul.orders__history-list
+          li.orders__history-list-item
+            span.order__number 
+            div.order__status 
+            span.order__cost
+          li.orders__history-list-item
+            span.order__number
+            span.order__status 
+            span.order__cost
+          li.orders__history-list-item   
+            span.order__number
+            span.order__status 
+            span.order__cost
+      section.personal-information
+
