@@ -20,16 +20,113 @@ block content
               button.porfile__switch-button Выйти
         ul.orders__history-list
           li.orders__history-list-item
-            span.order__number 
-            div.order__status 
-            span.order__cost
+            div.orders__history-list-item-block 
+              span.order__number 718 от 28.09.2 
+              div.order__status
+                span Статус: 
+                span.order__status_accent Выполнен
+              div.order__cost
+                span Сумма заказа
+                span.order__cost_accent 9500 грн
+              img(src='../dist/svg/item_beige.svg' alt='Декоративный элемент сайта')
           li.orders__history-list-item
-            span.order__number
-            span.order__status 
-            span.order__cost
-          li.orders__history-list-item   
-            span.order__number
-            span.order__status 
-            span.order__cost
-      section.personal-information
+            div.orders__history-list-item-block
+              span.order__number 328 от 10.07.21
+              div.order__status
+                span Статус: 
+                span.order__status_accent Отклонен 
+              div.order__cost
+                span Сумма заказа
+                span.order__cost_accent  9500 грн
+              img(src='../dist/svg/item_beige.svg' alt='Декоративный элемент сайта')
+          li.orders__history-list-item.order_show
+            div.orders__history-list-item-block 
+              span.order__number 235 от 03.05.21
+              div.order__status 
+                span Статус: 
+                span.order__status_accent Выполнен
+              div.order__cost
+                span Сумма заказа
+                span.order__cost_accent 9500 грн
+              img(src='../dist/svg/item_beige.svg' alt='Декоративный элемент сайта')
+            div.orders__history-details
+              ul.orders__history-details-list 
+                li.orders__history-details-list-item
+                  div.order__list-item-block-image
+                    div
+                      img.order__list-item-image(src='../dist/images/Rectangle-10.png' alt='Девушка в зимней куртке белого цвета с меховым капюшоном')
+                    div.order__list-item-block-information
+                      span.order__list-item-article арт. 1589956
+                      h3.order__list-item-title Кремовое пальто
+                  div.order__list-item-color-blok 
+                    span.order__list-item-color
+                  div.orders__history-list-item-size
+                    span Размер:
+                    span M
+                  div.orders__history-list-item-quantity
+                    span Количество:
+                    span  3
+                  div.order__list-item-other
+                  span.order__list-item-price 9450 грн   
+                li.orders__history-details-list-item
+                  div.order__list-item-block-image
+                    div
+                      img.order__list-item-image(src='../dist/images/Rectangle-10.png' alt='Девушка в зимней куртке белого цвета с меховым капюшоном')
+                    div.order__list-item-block-information
+                      span.order__list-item-article арт. 1589956
+                      h3.order__list-item-title Кремовое пальто
+                  div.order__list-item-color-blok 
+                    span.order__list-item-color
+                  div.orders__history-list-item-size
+                    span Размер:
+                    span L
+                  div.orders__history-list-item-quantity
+                    span Количество:
+                    span 3
+                  div.order__list-item-other
+                  span.order__list-item-price 9450 грн
+            div.personal-information 
+              div.personal-information__user-data
+                div.personal-information__item
+                  span Имя фамилия:
+                  span Елизаветта Станиславчук
+                div.personal-information__item
+                  span E-mail: 
+                  span ella.s97@gmail.com
+                div.personal-information__item 
+                  span Номер телефона:
+                  span +38(067)470 20 66
+              div.personal-information__delivery-data
+                div.personal-information__item
+                  span Способ доставки: 
+                  span Доставка Новой Почтой
+                div.personal-information__item  
+                  span Способ оплаты:
+                  span Оплата при получении
+          li.orders__history-list-item.order_show
+            div.orders__history-list-item-block 
+              span.order__number 236 от 03.05.21
+              div.order__status 
+                span Статус: 
+                span.order__status_accent Выполнен
+              div.order__cost
+                span Сумма заказа
+                span.order__cost_accent 9500 грн
+              img(src='../dist/svg/item_beige.svg' alt='Декоративный элемент сайта')
+        form.profile-settings
+          fieldset.profile-settings__personal 
+            legend.profile-settings__title Персональные данные:
+            input(type="text")
+            input(type="text")
+            input(type="text")
+            input(type="text")
+          fieldset.profile-settings__delivery 
+            legend.profile-settings__title Адрес доставки:
+            input(type="text")
+            input(type="text")
+            input(type="text")
+          button Обновить информацию
+
+
+
 

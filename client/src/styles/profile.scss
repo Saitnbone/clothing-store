@@ -5,6 +5,10 @@
   ---------------------------------------------------------------
 */
 
+.profile {
+  margin-block-start: 27px;
+}
+
 .porfile__switch {
   border-top: 0.3px solid rgb(37, 37, 37);
   border-bottom: 0.3px solid rgb(37, 37, 37);
@@ -29,8 +33,105 @@
 // Стили для блока .orders__history-list
 
 .orders__history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   margin-block-start: 20px;
 
-  &-block {
+  &-item {
+    padding-block-end: 12px;
+    border-bottom: 0.3px solid rgb(37, 37, 37);
+
+    &-block {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
+
+.order__status {
+  display: flex;
+  flex-direction: column;
+
+  &_accent {
+    font-weight: bold;
+  }
+}
+
+.order__cost {
+  display: flex;
+  flex-direction: column;
+
+  &_accent {
+    font-weight: bold;
+  }
+}
+
+// Стили для блока .orders__history-details
+
+.orders__history-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-block-start: 17px;
+
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.order__list-item-color {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  inline-size: 27px;
+  block-size: 27px;
+  background-color: rgb(111, 131, 164);
+  border-radius: 50%;
+}
+
+.orders__history-list-item-size {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+.orders__history-list-item-quantity {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+
+// Стили для блока .personal-information
+
+.personal-information {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-block-start: 20px;
+
+  &__user-data {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__delivery-data {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    gap: 4px;
+  }
+}
+
+// Стили для формы .profile-settings

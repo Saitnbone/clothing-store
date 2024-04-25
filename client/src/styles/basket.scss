@@ -89,6 +89,9 @@
     display: flex;
     gap: 27px;
   }
+  &-price {
+    font-weight: bold;
+  }
 }
 .order__total {
   display: flex;
