@@ -289,6 +289,42 @@
 ------------------------------------------------------------------------
 */
 
+@media (width <= 1070px) {
+  .personal-information {
+    gap: 12px;
+
+    &__user-data {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    &__delivery-data {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+
+  .profile-settings__personal {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .profile-settings__delivery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width <= 568px) {
+  .profile-settings__personal {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .profile-settings__delivery {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 /* 
 ------------------------------------------------------------------------
                          Медиазапросы для страницы authorization

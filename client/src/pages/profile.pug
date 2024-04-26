@@ -114,18 +114,34 @@ block content
                 span.order__cost_accent 9500 грн
               img(src='../dist/svg/item_beige.svg' alt='Декоративный элемент сайта')
         form.profile-settings
-          fieldset.profile-settings__personal 
+          fieldset
             legend.profile-settings__title Персональные данные:
-            input(type="text")
-            input(type="text")
-            input(type="text")
-            input(type="text")
-          fieldset.profile-settings__delivery 
+            div.profile-settings__personal
+              div.profile-block
+                label(for="name") Имя пользователя:
+                input.profile-settings__input(type="text" id='name')
+              div.profile-block
+                label(for="surname") Фамилия пользователя:
+                input.profile-settings__input(type="text" id='surname')
+              div.profile-block
+                label(for="email") Электронная почта:
+                input.profile-settings__input(type="email" id='email')
+              div.profile-block 
+                label(for="phone") Номер телефона:
+                input.profile-settings__input(type="number" id='phone')
+          fieldset
             legend.profile-settings__title Адрес доставки:
-            input(type="text")
-            input(type="text")
-            input(type="text")
-          button Обновить информацию
+            div.profile-settings__delivery
+              div.profile-block 
+                label(for="country") Страна:
+                input.profile-settings__input(type="text" id='country')
+              div.profile-block 
+                lable(for='town') Город:
+                input.profile-settings__input(type="text" id='town')
+              div.profile-block 
+                label(for="street") Улица:
+                input.profile-settings__input(type="text" id='street')
+          button.profile-settings__submit(type="submit") Обновить информацию
 
 
 
