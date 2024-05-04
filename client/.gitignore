@@ -1,5 +1,3 @@
 # Файлы для .gitignore
-package-lock.json
 node_modules
 dist
-server
