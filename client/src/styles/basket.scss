@@ -48,6 +48,27 @@
     }
   }
 
+  // Тестинг анимации при сжатии экрана
+  &-settings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    inline-size: 100%;
+    gap: 141px;
+    margin-inline-start: 25px;
+
+    &-block-one {
+      inline-size: 232px;
+    }
+
+    &-block-two {
+      display: flex;
+      justify-content: space-between;
+      inline-size: 100%;
+    }
+  }
+
+  //
   &-color-blok {
     position: relative;
     inline-size: 30px;
