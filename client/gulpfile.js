@@ -4,24 +4,28 @@ import gulp from "gulp";
 // Импорт путей
 import { path } from "../client/gulp/config/path.js";
 
+// Импорт общих плагинов
+import { plugins } from "./gulp/config/plugins.js";
+
 global.app = {
   path: path,
   gulp: gulp,
+  plugins: plugins,
 };
 
 // Импорт задач
-import { copy } from "../client/gulp/tasks/copy.js";
+// import { copy } from "../src/gulp/tasks/copy.js";
 import { reset } from "../client/gulp/tasks/reset.js";
 import { html } from "../client/gulp/tasks/html.js";
 // import {scss} from "../client/gulp/tasks/scss.js";
+// import {js} from "../client/"
 
 // Наблюдатель за изменениями в файлах
 const watchFiles = () => {
-  gulp.watch(path.watch.html, gulp.series(reset, html)); // Здесь включаем reset в последовательность с html
-  gulp.watch(path.watch.files, gulp.series(reset, copy)); // Здесь включаем reset в последовательность с copy
+  gulp.watch(path.watch.html, gulp.series(reset, html));
 };
 
-const mainTasks = gulp.parallel(html, copy);
+const mainTasks = gulp.parallel(html);
 
 // Повторение сценариев выполнения задач
 const dev = gulp.series(mainTasks, watchFiles);
