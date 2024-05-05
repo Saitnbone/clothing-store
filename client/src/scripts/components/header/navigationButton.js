@@ -7,10 +7,10 @@
                                     (all pages)
 ------------------------------------------------------------------------
 */
-
+// @todo: Импорты
+import { header } from "..";
 // Переменные для блока header
 
-const header = document.querySelector(".header");
 
 // Кнопки блока .header__list-of-things
 const navButton = header.querySelector(".header__button");

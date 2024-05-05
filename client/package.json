@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "client side of the application",
   "main": "gulpfile.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp build",
+    "build": "gulp",
     "watchApp": "gulp watchApp"
   },
   "repository": {
@@ -19,8 +20,10 @@
   },
   "homepage": "https://github.com/Saitnbone/clothing-store#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.24.1",
+    "@babel/preset-env": "^7.24.5",
     "browser-sync": "^3.0.2",
-    "del": "^6.0.0",
+    "del": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-concat-css": "^3.1.0",
@@ -29,5 +32,10 @@
     "gulp-replace-path": "^0.4.0",
     "gulp-sass": "^5.1.0",
     "sass": "^1.74.1"
+  },
+  "dependencies": {
+    "gulp-babel": "^8.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-uglify": "^3.0.2"
   }
 }

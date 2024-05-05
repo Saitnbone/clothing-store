@@ -121,3 +121,5 @@ const furCoats = [
 //     description: "Описание парки",
 //   },
 // ];
+
+export { furCoats };
