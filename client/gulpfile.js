@@ -16,7 +16,8 @@ global.app = {
 // Импорт задач
 // import { copy } from "../src/gulp/tasks/copy.js";
 import { reset } from "../client/gulp/tasks/reset.js";
-import { html } from "../client/gulp/tasks/html.js";
+import { html } from "../client/gulp/tasks/pug.js";
+import { server } from "../client/gulp/tasks/server.js";
 // import {scss} from "../client/gulp/tasks/scss.js";
 // import {js} from "../client/"
 
@@ -28,7 +29,7 @@ const watchFiles = () => {
 const mainTasks = gulp.parallel(html);
 
 // Повторение сценариев выполнения задач
-const dev = gulp.series(mainTasks, watchFiles);
+const dev = gulp.series(mainTasks, gulp.parallel(watchFiles, server));
 
 // Выполнения сценария по умолчанию
 gulp.task("default", dev);

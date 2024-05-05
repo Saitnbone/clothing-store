@@ -1,10 +1,23 @@
-import fileinclude from "gulp-file-include";
 import versionNumber from "gulp-version-number";
+import pug from "gulp-pug";
 
 export const html = () => {
   return app.gulp
     .src(app.path.src.html)
-    .pipe(fileinclude())
+    .pipe(
+      app.plugins.plumber(
+        app.plugins.notify.onError({
+          title: "HTML",
+          message: "Error <%m error.message %>",
+        })
+      )
+    )
+    .pipe(
+      pug({
+        pretty: true,
+        verbose: true,
+      })
+    )
     .pipe(app.plugins.replace(/@img\//g, "img/"))
     .pipe(
       versionNumber({
@@ -19,5 +32,6 @@ export const html = () => {
         },
       })
     )
-    .pipe(app.gulp.dest(app.path.build.html));
+    .pipe(app.gulp.dest(app.path.build.html))
+    .pipe(app.plugins.browserSync.stream());
 };

@@ -12,12 +12,12 @@ export const path = {
     files: buildFolder,
   },
   src: {
-    html: `${srcFolder}/views/*.html`,
+    html: `${srcFolder}/pages/*.pug`,
     scss: `${srcFolder}/styles/imports.scss`,
     files: `${srcFolder}/files/**/*.*`,
   },
   watch: {
-    html: `${srcFolder}/views/*.html`,
+    html: `${srcFolder}/pages/*.pug`,
     scss: `${srcFolder}/styles/imports.scss`,
     files: `${srcFolder}/**/*.*`,
   },
