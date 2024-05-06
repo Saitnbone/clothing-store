@@ -1,6 +1,7 @@
 import versionNumber from "gulp-version-number";
 import pug from "gulp-pug";
 
+// @todo: Таска для обработки html файлов 
 export const html = () => {
   return app.gulp
     .src(app.path.src.html)

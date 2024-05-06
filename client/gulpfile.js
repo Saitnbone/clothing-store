@@ -14,22 +14,22 @@ global.app = {
 };
 
 // Импорт задач
-// import { copy } from "../src/gulp/tasks/copy.js";
 import { reset } from "../client/gulp/tasks/reset.js";
 import { html } from "../client/gulp/tasks/pug.js";
-import { server } from "../client/gulp/tasks/server.js";
-// import {scss} from "../client/gulp/tasks/scss.js";
-// import {js} from "../client/"
+// import { server } from "../client/gulp/tasks/server.js";
+import { scss } from "../client/gulp/tasks/scss.js";
+// import { js } from "../client/gulp/tasks/js.js";
 
 // Наблюдатель за изменениями в файлах
 const watchFiles = () => {
   gulp.watch(path.watch.html, gulp.series(reset, html));
+  gulp.watch(path.watch.scss, gulp.series(reset, scss));
 };
 
-const mainTasks = gulp.parallel(html);
+const mainTasks = gulp.parallel(html, scss);
 
 // Повторение сценариев выполнения задач
-const dev = gulp.series(mainTasks, gulp.parallel(watchFiles, server));
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watchFiles));
 
 // Выполнения сценария по умолчанию
 gulp.task("default", dev);
