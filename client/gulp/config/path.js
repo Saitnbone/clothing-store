@@ -9,17 +9,20 @@ export const path = {
   build: {
     html: `${buildFolder}/`,
     css: `${buildFolder}/`,
-    files: buildFolder,
+    images: `${buildFolder}/images`,
+    svg: `${buildFolder}/svg`,
   },
   src: {
     html: `${srcFolder}/pages/*.pug`,
     scss: `${srcFolder}/styles/imports.scss`,
-    files: `${srcFolder}/files/**/*.*`,
+    images: `${srcFolder}/images/**/*.{jpg,png,gif,ico,webp,avif}`,
+    svg: `${srcFolder}/svg/**/*.svg`,
   },
   watch: {
     html: `${srcFolder}/pages/*.pug`,
     scss: `${srcFolder}/styles/imports.scss`,
-    files: `${srcFolder}/**/*.*`,
+    images: `${srcFolder}/images/**/*{jpg,png,gif,ico,webp,avif}"`,
+    svg: `${srcFolder}/svg/**/*.svg`,
   },
   clean: buildFolder,
   buildFolder: buildFolder,
