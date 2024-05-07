@@ -20,7 +20,7 @@ import { html } from "../client/gulp/tasks/pug.js";
 import { scss } from "../client/gulp/tasks/scss.js";
 import { images } from "../client/gulp/tasks/images.js";
 import { svg } from "../client/gulp/tasks/svg.js";
-// import { js } from "../client/gulp/tasks/js.js";
+import { js } from "../client/gulp/tasks/js.js";
 
 // Наблюдатель за изменениями в файлах
 const watchFiles = () => {
@@ -28,9 +28,10 @@ const watchFiles = () => {
   gulp.watch(path.watch.scss, gulp.series(reset, scss));
   gulp.watch(path.watch.images, gulp.series(reset, images));
   gulp.watch(path.watch.svg, gulp.series(reset, svg));
+  gulp.watch(path.watch.js, gulp.series(reset, js));
 };
 
-const mainTasks = gulp.parallel(html, scss, images, svg);
+const mainTasks = gulp.parallel(html, scss, images, svg, js);
 
 // Повторение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watchFiles));
