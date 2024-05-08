@@ -7,6 +7,7 @@ import rename from "gulp-rename";
 import cleanCss from "gulp-clean-css";
 import autoprefixer from "gulp-autoprefixer";
 import groupCssMediaQueries from "gulp-group-css-media-queries";
+// import stripComments from "gulp-strip-comments";
 
 // Константы
 const sass = gulpSass(dartSass);
@@ -52,6 +53,7 @@ export const scss = () => {
           extname: ".css",
         })
       )
+      // .pipe(stripComments())
       .pipe(app.gulp.dest(app.path.build.css))
       .pipe(app.plugins.browserSync.stream())
   );

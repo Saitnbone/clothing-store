@@ -1,4 +1,5 @@
 import webpack from "webpack-stream";
+import stripComments from "gulp-strip-comments";
 
 // @todo: Таска для обработки .js файлов
 export const js = () => {
@@ -20,6 +21,7 @@ export const js = () => {
         },
       })
     )
+    .pipe(stripComments())
     .pipe(app.gulp.dest(app.path.build.js))
     .pipe(app.plugins.browserSync.stream());
 };

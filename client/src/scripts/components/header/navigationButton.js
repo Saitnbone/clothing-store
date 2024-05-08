@@ -22,7 +22,7 @@ const searchButton = header.querySelector(".search-button");
 
 window.addEventListener("resize", handleResize);
 
-function handleResize() {
+const handleResize = () => {
   const checkOpenedMobileMenu = window.matchMedia("(min-width: 569px)").matches;
   const popUpMobile = header.querySelector(".popup-mobile");
 
