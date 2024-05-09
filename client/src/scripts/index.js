@@ -5,9 +5,18 @@
 */
 
 // @todo: Глобальные DOM-узлы для проекта
-export const header = document.querySelectorAll(".header");
-export const main = document.querySelectorAll(".main");
-export const footer = document.querySelectorAll(".footer");
+const header = document.querySelectorAll(".header");
+const main = document.querySelectorAll(".main");
+const footer = document.querySelectorAll(".footer");
+
+// @todo: DOM-узлы для header
+const basketButton = header.querySelector(".basket-button");
+const navButton = header.querySelector(".header__button");
+const searchButton = header.querySelector(".search-button");
+
+// @todo: DOM-узлы для main
+
+// @todo: DOM-узлы для footer
 
 // @todo: DOM-узлы для страницы mainPage
 
@@ -28,20 +37,10 @@ const catalog = document.querySelector(".catalog__cloth");
 
 // @todo: DOM-узлы для страницы basketPage
 
-// @todo: Импорты
+// @todo: Импорты header
 
-import "./globalComponents/dropdownHandler.js";
-import "./components/header/basketButton.js";
+// @todo: Импорты main
 
-// @import "../styles/global.scss";
-// @import "../styles/variables.scss";
-// @import "../styles/main.scss";
-// @import "../styles/payments.scss";
-// @import "../styles/catalog.scss";
-// @import "../styles/returns.scss";
-// @import "../styles/contacts.scss";
-// @import "../styles/profile.scss";
-// @import "../styles/authorization.scss";
-// @import "../styles/favorites.scss";
-// @import "../styles/basket.scss";
-// @import "../styles/mediaQueries.scss";
+// @todo: Импорты footer
+
+// @todo: Слушатели событий header
