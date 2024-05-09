@@ -3,12 +3,13 @@ import path from "path";
 import { fileURLToPath } from "url";
 import morgan from "morgan";
 import dotenv from "dotenv";
+import { error } from "console";
 
 dotenv.config();
 
 const app = express();
 
-app.set("view engine", "pug");
+// app.set("view engine", "html");
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -29,79 +30,141 @@ app.use(
   morgan(":method :url :status :res[content-length] - :response-time ms")
 );
 
-app.get("/", (req, res) => {
-  res
-    .status(200)
-    .sendFile(express.static(path.join(__dirname, "..", "client", "dist", "main.html")));
-});
-
-app.get("/", (req, res) => {
+app.get("/dist/bundle.css", (req, res) => {
+  try {
     res
       .status(200)
-      .sendFile(express.static(path.join(__dirname, "..", "client", "dist", "bundle.css")));
+      .set("Content-Type", "text/css")
+      .sendFile(path.join(__dirname, "..", "client", "dist", "bundle.css"));
+  } catch {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
-app.get("/home", (req, res) => {
-  res
-    .status(200)
-    .sendFile(path.join(__dirname, "..", "client", "dist", "main.html"));
-    // .sendFile(path.join(__dirname, '..', 'client', 'dist', 'bundle.css'));
+app.get("/", (req, res) => {
+  try {
+    res
+      .status(200)
+      .set("Content-Type", "text/html")
+      .sendFile(path.join(__dirname, "..", "client", "dist", "main.html"));
+  } catch {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.get("/main", (req, res) => {
-  res.status(200).render(createPath("main"));
+  try {
+    res
+      .status(200)
+      .set("Content-Type", "text/html")
+      .sendFile(path.join(__dirname, "..", "client", "dist", "main.html"));
+  } catch {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.get("/catalog", (req, res) => {
-    res.status(200)
-    .sendFile(path.join(__dirname, "..", "client", "dist", "catalog.html"));
-//   res.status(200).render(createPath("catalog"));
+  try {
+    res
+      .status(200)
+      .set("Content-Type", "text/html")
+      .sendFile(path.join(__dirname, "..", "client", "dist", "catalog.html"));
+  } catch {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.get("/authorization", (req, res) => {
-    res.status(200)
-    .sendFile(path.join(__dirname, "..", "client", "dist", "catalog.html"));
-    
-//   res.status(200).render(createPath("authorization"));
+  try {
+    res
+      .status(200)
+      .set("Content-Type", "text/html")
+      .sendFile(
+        path.join(__dirname, "..", "client", "dist", "authorization.html")
+      );
+  } catch {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.get("/basket", (req, res) => {
-    res.status(200)
-    .sendFile(path.join(__dirname, "..", "client", "dist", "catalog.html"));
-  res.status(200).render(createPath("basket"));
+  try {
+    res
+      .status(200)
+      .set("Content-Type", "text/html")
+      .sendFile(path.join(__dirname, "..", "client", "dist", "basket.html"));
+  } catch {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.get("/contacts", (req, res) => {
-    res.status(200)
-    .sendFile(path.join(__dirname, "..", "client", "dist", "catalog.html"));
-  res.status(200).render(createPath("contacts"));
+  try {
+    res
+      .status(200)
+      .set("Content-Type", "text/html")
+      .sendFile(path.join(__dirname, "..", "client", "dist", "contacts.html"));
+  } catch {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.get("/favorites", (req, res) => {
-    res.status(200)
-    .sendFile(path.join(__dirname, "..", "client", "dist", "catalog.html"));
-  res.status(200).render(createPath("favorites"));
+  try {
+    res
+      .status(200)
+      .set("Content-Type", "text/html")
+      .sendFile(path.join(__dirname, "..", "client", "dist", "favorites.html"));
+  } catch {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.get("/payments", (req, res) => {
-    res.status(200)
-    .sendFile(path.join(__dirname, "..", "client", "dist", "catalog.html" && 'bundle.css'));
-//   res.status(200).render(createPath("payments"));
+  try {
+    res
+      .status(200)
+      .set("Content-Type", "text/html")
+      .sendFile(path.join(__dirname, "..", "client", "dist", "payments.html"));
+  } catch {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.get("/profile", (req, res) => {
-    res.status(200)
-    .sendFile(path.join(__dirname, "..", "client", "dist", "catalog.html"));
-//   res.status(200).render(createPath("profile"));
+  try {
+    res
+      .status(200)
+      .set("Content-Type", "text/html")
+      .sendFile(path.join(__dirname, "..", "client", "dist", "profile.html"));
+  } catch {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
 app.get("/returns", (req, res) => {
-    res.status(200)
-    .sendFile(path.join(__dirname, "..", "client", "dist", "catalog.html"));
-//   res.status(200).render(createPath("returns"));
+  try {
+    res
+      .status(200)
+      .set("Content-Type", "text/html")
+      .sendFile(path.join(__dirname, "..", "client", "dist", "returns.html"));
+  } catch {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
 });
 
-Мидлвар для перехвата ошибок роутинга
+// Мидлвар для перехвата ошибок роутинга
 app.use((req, res) => {
   res.status(404).sendFile(createPath("error"));
 });
