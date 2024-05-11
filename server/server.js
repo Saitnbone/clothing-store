@@ -158,7 +158,7 @@ app.get("/dist/bundle.css", (req, res) => {
   try {
     res
       .status(200)
-      .set("Content-Type", "image/png")
+      .set("Content-Type", "text/css")
       .sendFile(path.join(__dirname, "..", "client", "dist", "bundle.css"));
   } catch {
     console.error(error);
