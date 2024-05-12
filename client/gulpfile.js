@@ -38,3 +38,5 @@ const dev = gulp.series(reset, mainTasks, gulp.parallel(watchFiles));
 
 // Выполнения сценария по умолчанию
 gulp.task("default", dev);
+
+// 
