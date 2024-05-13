@@ -188,7 +188,7 @@ app.get("/dist/images/background-image.png", (req, res) => {
   }
 });
 
-app.get("/dist/images/mobile-backgroun-image.png", (req, res) => {
+app.get("/dist/images/mobile-background-image.png", (req, res) => {
   try {
     res
       .status(200)
@@ -200,7 +200,7 @@ app.get("/dist/images/mobile-backgroun-image.png", (req, res) => {
           "client",
           "dist",
           "images",
-          "mobile-backgroun-image.png"
+          "mobile-background-image.png"
         )
       );
   } catch {
