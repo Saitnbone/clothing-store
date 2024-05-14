@@ -35,7 +35,7 @@ export const handleResize = () => {
 
 navButton.addEventListener("click", toggleMobileHeaderMenu);
 
-function toggleMobileHeaderMenu() {
+const toggleMobileHeaderMenu = () => {
   const popUpMobile = header.querySelector(".popup-mobile");
 
   if (
@@ -63,5 +63,3 @@ function closeMobileHeaderMenu() {
     popUpMobile.classList.remove("popup-mobile_show");
   }
 }
-
-export default header;

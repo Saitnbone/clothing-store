@@ -1,24 +1,6 @@
-/* 
-------------------------------------------------------------------------
-                         Настройки скрипта для блока footer
-                                  (все страницы)
-                                        ||
-                          Script settings for block footer
-                                    (all pages)
-------------------------------------------------------------------------
-*/
 
-// Переменнные для блока footer
-
-const footerSections = document.querySelectorAll(".footer__section");
-
-// :@todo Функция открытия списков в блоке footer
-
-footerSections.forEach((element) => {
-  element.addEventListener("click", openFooterList);
-});
-
-function openFooterList(event) {
+// @todo: Функция открытия списков в блоке footer
+export const openFooterList = (event) => {
   const footerButton = event.currentTarget.querySelector(
     ".footer__section-list"
   );
