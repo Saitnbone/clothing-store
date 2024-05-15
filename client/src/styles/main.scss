@@ -30,18 +30,6 @@
   aspect-ratio: 3 / 2;
 }
 
-.header__list-of-tools {
-  display: flex;
-  gap: 27px;
-
-  &-item-button {
-    display: flex;
-    line-height: 21px;
-    font-size: 18px;
-    text-transform: uppercase;
-  }
-}
-
 // Настройки для меню навигации для телефонов
 .popup-mobile {
   display: none;
@@ -60,19 +48,6 @@
   &__item:first-child {
     justify-content: start;
     block-size: 59px;
-
-    // &:not(:last-child) {
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   block-size: 39px;
-    //   border-bottom: 0.3px solid rgb(37, 37, 37);
-    //   margin-inline-start: 20px;
-    //   margin-inline-end: 20px;
-    //   text-align: center;
-    //   font-size: 16px;
-    //   text-transform: uppercase;
-    // }
   }
 
   &__item {

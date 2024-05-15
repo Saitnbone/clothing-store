@@ -13,7 +13,7 @@ const footer = document.querySelector(".footer");
 const basketButton = header.querySelector(".basket-button");
 const navButton = header.querySelector(".header__button");
 const searchButton = header.querySelector(".search-button");
-const toggleParametrs = header.querySelectorAll(".");
+const toggleParametrs = header.querySelectorAll(".list");
 
 // @todo: DOM-узлы для main
 
@@ -40,18 +40,18 @@ const catalog = document.querySelector(".catalog__cloth");
 // @todo: DOM-узлы для страницы basketPage
 
 // @todo: Глобальные импорты
-import { openList, closeList } from "./globalComponents/dropdownHandler.js";
+import { openCloseList } from "./scripts/components/globalComponents/dropdownHandler.js";
 
 // @todo: Импорты header
 
 // @todo: Импорты main
 
 // @todo: Импорты footer
-import { openFooterList } from "./components/footer/footerList.js";
+import { openFooterList } from "./scripts/components/footer/footerList.js";
 
 // @todo: Слушатели событий header
 toggleParametrs.forEach((el) => {
-  el.addEventListener("click", openList);
+  el.addEventListener("click", openCloseList);
 });
 
 // @todo: Слушатели событий main

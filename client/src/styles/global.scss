@@ -79,6 +79,17 @@ fieldset {
   padding: 0;
 }
 
+// Настройки для выпадающих списков
+.drop-down-list {
+  display: none;
+}
+
+.drop-down-list_show {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 // Стили для блока header
 
 .header__navigation-block {
@@ -121,13 +132,15 @@ fieldset {
 .header__list-of-tools {
   display: flex;
   gap: 27px;
-}
 
-.header__list-of-tools-item-button {
-  display: flex;
-  line-height: 21px;
-  font-size: 18px;
-  text-transform: uppercase;
+  &-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    line-height: 21px;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
 }
 
 .header__list-of-things {

@@ -16,7 +16,6 @@ global.app = {
 // Импорт задач
 import { reset } from "../client/gulp/tasks/reset.js";
 import { html } from "../client/gulp/tasks/pug.js";
-// import { server } from "../client/gulp/tasks/server.js";
 import { scss } from "../client/gulp/tasks/scss.js";
 import { images } from "../client/gulp/tasks/images.js";
 import { svg } from "../client/gulp/tasks/svg.js";
