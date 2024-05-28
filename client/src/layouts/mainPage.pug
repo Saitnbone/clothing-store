@@ -15,7 +15,7 @@ html(lang="ru")
       nav.header__navigation-block.navigation-main-page
         button.header__button
           img(src='/dist/svg/menu-button.svg' alt='Кнопка для открытия навигации')
-        ul.popup-desktop
+        ul.popup.popup-desktop
           li.popup-desktop__item
             span Оплата и доставка
           li.popup-desktop__item
@@ -26,7 +26,7 @@ html(lang="ru")
           li.header__list-about-item
             button.header__list-about-item-buttom new
           li.header__list-about-item
-            a.header__list-about-item-buttom(href='http://127.0.0.1:5500/client/dist/catalog.html')
+            a.header__list-about-item-buttom(href='/dist/catalog.html')
               | каталог
           li.header__list-about-item
             button.header__list-about-item-buttom о нас
@@ -58,7 +58,7 @@ html(lang="ru")
           li#basket-button.header__list-of-things-item
             a(href="http://127.0.0.1:5500/client/dist/basket.html") 
               img(src='/dist/svg/basket.svg' alt='Иконка с изображением козины покупателя').header__collection-block
-      ul.popup-mobile
+      ul.popup.popup-mobile
         li.popup-mobile__item
           div.popup-mobile__search-block
             input(type="text", id="searchInput", placeholder="Введите ваш запрос").popup-mobile__search-block-input

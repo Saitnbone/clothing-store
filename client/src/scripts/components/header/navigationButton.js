@@ -1,43 +1,57 @@
-// :@todo Функция проверки размеров экрана
-export const handleResize = () => {
-  const checkOpenedMobileMenu = window.matchMedia("(min-width: 569px)").matches;
-  const popUpMobile = document.querySelector(".popup-mobile");
+// @func: Функция проверки размеров экрана
+export const checkDisplaySize = () => {
+  const isDesktop = window.matchMedia("(min-width: 569px)").matches;
+  const popupMobile = document.querySelector(".popup-mobile");
 
-  if (checkOpenedMobileMenu && popUpMobile) {
-    closeMobileHeaderMenu();
+  if (
+    isDesktop &&
+    popupMobile &&
+    popupMobile.classList.contains("popup-mobile_show")
+  ) {
+    closeMobileHeaderMenu(popupMobile);
   }
 };
 
-// :@todo Функция мобильного меню навигации в блоке header
-export const toggleMobileHeaderMenu = () => {
-  const popupMobile = document.querySelector(".popup-mobile");
+// @func: Функция мобильного меню навигации в блоке header
+const toggleMobileHeaderMenu = (popupMobile) => {
+  if (!popupMobile) return;
+
   if (
     window.innerWidth >= 569 ||
     popupMobile.classList.contains("popup-mobile_show")
   ) {
-    closeMobileHeaderMenu();
+    closeMobileHeaderMenu(popupMobile);
   } else {
-    openMobileHeaderMenu();
+    openMobileHeaderMenu(popupMobile);
   }
 };
 
-// @todo: Функция открытия мобильного навигационного меню
-const openMobileHeaderMenu = () => {
-  const popupMobile = document.querySelector(".popup-mobile");
+// @func: Функция открытия мобильного навигационного меню
+const openMobileHeaderMenu = (popupMobile) => {
   if (popupMobile) {
     popupMobile.classList.add("popup-mobile_show");
   }
 };
 
-// @todo: Функция закрытия мобильного навигационного меню
-const closeMobileHeaderMenu = () => {
-  const popupMobile = document.querySelector(".popup-mobile");
+// @func: Функция закрытия мобильного навигационного меню
+const closeMobileHeaderMenu = (popupMobile) => {
   if (popupMobile) {
     popupMobile.classList.remove("popup-mobile_show");
   }
 };
 
-// @todo: // :@todo Функция десктопного меню навигации в блоке header
-export const toggleDesktopHeaderMenu = () => {
-  const popupDesktop = document.querySelector(".popup-desktop");
+// @func: Функция открытия десктопного навигационного меню
+const openDesktopNavMenu = (popupDesktop) => {
+  if (popupDesktop) {
+    popupDesktop.classList.add("popup-desktop_show");
+  }
+};
+
+// @func: Функция проверки размера экрана девайса
+export const checkNavButtonState = (event, popupDesktop, popupMobile) => {
+  if (window.innerWidth <= 569 && event.target) {
+    toggleMobileHeaderMenu(popupMobile);
+  } else {
+    openDesktopNavMenu(popupDesktop);
+  }
 };

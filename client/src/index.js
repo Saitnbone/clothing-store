@@ -1,66 +1,85 @@
-// @todo: Глобальные DOM-узлы для проекта
+// Обозначения:
+
+/*
+
+@DOM: - обозначение для DOM-узлов
+@const: -  обозначение констант
+@func: - обозначение для функций 
+@listeners: - обозначение для слушателей событий
+
+*/
+
+// Глобальные импорты
+import { toggleListState } from "./scripts/components/globalComponents/dropdownHandler.js";
+
+// Импорты для блока header
+import {
+  checkDisplaySize,
+  checkNavButtonState,
+} from "./scripts/components/header/navigationButton.js";
+
+// Импорты main
+
+// Импорты footer
+import { openFooterList } from "./scripts/components/footer/footerList.js";
+
+// @DOM: Глобальные DOM-узлы для проекта
 const header = document.querySelector(".header");
 const main = document.querySelector(".main");
 const footer = document.querySelector(".footer");
 
-// @todo: DOM-узлы для header
+// @DOM: DOM-узлы для header
+const navigationButton = header.querySelector(".header__button");
+const popupDesktop = document.querySelector(".popup-desktop");
+const popupMobile = document.querySelector(".popup-mobile");
 const basketButton = header.querySelector(".basket-button");
-const navButton = header.querySelector(".header__button");
 const searchButton = header.querySelector(".search-button");
 const lists = header.querySelectorAll(".list");
 
-// @todo: DOM-узлы для main
+// @DOM: DOM-узлы для main
 
-// @todo: DOM-узлы для footer
+// @DOM: DOM-узлы для footer
 const footerLists = footer.querySelectorAll(".footer__section");
 
-// @todo: DOM-узлы для страницы mainPage
+// @DOM: DOM-узлы для страницы mainPage
 
-// @todo: DOM-узлы для страницы paymentsPage
+// @DOM: DOM-узлы для страницы paymentsPage
 
-// @todo: DOM-узлы для страницы catalogPage
+// @DOM: DOM-узлы для страницы catalogPage
 const catalog = document.querySelector(".catalog__cloth");
 
-// @todo: DOM-узлы для страницы returnsPage
+// @DOM: DOM-узлы для страницы returnsPage
 
-// @todo: DOM-узлы для страницы contactsPage
+// @DOM: DOM-узлы для страницы contactsPage
 
-// @todo: DOM-узлы для страницы profilePage
+// @DOM: DOM-узлы для страницы profilePage
 
-// @todo: DOM-узлы для страницы authorizationPage
+// @DOM: DOM-узлы для страницы authorizationPage
 
-// @todo: DOM-узлы для страницы favoritesPage
+// @DOM: DOM-узлы для страницы favoritesPage
 
-// @todo: DOM-узлы для страницы basketPage
+// @DOM: DOM-узлы для страницы basketPage
 
-// @todo: Глобальные импорты
-import { openCloseList } from "./scripts/components/globalComponents/dropdownHandler.js";
+// @listeners:  Глобальные слушатели событий header
 
-// @todo: Импорты header
-import { handleResize } from "./scripts/components/header/navigationButton.js";
-import { toggleMobileHeaderMenu } from "./scripts/components/header/navigationButton.js";
+// @listeners:  Слушатели событий header
+window.addEventListener("resize", checkDisplaySize);
 
-// @todo: Импорты main
-
-// @todo: Импорты footer
-import { openFooterList } from "./scripts/components/footer/footerList.js";
-
-// @todo: Слушатели событий header
-window.addEventListener("resize", handleResize);
-
-navButton.addEventListener("click", toggleMobileHeaderMenu);
+navigationButton.addEventListener("click", (event) => {
+  checkNavButtonState(event, popupDesktop, popupMobile);
+});
 
 lists.forEach((listElement) => {
   const hzElement = listElement.querySelector(".hz");
   const dropDownList = listElement.querySelector(".list__drop-down");
   listElement.addEventListener("click", (event) =>
-    openCloseList(event, hzElement, dropDownList)
+    toggleListState(event, hzElement, dropDownList)
   );
 });
 
-// @todo: Слушатели событий main
+// @listeners: Слушатели событий main
 
-// @todo: Слушатели событий footer
+// @listeners: Слушатели событий footer
 footerLists.forEach((listElement) => {
   listElement.addEventListener("click", openFooterList);
 });

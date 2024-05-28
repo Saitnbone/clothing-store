@@ -51,8 +51,11 @@ export const furCoatsData = [
   },
 ];
 
-// Категории "Пальто"
+furCoatsData.forEach((coatData) => {
+  console.log(coatData.price);
+});
 
+// Категории "Пальто"
 export const coatsData = [
   {
     id: 8,
@@ -61,7 +64,7 @@ export const coatsData = [
     description: "Описание пальто",
   },
   {
-    id: 9, 
+    id: 9,
     name: "Пальто",
     image: "../images/Rectangle-10.png",
     description: "Описание пальто",
@@ -132,4 +135,3 @@ export const parksData = [
     description: "Описание парки",
   },
 ];
-
