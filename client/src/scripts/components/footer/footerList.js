@@ -1,4 +1,3 @@
-
 // @todo: Функция открытия списков в блоке footer
 export const openFooterList = (event) => {
   const footerButton = event.currentTarget.querySelector(

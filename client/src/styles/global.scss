@@ -80,14 +80,17 @@ fieldset {
 }
 
 // Настройки для выпадающих списков
-.drop-down-list {
+.list__drop-down {
   display: none;
-}
 
-.drop-down-list_show {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  &_show {
+    position: absolute;
+    display: flex;
+    top: 20px;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1;
+  }
 }
 
 // Стили для блока header
@@ -132,6 +135,7 @@ fieldset {
 .header__list-of-tools {
   display: flex;
   gap: 27px;
+  position: relative;
 
   &-item {
     display: flex;

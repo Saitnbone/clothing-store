@@ -30,6 +30,16 @@
   aspect-ratio: 3 / 2;
 }
 
+// Настройки меню наваигации для десктопа
+.popup-desktop {
+  display: none;
+  z-index: 1;
+
+  &_show {
+    display: flex;
+  }
+}
+
 // Настройки для меню навигации для телефонов
 .popup-mobile {
   display: none;

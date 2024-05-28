@@ -14,7 +14,14 @@ html(lang="ru")
     header.header.header__main-page
       nav.header__navigation-block.navigation-main-page
         button.header__button
-          img(src='/dist/svg/menu-button.svg' alt='Кнопка для открытия каталога')
+          img(src='/dist/svg/menu-button.svg' alt='Кнопка для открытия навигации')
+        ul.popup-desktop
+          li.popup-desktop__item
+            span Оплата и доставка
+          li.popup-desktop__item
+            span Условия возврата
+          li.popup-desktop__item
+            span Контакты
         ul.header__element.header__list-about
           li.header__list-about-item
             button.header__list-about-item-buttom new
@@ -26,17 +33,17 @@ html(lang="ru")
         h1.header__element.header__title Yanki
         ul.header__element.header__list-of-tools
           li.list.header__list-of-tools-item
-            div
-              span Ru
+            div.element-block
+              span.hz Ru
               img(src='/dist/svg/item.svg' alt='Кнопка для переключения языка сайта')
-            div.drop-down-list
+            div.list__drop-down
               span Ua
               span En     
           li.list.header__list-of-tools-item
-            div
-              span Uah
+            div.element-block
+              span.hz Uah
               img(src='/dist/svg/item.svg' alt='Иконка для переключения языка сайта')
-            div.drop-down-list
+            div.list__drop-down
               span Usd
               span Eur
         ul.header__element.header__list-of-things

@@ -1,9 +1,3 @@
-/* 
---------------------------------------------------------------
-                    Константы для проекта
---------------------------------------------------------------
-*/
-
 // @todo: Глобальные DOM-узлы для проекта
 const header = document.querySelector(".header");
 const main = document.querySelector(".main");
@@ -13,7 +7,7 @@ const footer = document.querySelector(".footer");
 const basketButton = header.querySelector(".basket-button");
 const navButton = header.querySelector(".header__button");
 const searchButton = header.querySelector(".search-button");
-const toggleParametrs = header.querySelectorAll(".list");
+const lists = header.querySelectorAll(".list");
 
 // @todo: DOM-узлы для main
 
@@ -43,6 +37,8 @@ const catalog = document.querySelector(".catalog__cloth");
 import { openCloseList } from "./scripts/components/globalComponents/dropdownHandler.js";
 
 // @todo: Импорты header
+import { handleResize } from "./scripts/components/header/navigationButton.js";
+import { toggleMobileHeaderMenu } from "./scripts/components/header/navigationButton.js";
 
 // @todo: Импорты main
 
@@ -50,8 +46,16 @@ import { openCloseList } from "./scripts/components/globalComponents/dropdownHan
 import { openFooterList } from "./scripts/components/footer/footerList.js";
 
 // @todo: Слушатели событий header
-toggleParametrs.forEach((el) => {
-  el.addEventListener("click", openCloseList);
+window.addEventListener("resize", handleResize);
+
+navButton.addEventListener("click", toggleMobileHeaderMenu);
+
+lists.forEach((listElement) => {
+  const hzElement = listElement.querySelector(".hz");
+  const dropDownList = listElement.querySelector(".list__drop-down");
+  listElement.addEventListener("click", (event) =>
+    openCloseList(event, hzElement, dropDownList)
+  );
 });
 
 // @todo: Слушатели событий main

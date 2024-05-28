@@ -9,8 +9,6 @@ dotenv.config();
 
 const app = express();
 
-// app.set("view engine", "html");
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -21,8 +19,6 @@ const port = process.env.PORT || 3030;
 app.listen(port, "localhost", (error) => {
   error ? console.log(error) : console.log(`Server listening port ${port}`);
 });
-
-// app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: false }));
 

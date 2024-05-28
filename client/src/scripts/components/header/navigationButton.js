@@ -1,65 +1,43 @@
-/* 
-------------------------------------------------------------------------
-                         Настройки скрипта для навигации header
-                                  (все страницы)
-                                        ||
-                          Script settings for navigation header
-                                    (all pages)
-------------------------------------------------------------------------
-*/
-// @todo: Импорты
-
-// Переменные для блока header
-
-
-// Кнопки блока .header__list-of-things
-const navButton = header.querySelector(".header__button");
-const searchButton = header.querySelector(".search-button");
-
-// :@todo Функция открытия функция проверки размеров экрана
-
 // :@todo Функция проверки размеров экрана
-
-window.addEventListener("resize", handleResize);
-
 export const handleResize = () => {
   const checkOpenedMobileMenu = window.matchMedia("(min-width: 569px)").matches;
-  const popUpMobile = header.querySelector(".popup-mobile");
+  const popUpMobile = document.querySelector(".popup-mobile");
 
   if (checkOpenedMobileMenu && popUpMobile) {
     closeMobileHeaderMenu();
   }
-}
+};
 
-// :@todo Функция открытия меню навигации в блоке header
-
-navButton.addEventListener("click", toggleMobileHeaderMenu);
-
-const toggleMobileHeaderMenu = () => {
-  const popUpMobile = header.querySelector(".popup-mobile");
-
+// :@todo Функция мобильного меню навигации в блоке header
+export const toggleMobileHeaderMenu = () => {
+  const popupMobile = document.querySelector(".popup-mobile");
   if (
     window.innerWidth >= 569 ||
-    popUpMobile.classList.contains("popup-mobile_show")
+    popupMobile.classList.contains("popup-mobile_show")
   ) {
     closeMobileHeaderMenu();
   } else {
     openMobileHeaderMenu();
   }
-}
+};
 
-function openMobileHeaderMenu() {
-  const popUpMobile = header.querySelector(".popup-mobile");
-
-  if (popUpMobile) {
-    popUpMobile.classList.add("popup-mobile_show");
+// @todo: Функция открытия мобильного навигационного меню
+const openMobileHeaderMenu = () => {
+  const popupMobile = document.querySelector(".popup-mobile");
+  if (popupMobile) {
+    popupMobile.classList.add("popup-mobile_show");
   }
-}
+};
 
-function closeMobileHeaderMenu() {
-  const popUpMobile = header.querySelector(".popup-mobile");
-
-  if (popUpMobile) {
-    popUpMobile.classList.remove("popup-mobile_show");
+// @todo: Функция закрытия мобильного навигационного меню
+const closeMobileHeaderMenu = () => {
+  const popupMobile = document.querySelector(".popup-mobile");
+  if (popupMobile) {
+    popupMobile.classList.remove("popup-mobile_show");
   }
-}
+};
+
+// @todo: // :@todo Функция десктопного меню навигации в блоке header
+export const toggleDesktopHeaderMenu = () => {
+  const popupDesktop = document.querySelector(".popup-desktop");
+};

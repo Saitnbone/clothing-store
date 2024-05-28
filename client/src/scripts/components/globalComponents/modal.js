@@ -1,4 +1,4 @@
-// @todo: Функция закрития модальных окон через кнопку esc
+// Функция закрития модальных окон через кнопку esc
 const closeEscPopup = (evt) => {
   if (evt.key === "Escape") {
     const openedPopup = document.querySelector(".popup_opened");
@@ -8,14 +8,14 @@ const closeEscPopup = (evt) => {
   }
 };
 
-// @todo: Функция открытия модального окна
+// Функция открытия модального окна
 export const openPopup = (modal) => {
   modal.classList.add("popup_opened");
   closeEscPopup(modal);
   document.addEventListener("keydown", closeEscPopup);
 };
 
-// @todo: Функция закрытия модального окна
+// Функция закрытия модального окна
 export const closePopup = (modal) => {
   if (modal.classList.contains("popup_opened")) {
     modal.classList.remove("popup_opened");
@@ -23,4 +23,6 @@ export const closePopup = (modal) => {
   document.removeEventListener("keydown", closeEscPopup);
 };
 
-// @todo: Функция закрития модальных окон через кнопку esc
+// Функция закрития модальных окон через кнопку esc
+
+
