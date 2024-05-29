@@ -15,7 +15,7 @@ export const openPopup = (modal) => {
   document.addEventListener("keydown", closeEscPopup);
 };
 
-// @func:  Функция закрытия модального окна
+// @func: Функция закрытия модального окна
 export const closePopup = (modal) => {
   if (modal.classList.contains("popup_opened")) {
     modal.classList.remove("popup_opened");

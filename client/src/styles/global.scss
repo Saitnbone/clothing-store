@@ -104,12 +104,23 @@ fieldset {
   text-transform: uppercase;
 }
 
+.navigation_flex-start {
+  justify-content: flex-start;
+}
+
 .header__button:hover {
   opacity: 0.5;
 }
 
-.header__list-about {
+.header__element {
   display: flex;
+
+  &_hide {
+    display: none;
+  }
+}
+
+.header__list-about {
   gap: 1.575rem;
   font-size: 18px;
 }
@@ -133,7 +144,6 @@ fieldset {
 }
 
 .header__list-of-tools {
-  display: flex;
   gap: 27px;
   position: relative;
 
@@ -148,20 +158,19 @@ fieldset {
 }
 
 .header__list-of-things {
-  display: flex;
   gap: 30px;
   font-size: 18px;
-}
 
-.header__list-of-things-item {
-  display: flex;
-  flex-direction: row;
-}
+  &-item {
+    display: flex;
+    flex-direction: row;
 
-.header__list-of-things-item:hover {
-  cursor: pointer;
-  box-shadow: var(--box-shadow);
-  opacity: 0.5;
+    &:hover {
+      cursor: pointer;
+      box-shadow: var(--box-shadow);
+      opacity: 0.5;
+    }
+  }
 }
 
 // Стили для блока main

@@ -1,0 +1,70 @@
+// Настройки меню наваигации для десктопа
+.popup-desktop {
+  display: none;
+  z-index: 1;
+
+  &_show {
+    display: flex;
+  }
+}
+
+// Настройки для меню навигации для телефонов
+.popup-mobile {
+  display: none;
+
+  &_show {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    inline-size: 100vw;
+    block-size: 100vh;
+    margin-block-start: 15px;
+    background-color: white;
+    z-index: 1;
+  }
+
+  &__item:first-child {
+    justify-content: start;
+    block-size: 59px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    block-size: 39px;
+    border-bottom: 0.3px solid rgb(37, 37, 37);
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+    text-align: center;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__item:last-child {
+    display: flex;
+    flex-direction: column;
+    text-transform: none;
+    border-bottom: none;
+    margin-block-start: 78px;
+  }
+
+  .popup-mobile__search-block {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .popup-mobile__search-block-input {
+    inline-size: 261px;
+    block-size: 40px;
+    box-sizing: border-box;
+    border: 0.3px solid rgb(37, 37, 37);
+    border-radius: 20px;
+
+    &::placeholder {
+      opacity: 0.5;
+      text-indent: 25px;
+    }
+  }
+}

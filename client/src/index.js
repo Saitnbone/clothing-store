@@ -29,9 +29,11 @@ const main = document.querySelector(".main");
 const footer = document.querySelector(".footer");
 
 // @DOM: DOM-узлы для header
+const headerNavBlock = header.querySelector(".header__navigation-block");
 const navigationButton = header.querySelector(".header__button");
-const popupDesktop = document.querySelector(".popup-desktop");
-const popupMobile = document.querySelector(".popup-mobile");
+const popupDesktop = header.querySelector(".popup-desktop");
+const popupMobile = header.querySelector(".popup-mobile");
+const headerElements = header.querySelectorAll(".header__element");
 const basketButton = header.querySelector(".basket-button");
 const searchButton = header.querySelector(".search-button");
 const lists = header.querySelectorAll(".list");
@@ -46,7 +48,7 @@ const footerLists = footer.querySelectorAll(".footer__section");
 // @DOM: DOM-узлы для страницы paymentsPage
 
 // @DOM: DOM-узлы для страницы catalogPage
-const catalog = document.querySelector(".catalog__cloth");
+const catalog = main.querySelector(".catalog__cloth");
 
 // @DOM: DOM-узлы для страницы returnsPage
 
@@ -66,7 +68,13 @@ const catalog = document.querySelector(".catalog__cloth");
 window.addEventListener("resize", checkDisplaySize);
 
 navigationButton.addEventListener("click", (event) => {
-  checkNavButtonState(event, popupDesktop, popupMobile);
+  checkNavButtonState(
+    event,
+    popupDesktop,
+    popupMobile,
+    headerNavBlock,
+    headerElements
+  );
 });
 
 lists.forEach((listElement) => {
