@@ -15,8 +15,9 @@ import { toggleListState } from "./scripts/components/globalComponents/dropdownH
 // Импорты для блока header
 import {
   checkDisplaySize,
-  checkNavButtonState,
+  checkNavigationBlockState,
 } from "./scripts/components/header/navigationButton.js";
+import { checkSearchBlockState } from "./scripts/components/header/searchButton.js";
 
 // Импорты main
 
@@ -32,10 +33,15 @@ const footer = document.querySelector(".footer");
 const headerNavBlock = header.querySelector(".header__navigation-block");
 const navigationButton = header.querySelector(".header__button");
 const popupDesktop = header.querySelector(".popup-desktop");
+// const headerPopupNavBlock = querySelector('.header__popup-nav-block');
 const popupMobile = header.querySelector(".popup-mobile");
 const headerElements = header.querySelectorAll(".header__element");
+const headerListOfTools = header.querySelector(".header__list-of-tools");
 const basketButton = header.querySelector(".basket-button");
 const searchButton = header.querySelector(".search-button");
+const searchHeaderInput = header.querySelector(
+  ".header__popup-search-block-input"
+);
 const lists = header.querySelectorAll(".list");
 
 // @DOM: DOM-узлы для main
@@ -48,7 +54,7 @@ const footerLists = footer.querySelectorAll(".footer__section");
 // @DOM: DOM-узлы для страницы paymentsPage
 
 // @DOM: DOM-узлы для страницы catalogPage
-const catalog = main.querySelector(".catalog__cloth");
+// const catalog = main.querySelector(".catalog__cloth");
 
 // @DOM: DOM-узлы для страницы returnsPage
 
@@ -64,17 +70,21 @@ const catalog = main.querySelector(".catalog__cloth");
 
 // @listeners:  Глобальные слушатели событий header
 
-// @listeners:  Слушатели событий header
+// @listeners:  Слушатели событий для header
 window.addEventListener("resize", checkDisplaySize);
 
 navigationButton.addEventListener("click", (event) => {
-  checkNavButtonState(
+  checkNavigationBlockState(
     event,
     popupDesktop,
     popupMobile,
     headerNavBlock,
     headerElements
   );
+});
+
+searchButton.addEventListener("click", (event) => {
+  checkSearchBlockState(event, searchHeaderInput, headerListOfTools);
 });
 
 lists.forEach((listElement) => {

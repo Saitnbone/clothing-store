@@ -155,6 +155,9 @@ fieldset {
     font-size: 18px;
     text-transform: uppercase;
   }
+  &_hide {
+    display: none;
+  }
 }
 
 .header__list-of-things {
@@ -164,13 +167,13 @@ fieldset {
   &-item {
     display: flex;
     flex-direction: row;
-
-    &:hover {
-      cursor: pointer;
-      box-shadow: var(--box-shadow);
-      opacity: 0.5;
-    }
   }
+}
+
+.search-button:hover {
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  opacity: 0.5;
 }
 
 // Стили для блока main

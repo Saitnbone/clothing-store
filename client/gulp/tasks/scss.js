@@ -2,6 +2,8 @@
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
 import rename from "gulp-rename";
+import plumber from "gulp-plumber";
+import  notify from "gulp-notify";
 // import cleanCss from "gulp";
 // import webpcss from "gulp-webpcss";
 import cleanCss from "gulp-clean-css";
@@ -17,13 +19,18 @@ export const scss = () => {
   return (
     app.gulp
       .src(app.path.src.scss, { sourcemap: true })
+      // .pipe(
+      //   app.plugins.plumber(
+      //     app.plugins.notify.onError({
+      //       title: "SCSS",
+      //       message: "Error: <% error.message %>",
+      //     })
+      //   )
+      // )
       .pipe(
-        app.plugins.plumber(
-          app.plugins.notify.onError({
-            title: "SCSS",
-            message: "Error: <% error.message %>",
-          })
-        )
+        plumber({
+          errorHandler: notify.onError("SCSS Error: <%= error.message %>"),
+        })
       )
       .pipe(app.plugins.replace(/@img\//g, "../img/"))
       .pipe(

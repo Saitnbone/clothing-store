@@ -117,7 +117,7 @@ export const checkDisplaySize = () => {
   }
 };
 // @func: Функция проверки состояния кнопки навигации
-export const checkNavButtonState = (
+export const checkNavigationBlockState = (
   event,
   popupDesktop,
   popupMobile,

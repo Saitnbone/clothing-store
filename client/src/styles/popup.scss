@@ -1,10 +1,40 @@
+/* 
+------------------------------------------------------------------------
+                      Настройки для попапов для header
+                                    ||
+                       Settings for popups for header
+------------------------------------------------------------------------
+*/
+
 // Настройки меню наваигации для десктопа
+.header__popup-nav-block {
+  display: flex;
+  gap: 45px;
+  align-items: center;
+}
 .popup-desktop {
   display: none;
-  z-index: 1;
 
   &_show {
     display: flex;
+  }
+}
+
+.header__popup-search-block {
+  display: flex;
+  gap: 20px;
+
+  &-input {
+    display: none;
+    inline-size: 209px;
+    block-size: 30px;
+    box-sizing: border-box;
+    border: 0.3px solid rgb(37, 37, 37);
+    border-radius: 20px;
+
+    &_show {
+      display: block;
+    }
   }
 }
 

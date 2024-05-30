@@ -13,15 +13,16 @@ html(lang="ru")
   body.page
     header.header.header__main-page
       nav.header__navigation-block.navigation-main-page
-        button.header__button
-          img(src='/dist/svg/menu-button.svg' alt='Кнопка для открытия навигации')
-        ul.popup.popup-desktop
-          li.popup-desktop__item
-            span Оплата и доставка
-          li.popup-desktop__item
-            span Условия возврата
-          li.popup-desktop__item
-            span Контакты
+        div.header__popup-nav-block
+          button.header__button
+            img(src='/dist/svg/menu-button.svg' alt='Кнопка для открытия навигации')
+          ul.popup.popup-desktop
+            li.popup-desktop__item
+              span Оплата и доставка
+            li.popup-desktop__item
+              span Условия возврата
+            li.popup-desktop__item
+              span Контакты
         ul.header__element.header__list-about
           li.header__list-about-item
             button.header__list-about-item-buttom new
@@ -47,8 +48,11 @@ html(lang="ru")
               span Usd
               span Eur
         ul.header__element.header__list-of-things
-          li.header__list-of-things-item.search-button
-            img(src='/dist/svg/search-icon.svg' alt='Изображение иконки поискового поля')
+          li.header__list-of-things-item
+            div.header__popup-search-block
+              button.search-button
+                img(src='/dist/svg/search-icon.svg' alt='Изображение иконки поискового поля')
+              input(type="text", id="searchInputDescktop", placeholder="Введите ваш запрос").header__popup-search-block-input
           li.header__list-of-things-item.profile-button
             a(href='http://127.0.0.1:5500/client/dist/profile.html')
               img(src='/dist/svg/profile-icon.svg' alt='Изображение иконки профиля пользователя')
