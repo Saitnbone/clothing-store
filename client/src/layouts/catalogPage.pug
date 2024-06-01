@@ -12,8 +12,16 @@ html(lang="ru")
   body.page
     header.header
       nav.header__navigation-block
-        button.header__button
-          img(src='/dist/svg/menu-button_beige.svg' alt='Кнопка для открытия каталога')
+        div.header__popup-nav-block
+          button.header__button
+            img(src='/dist/svg/menu-button_beige.svg' alt='Кнопка для открытия навигации')
+          ul.popup.popup-desktop
+            li.popup-desktop__item
+              span Оплата и доставка
+            li.popup-desktop__item
+              span Условия возврата
+            li.popup-desktop__item
+              span Контакты
         ul.header__element.header__list-about
           li.header__list-about-item
             a(href='http://127.0.0.1:5500/client/dist/catalog.html') New
@@ -34,7 +42,10 @@ html(lang="ru")
               img(src='/dist/svg/item_beige.svg' alt='Кнопка для переключения языка сайта')
         ul.header__element.header__list-of-things
           li.header__list-of-things-item
-            img(src='/dist/svg/search-icon_black.svg' alt='Изображение иконки поискового поля')
+            div.header__popup-search-block
+              button.search-button
+                img(src='/dist/svg/search-icon_black.svg' alt='Изображение иконки поискового поля')
+              input(type="text", id="searchInputDescktop", placeholder="Введите ваш запрос").header__popup-search-block-input
           li.header__list-of-things-item
             a(href="http://127.0.0.1:5500/client/dist/profile.html") 
               img(src='../dist/svg/profile-icon_beige.svg' alt='Изображение иконки профиля пользователя в минималистичном стиле')
@@ -112,5 +123,32 @@ html(lang="ru")
               img(src='/dist/svg/telegram-icon.svg' alt='Иконка телеграма')
           span +38(073) 096 36 44
           span info@yanki.com
-    template
+
+    template#card-template
+      li.catalog__cloth-list-item
+        article.catalog__cloth-card
+          img.catalog__cloth-card-image(src='' alt='')
+          h3.catalog__cloth-card-title
+            | Белая куртка
+          span.catalog__cloth-card-price 2580 грн.
+            ul.catalog__cloth-card-sizes-list
+              li.catalog__cloth-card-sizes-list-item
+                | xss
+              li.catalog__cloth-card-sizes-list-item
+                | xs
+              li.catalog__cloth-card-sizes-list-item
+                | s
+              li.catalog__cloth-card-sizes-list-item
+                | l
+              li.catalog__cloth-card-sizes-list-item
+                | m
+            ul.catalog__cloth-card-colors-list
+              li.catalog__cloth-card-colors-list-item.item_white
+              li.catalog__cloth-card-colors-list-item.item_blue
+              li.catalog__cloth-card-colors-list-item.item_yellow
+    template#card-template-description
+      button.close-button
+      div.card
+        div.card__image
+        div.card__description
     script(src="/dist/bundle.js")

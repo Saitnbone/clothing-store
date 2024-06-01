@@ -13,6 +13,7 @@
 body {
   min-inline-size: 280px;
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .page {
@@ -98,7 +99,6 @@ fieldset {
 .header__navigation-block {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 33px 120px 0 120px;
   line-height: 21px;
   text-transform: uppercase;
@@ -163,11 +163,18 @@ fieldset {
 .header__list-of-things {
   gap: 30px;
   font-size: 18px;
+  align-items: baseline;
 
   &-item {
     display: flex;
     flex-direction: row;
   }
+}
+
+.basket-button:hover {
+  cursor: pointer;
+  box-shadow: var(--box-shadow);
+  opacity: 0.5;
 }
 
 .search-button:hover {

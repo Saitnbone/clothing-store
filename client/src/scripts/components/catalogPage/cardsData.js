@@ -3,57 +3,53 @@ export const furCoatsData = [
   {
     id: 1,
     name: "Шуба",
-    image: "../images/Rectangle-7.png",
+    image: "../dist/images/Rectangle-7.png",
     description: "Описание шубы",
     price: 1000,
   },
   {
     id: 2,
     name: "Шуба",
-    image: "../images/Rectangle-7.png",
+    image: "../dist/images/Rectangle-7.png",
     description: "Описание шубы",
     price: 1000,
   },
   {
     id: 3,
     name: "Шуба",
-    image: "../images/Rectangle-7.png",
+    image: "../dist/images/Rectangle-7.png",
     description: "Описание шубы",
     price: 1000,
   },
   {
     id: 4,
     name: "Шуба",
-    image: "../images/Rectangle-7.png",
+    image: "../dist/images/Rectangle-7.png",
     description: "Описание шубы",
     price: 1000,
   },
   {
     id: 5,
     name: "Шуба",
-    image: "../images/Rectangle-7.png",
+    image: "../dist/images/Rectangle-7.png",
     description: "Описание шубы",
     price: 1000,
   },
   {
     id: 6,
     name: "Шуба",
-    image: "../images/Rectangle-7.png",
+    image: "../dist/images/Rectangle-7.png",
     description: "Описание шубы",
     price: 1000,
   },
   {
     id: 7,
     name: "Шуба",
-    image: "../images/Rectangle-7.png",
+    image: "../dist/images/Rectangle-7.png",
     description: "Описание шубы",
     price: 1000,
   },
 ];
-
-furCoatsData.forEach((coatData) => {
-  console.log(coatData.price);
-});
 
 // Категории "Пальто"
 export const coatsData = [

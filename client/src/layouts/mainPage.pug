@@ -59,9 +59,13 @@ html(lang="ru")
           li.header__list-of-things-item.favorites-button
             a(href="http://127.0.0.1:5500/client/dist/favorites.html")
               img(src='/dist/svg/favorites.svg' alt='Иконка с изображением сердечка для перехода на страницу с избранными товарами пользователя')
-          li#basket-button.header__list-of-things-item
+          li.header__list-of-things-item
             a(href="http://127.0.0.1:5500/client/dist/basket.html") 
-              img(src='/dist/svg/basket.svg' alt='Иконка с изображением козины покупателя').header__collection-block
+              button.basket-button
+                img(src='/dist/svg/basket.svg' alt='Иконка с изображением козины покупателя').header__collection-block
+      ul.popup.popup__shoping-list.popup__shoping-list_show
+        li.popup__shoping-list-item
+        li.popup__shoping-list-item
       ul.popup.popup-mobile
         li.popup-mobile__item
           div.popup-mobile__search-block
