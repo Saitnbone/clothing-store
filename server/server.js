@@ -590,7 +590,14 @@ app.get("/dist/svg/profile-icon_beige.svg", (req, res) => {
       .status(200)
       .set("Content-Type", "image/svg+xml")
       .sendFile(
-        path.join(__dirname, "..", "client", "dist", "svg", "profile-icon_beige.svg")
+        path.join(
+          __dirname,
+          "..",
+          "client",
+          "dist",
+          "svg",
+          "profile-icon_beige.svg"
+        )
       );
   } catch {
     console.error(error);
@@ -632,7 +639,14 @@ app.get("/dist/svg/search-icon_black.svg", (req, res) => {
       .status(200)
       .set("Content-Type", "image/svg+xml")
       .sendFile(
-        path.join(__dirname, "..", "client", "dist", "svg", "search-icon_black.svg")
+        path.join(
+          __dirname,
+          "..",
+          "client",
+          "dist",
+          "svg",
+          "search-icon_black.svg"
+        )
       );
   } catch {
     console.error(error);
@@ -669,12 +683,42 @@ app.get("/dist/svg/trash-basket.svg", (req, res) => {
 });
 
 // Настройки для отпрвки скриптов
-app.get("/dist/bundle.js", (req, res) => {
+app.get("/dist/scripts/index.bundle.js", (req, res) => {
   try {
     res
       .status(200)
       .set("Content-Type", "application/javascript")
-      .sendFile(path.join(__dirname, "..", "client", "dist", "bundle.js"));
+      .sendFile(
+        path.join(
+          __dirname,
+          "..",
+          "client",
+          "dist",
+          "scripts",
+          "index.bundle.js"
+        )
+      );
+  } catch {
+    console.error(error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+app.get("/dist/scripts/catalogPage.bundle.js", (req, res) => {
+  try {
+    res
+      .status(200)
+      .set("Content-Type", "application/javascript")
+      .sendFile(
+        path.join(
+          __dirname,
+          "..",
+          "client",
+          "dist",
+          "scripts",
+          "index.bundle.js"
+        )
+      );
   } catch {
     console.error(error);
     res.status(500).send("Internal Server Error");

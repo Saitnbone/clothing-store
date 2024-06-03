@@ -4,17 +4,22 @@ const rootFolder = nodePath.basename(nodePath.resolve());
 
 const buildFolder = "./dist";
 const srcFolder = "./src";
+const jsPath = "./src/scripts/components";
 
 export const path = {
   build: {
-    js: `${buildFolder}/`,
+    js: `${buildFolder}/scripts`,
     html: `${buildFolder}/`,
     css: `${buildFolder}/`,
     images: `${buildFolder}/images`,
     svg: `${buildFolder}/svg`,
   },
   src: {
-    js: `${srcFolder}/index.js`,
+    js: {
+      index: `${srcFolder}/index.js`,
+      basketPage: `${jsPath}/basketPage/basketPage.js`,
+      catalogPage: `${jsPath}/catalogPage/catalogPage.js`,
+    },
     html: `${srcFolder}/pages/*.pug`,
     scss: `${srcFolder}/index.scss`,
     images: `${srcFolder}/images/**/*.{jpg,png,gif,ico,webp,avif}`,

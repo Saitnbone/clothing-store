@@ -19,14 +19,6 @@ import {
 } from "./scripts/components/header/navigationButton.js";
 import { checkSearchBlockState } from "./scripts/components/header/searchButton.js";
 
-// Импорты для страницы main
-
-// Импорты main для страницы catalog
-import { furCoatsData } from "./scripts/components/catalogPage/cardsData.js";
-import { coatsData } from "./scripts/components/catalogPage/cardsData.js";
-import { parksData } from "./scripts/components/catalogPage/cardsData.js";
-import { createCard } from "./scripts/components/catalogPage/createCard.js";
-
 // Импорты footer
 import { openFooterList } from "./scripts/components/footer/footerList.js";
 
@@ -53,36 +45,6 @@ const lists = header.querySelectorAll(".list");
 
 // @DOM: DOM-узлы для footer
 const footerLists = footer.querySelectorAll(".footer__section");
-
-// @DOM: DOM-узлы для страницы mainPage
-
-// @DOM: DOM-узлы для страницы paymentsPage
-
-// @DOM: DOM-узлы для страницы catalogPage
-const clothList = document.querySelector(".catalog__cloth-list");
-const addFavorites = main.querySelector(".favorites-button");
-const clothCard = main.querySelector("..catalog__cloth-card");
-const catalog = main.querySelector(".catalog__cloth");
-
-// @DOM: DOM-узлы для страницы returnsPage
-
-// @DOM: DOM-узлы для страницы contactsPage
-
-// @DOM: DOM-узлы для страницы profilePage
-
-// @DOM: DOM-узлы для страницы authorizationPage
-
-// @DOM: DOM-узлы для страницы favoritesPage
-
-// @DOM: DOM-узлы для страницы basketPage
-
-// @func: Вызов основных функций
-// const cardItems = createCard(furCoatsData);
-// cardItems.forEach((cardItem) => clothList.append(cardItem));
-
-// renderCatalogCards(furCoatsData, clothList);
-
-createCard(furCoatsData, clothList);
 
 // @listeners:  Глобальные слушатели событий header
 
@@ -111,13 +73,7 @@ lists.forEach((listElement) => {
   );
 });
 
-// @listeners: Слушатели событий main (страница каталога)
-// addFavorites.addEventListener('click', (event) =>{
-
-// })
-// clothCard.addEventListener("click", (event) => showDescriptonCard);
-
-// @listeners: Слушатели событий footer
+// @listeners: Слушатели событий footer (все страницы)
 footerLists.forEach((listElement) => {
   listElement.addEventListener("click", openFooterList);
 });
