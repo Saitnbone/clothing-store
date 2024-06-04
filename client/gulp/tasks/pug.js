@@ -1,4 +1,4 @@
-import versionNumber from "gulp-version-number";
+// import versionNumber from "gulp-version-number";
 import pug from "gulp-pug";
 
 // @todo: Таска для обработки html файлов 
@@ -9,7 +9,7 @@ export const html = () => {
       app.plugins.plumber(
         app.plugins.notify.onError({
           title: "HTML",
-          message: "Error <%m error.message %>",
+          message: "Error: <%= error.message %>",
         })
       )
     )
@@ -20,19 +20,6 @@ export const html = () => {
       })
     )
     .pipe(app.plugins.replace(/@img\//g, "img/"))
-    // .pipe(
-    //   versionNumber({
-    //     value: "%DT%",
-    //     append: {
-    //       key: "_v",
-    //       cover: 0,
-    //       to: ["css", "js"],
-    //     },
-    //     output: {
-    //       file: "gulp/version.json",
-    //     },
-    //   })
-    // )
     .pipe(app.gulp.dest(app.path.build.html))
     .pipe(app.plugins.browserSync.stream());
 };
