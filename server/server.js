@@ -716,7 +716,7 @@ app.get("/dist/scripts/catalogPage.bundle.js", (req, res) => {
           "client",
           "dist",
           "scripts",
-          "index.bundle.js"
+          "catalogPage.bundle.js"
         )
       );
   } catch {

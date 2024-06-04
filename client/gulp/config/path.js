@@ -19,6 +19,7 @@ export const path = {
       index: `${srcFolder}/index.js`,
       basketPage: `${jsPath}/basketPage/basketPage.js`,
       catalogPage: `${jsPath}/catalogPage/catalogPage.js`,
+      profilePage: `${jsPath}/profilePage/profilePage.js`,
     },
     html: `${srcFolder}/pages/*.pug`,
     scss: `${srcFolder}/index.scss`,

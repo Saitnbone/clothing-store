@@ -41,8 +41,6 @@ const searchHeaderInput = header.querySelector(
 );
 const lists = header.querySelectorAll(".list");
 
-// @DOM: DOM-узлы для main
-
 // @DOM: DOM-узлы для footer
 const footerLists = footer.querySelectorAll(".footer__section");
 

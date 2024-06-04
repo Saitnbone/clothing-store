@@ -12,8 +12,15 @@
   gap: 45px;
   align-items: center;
 }
+
 .popup-desktop {
   display: none;
+  gap: 20px;
+
+  &__item:hover{
+    cursor: pointer;
+    opacity: 0.5;
+  }
 
   &_show {
     display: flex;
